@@ -45,6 +45,7 @@ public class AnimManager : MonoBehaviour
         {
             PlayerAnim.SetInteger("Behaviour", -4);
         }
+
         if (Input.GetKeyUp(KeyCode.S))
         {
             PlayerAnim.SetInteger("Behaviour", -1);

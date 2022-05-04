@@ -9,7 +9,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: -4
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3088654264500129347}
@@ -34,7 +34,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -59,7 +59,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -84,7 +84,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -152,7 +152,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -177,7 +177,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -202,7 +202,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -227,7 +227,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: -1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 64107177957299570}
@@ -252,7 +252,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -337,7 +337,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -362,7 +362,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -387,7 +387,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -412,7 +412,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: -2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1475185666361855940}
@@ -467,7 +467,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -522,7 +522,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -547,7 +547,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -572,7 +572,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -597,7 +597,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -677,7 +677,7 @@ AnimatorController:
   m_Name: Sprite_RedGuard_60
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: RBBehaviour
+  - m_Name: RGBehaviour
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: -1
@@ -735,7 +735,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -820,7 +820,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -845,7 +845,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: -3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2344609261114128663}
@@ -870,7 +870,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -895,7 +895,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -920,7 +920,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -945,7 +945,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -970,7 +970,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -995,7 +995,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 2
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2214292877487705794}
@@ -1020,7 +1020,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 3
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1815563467960233977}
@@ -1045,7 +1045,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -924601665723959242}
@@ -1070,7 +1070,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
@@ -1095,7 +1095,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: RBBehaviour
+    m_ConditionEvent: RGBehaviour
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3439932547239360537}
