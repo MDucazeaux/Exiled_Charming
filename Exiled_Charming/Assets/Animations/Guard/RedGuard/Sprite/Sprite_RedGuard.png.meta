@@ -1,0 +1,4654 @@
+fileFormatVersion: 2
+guid: a26d5a3a568ee85419663f79b025f260
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sprite_RedGuard_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2049
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1848c4e238257a6439d79804628bcfb8
+      internalID: 804928199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 2049
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8353df30245236b47aa69d08808d797e
+      internalID: -1336420487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2049
+        width: 30
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a180aaedb11db6545a91d303fc86f292
+      internalID: 1106457247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 2049
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f1e07a536fb7d4f8ac8214c279c35c
+      internalID: -1292050618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_4
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 2049
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98cc592923280a047950e1f83764b9f8
+      internalID: 134083695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2049
+        width: 50
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9d6d237be2f5e44795105bd913a623f
+      internalID: 1321054291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_6
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 2049
+        width: 38
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0966fc5c26e6dc8488113d306f455a65
+      internalID: -1594765076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_7
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1984
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0599e9a6e77f44aaeb25cdc6513508
+      internalID: -1409469078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1984
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba645ba08c16a844b0f362f1d4b52de
+      internalID: 1929715394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_9
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 1984
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a0e1b7fd9c3f0459cb22dd58f597f8
+      internalID: 1361055812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_10
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1984
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a828d8840911cd428c2a4ac60af6de8
+      internalID: -1651511464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_11
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1984
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2a96b6ef78a0c429529a6640e0099f
+      internalID: -1436148461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1984
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 264795f149f943245851229bfabd92bc
+      internalID: -1761732648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_13
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1984
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5324e6f0adae14f9083365fb365f59
+      internalID: -193471149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1919
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a295b914f30230a4e8b8090e8458663e
+      internalID: 1534218435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_15
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1919
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc5280156810dc4395257d3cf16e802
+      internalID: -1489832488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1919
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31b4ced05018e74cb13cbdcdc7ec416
+      internalID: 891797304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_17
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1919
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 836c1295c4396e64595ca604bd5f03d3
+      internalID: -839008634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_18
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1919
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89038c435cb2f234682295438e5787a1
+      internalID: 2135965627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_19
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 1919
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9eab312cf99c54a9885041d0ad773e
+      internalID: -57893050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1919
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036d948f731a5f2438d612524ebc01d1
+      internalID: -1909265828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1856
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31398a82cdb870545b951191892999a6
+      internalID: 27589962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_22
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 1856
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c92167f2361e94f927aaeab1096aa3
+      internalID: -1818075801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_23
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1856
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2dbd764b5c975140ba8a256096fd6c5
+      internalID: 1852688799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_24
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1856
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d44c937440a5df45ad2a402fff7ce08
+      internalID: 283671733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_25
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1856
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495af37115249cb4f85acd0b511184b9
+      internalID: -291674541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1856
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1229b9163bd1044b5074e4958af66a
+      internalID: -1074986847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 1856
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5d3870c698af814a97746c42c46949b
+      internalID: 1730606877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_28
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1793
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615730740692d034a8436ed43224a154
+      internalID: 1969273055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_29
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1791
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2c149b5d063b44193d3277873168f2
+      internalID: -1056920525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_30
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1791
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5541458a3f4f841429e49e3e2aec2a7b
+      internalID: -1497665110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_31
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 1791
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc873b02ea97044896778959cdeb47e
+      internalID: -862866449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_32
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 1791
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cb608e56f570844692b107d20bec501
+      internalID: -172457921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_33
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1791
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08678e5aedbd4824a83ea923d9cfd7cc
+      internalID: 639790145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_34
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 1791
+        width: 28
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abba049f3022b6d4e8350a79fde5887b
+      internalID: 535026248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_35
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 1791
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343d4cae9f3d7ee49be47c3f2eb7c059
+      internalID: -530014895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_36
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1728
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2f78c8c610f8147b0ac8f3b3594719
+      internalID: 1658852665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1728
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e364923fdbeb4ac4bbe6f55d8c66ed32
+      internalID: 1743163740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_38
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1728
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b599fc354afa44b814e0847d69043e
+      internalID: 1840858921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_39
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 1727
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca443cea5de08a646a15464b809aba0b
+      internalID: 1073475679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_40
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1727
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cfd58e22c5c8ab4bb31fcc7de5e44b5
+      internalID: -713337781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_41
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1727
+        width: 33
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ee1bec3e853884ababacdbb6473c1e
+      internalID: 1089261448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_42
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1727
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87e554c2dc99e9f4ab01bab0831c3203
+      internalID: -557793705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_43
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1727
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126fb3ef33cf3e641a3c73f527b8b19b
+      internalID: 494930697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_44
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1663
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa33492b0216b447a37dd9cf90f57bd
+      internalID: 474970036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_45
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1664
+        width: 35
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69f647c92d62624ead04fa7afbf908e
+      internalID: 1679869146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_46
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1664
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5a8d30f11f25014289c41df7b6cfd45
+      internalID: 1965071702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_47
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1664
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d51106ea33376428af8ca4f81d2b27
+      internalID: -278896132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_48
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1664
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a533454b96df35439038a5f3f814f60
+      internalID: 1297952826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_49
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1664
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45498ae305f63843bd3f8d508584b88
+      internalID: -538249114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_50
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1664
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8f21a2b15df8fb4a9cc542de1fa40a3
+      internalID: 882823113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_51
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1664
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e9951386523244388f44ffd3b920df
+      internalID: -279303485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_52
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1600
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ad0e9767391f642b2845264005b3c4
+      internalID: 8250386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_53
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 1600
+        width: 34
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c50d7eb34d01b7f47ba62ff4412b9c1e
+      internalID: 289657719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1600
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87d03f920a18504c82054eae8cb3aa1
+      internalID: -1764852151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_55
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1599
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c8d36ce758493c48862f87b7556ec6c
+      internalID: 912557690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_56
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1599
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92bcb08f2af7f547ade9a2a8b0577b4
+      internalID: -1048748962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_57
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 1599
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b9069ba58d15441aa300dd567c49ac
+      internalID: 2059814795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_58
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1599
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a7c3915d46b7f4e95e4d849a2ee928
+      internalID: 1797078985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_59
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 1599
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e992e207ad681f4a91dbeb3776a09a9
+      internalID: -1590942745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_60
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 1538
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a870cccc5296974aabba330772f1365
+      internalID: 80943533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_61
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1538
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56835112cf4afb943b9a3d5ae2fabfda
+      internalID: -472521684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_62
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 1537
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e695988927e2fd346be705966c848d40
+      internalID: 10898556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_63
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1536
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4071304a3bed84083a7ebf7fec1b37
+      internalID: 1776988749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_64
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1537
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6c747c695bfaee49a45f6b240bfa093
+      internalID: 822536495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_65
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1538
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02387dcf951a940448342e85fc01f367
+      internalID: -1864786590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_66
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1537
+        width: 44
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d39f9babb098e94a8bf562d56925997
+      internalID: -462007335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_67
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1536
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6975d05b07ccb5a46b870e05bea82e3a
+      internalID: -198881589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_68
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1537
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1edaab7fb6e00048810f0d036d47efe
+      internalID: 1660564048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_69
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1472
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5056848f4f21e1c41b65210a57f93ecb
+      internalID: -1512001547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_70
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1473
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14c3797cdaa3b24ca0ab3589947af38
+      internalID: 949633174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_71
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1474
+        width: 51
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 625b7bd953e0eef4e837218e0598f145
+      internalID: -1383957491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_72
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1474
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0840870c4d7634a41afa421001f39941
+      internalID: 410163249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_73
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 1473
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419a8a99e3149d944bb7503329d0d646
+      internalID: -1650531300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_74
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1473
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a8adaf7c7772e4fae02b7b10f8b95f
+      internalID: 1977625402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_75
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 1473
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0491a77a4d2894ca80adbc1becb107
+      internalID: -841146420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_76
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1473
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e8ff6b17f993f74491834e99098bcab
+      internalID: -893544390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_77
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1473
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196ffc9beb04e7645980355bf569092e
+      internalID: 1013993653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_78
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1407
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 672b0ff228e878f4bbda5da20b7905c2
+      internalID: 84724155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_79
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1407
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9680e4e03f61c4da1ad252a5617379
+      internalID: -1520148527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_80
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1408
+        width: 37
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca0f921f8c78b8a42b24bfe1929ce648
+      internalID: -1946193289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_81
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1407
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54a3555d0ba1da0438916fac91b7a6ce
+      internalID: 105600767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_82
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1407
+        width: 39
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 251cacfd3a89f1a4da3ce0211999531b
+      internalID: 504263785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_83
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1407
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1511982a77af1834686720e1f84220bd
+      internalID: -1775385701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_84
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1408
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e567aa15d0d26e479c108427a75f271
+      internalID: 1372960073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_85
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1408
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1994da10d19252b4199c8d21c822879a
+      internalID: 1735093009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_86
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 1407
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8720255c64248a246bc578aaa8b4a6ab
+      internalID: -1986638022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_87
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1344
+        width: 45
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1acb515df2ee41949b26eb86bf39c8b1
+      internalID: -698885188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_88
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1345
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe24448106a7e0041b30435491e1e4e1
+      internalID: 2087416007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_89
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1346
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab71f6752e58f148a4a4004882a8b85
+      internalID: 125322786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_90
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1346
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac3d63c7b43e4b84d8d5fa5c2818d2dd
+      internalID: -59097446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_91
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1345
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05b095ef1774271409264ec7251b5aa5
+      internalID: 1671522571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_92
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1345
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a18000d8ecbec604a8cd8e6d4c986102
+      internalID: -450522134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_93
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 1345
+        width: 47
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb39ac30b2cb204fa236633808ae5a2
+      internalID: -679278003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_94
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 1345
+        width: 52
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6281f8427c265b44b1299ccf21fb98b
+      internalID: -1163780064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_95
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1345
+        width: 53
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92ee73b28f75304797926b0250ea5be
+      internalID: 1434158815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_96
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1281
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5512709271f95b346a13e8436e913c42
+      internalID: 152790638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_97
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1280
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd09e95f87011b428e38c4e439d8ddb
+      internalID: -1160120520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_98
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1280
+        width: 33
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411b3315624aa58419d85a4de6b93014
+      internalID: 1842664641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_99
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 1280
+        width: 36
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f26c594f4c60fe4daa806c6703b6e63
+      internalID: 667595650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_100
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1280
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33de4aa23fc15946bbdcac335be5e95
+      internalID: 1476777987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_101
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1280
+        width: 47
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f1898a2136c514fa3cbef18575a591
+      internalID: -410464518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_102
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1216
+        width: 30
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0840b4da9c7b254f96ac81acc8d5415
+      internalID: 468213150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_103
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1215
+        width: 34
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6b2dff0f0ef6c4c880c39b0751986b
+      internalID: 1085404388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_104
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1215
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea14d893cbd65c46bd5d0de9e84b386
+      internalID: -312794189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_105
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1215
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cc68a2e780f29e4481a4fb70b92a524
+      internalID: 928715812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_106
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 1215
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faf112417c0afd4d86a12c9af885910
+      internalID: -318169603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_107
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1215
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f70055b247931d4dbc14545d7831348
+      internalID: 1947526390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_108
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 1150
+        width: 35
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b6a2dea0db1624498f7dc7cac3dc3d
+      internalID: -603502776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_109
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 1150
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7153a698fb34e5d449b7fb4e39f5e042
+      internalID: 1418396611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_110
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1150
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb63d2b50078b0a4683a09d0f2549e03
+      internalID: -1863469326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_111
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1151
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df0136d06842751428e40a7397a2332f
+      internalID: -1815296284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_112
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 1151
+        width: 45
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c481dd0d5d98b449a5d550a4edf021
+      internalID: -1396548169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_113
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1151
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7853782a4a01444aae8c957302fb83
+      internalID: 2053889627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_114
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1087
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15bde0e991ab23f4c8a6c20bde756aac
+      internalID: -1336135371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_115
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1086
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3000e589a6ddf4fa4729e0b3038299
+      internalID: 1994573058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_116
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1086
+        width: 32
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e318f9e2243eb174392d9edfbf9857f6
+      internalID: 897839520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_117
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1086
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2726e33be5fdda344ae797e6c29a16d0
+      internalID: -1276931956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_118
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 1086
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609a8477c627dab4d81fc7ab22d966ab
+      internalID: 1787412329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_119
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1086
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14352928d5853645bcd9bbad140f855
+      internalID: 552748171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_120
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1025
+        width: 32
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2300795981ca46429d864be46997a4a
+      internalID: -575178583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1023
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4650bf31cb3fdd4395e182e25628bc2
+      internalID: -434910986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_122
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d169ef198c3ee14ca2fdac921ed1c8b
+      internalID: -718909492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_123
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7926cb03f1c1bf0438470aff3e3172dc
+      internalID: 351157144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_124
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 1023
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b864f9bb4bf9f34c8aa4864a245fefd
+      internalID: -1173847370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_125
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 1023
+        width: 29
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c17ece16bbee58418adee5599798617
+      internalID: 1548017781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_126
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 1023
+        width: 30
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117bf2a6335181744b495be5b1d1f7d5
+      internalID: -1411696735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_127
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1023
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99953f68fdad1f48b5e09f38ce21fe8
+      internalID: -910126033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_128
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67c1261ccbd579a4e8e642d2501afb63
+      internalID: -1959054655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_129
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1023
+        width: 32
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fded681af8a55d4898acdd0aa552e5c
+      internalID: 926585750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_130
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c220f35c20dd11b42960e48d71194c48
+      internalID: 393590067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_131
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d501b61dd272349870705a598708ee
+      internalID: -201284060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_132
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 1023
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebee800923a9a294aaeed3d821df5b6c
+      internalID: -1159881404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_133
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 960
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 198d94161add4f74e852326e861e5607
+      internalID: 1748722098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_134
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 960
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f6a652ece7ced408e40718781f8583
+      internalID: -245538770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_135
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 960
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a11494191ecc94bac4c67bf7a0d4c0
+      internalID: -352267292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_136
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 959
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cfbcbcf628f8a447a02d312390b8fc3
+      internalID: -431824260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_137
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 959
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6e150739c927944783d357994c0b6f7
+      internalID: 1962397266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_138
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 959
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ee59ea2df34fc4dbdd76646800c65a
+      internalID: -309913473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_139
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 959
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f87c8960f690f8442b867b928fa3392c
+      internalID: 1523761742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_140
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 959
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c67f02e5da37a7479ecd9e677048a6f
+      internalID: 1919497273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_141
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 959
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d252fd2f4b6a6438835c8157cc5f71
+      internalID: 73161669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_142
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 959
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad135315b132724ea8f1960f14160d8
+      internalID: -698648067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 959
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10a75b76814de04abf1ac3ec314a548
+      internalID: 86899209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_144
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 959
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3bc777426231441a28fed8f0b7f0b0
+      internalID: -811436777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_145
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 959
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc39e99bd4179784aac629cd7da96c18
+      internalID: 927346140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 895
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a41102fd5517741a1d70c813682cd1
+      internalID: 536285127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_147
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 896
+        width: 28
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1190934cfdd4484d811c5e5a40c9fef
+      internalID: 678249459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_148
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 897
+        width: 28
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c611046f7bb83848b69fe3d27b0a602
+      internalID: 1080624064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_149
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301f0e325c1f6b54086fe86e6d5d10f6
+      internalID: 1378070500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_150
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea1e716022b3c84488988e990176496
+      internalID: -1828344198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_151
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 466c3cfceb6e368498b5e0f52245e2ac
+      internalID: -1271657587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_152
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 895
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1fc7eab9792094ba41fa5e242567f1
+      internalID: 594480998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_153
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 895
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cda6df55fc7f4594cb0fa7fed28a5aa8
+      internalID: -2123589166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_154
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 895
+        width: 29
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f313a3fc3ed491409eae48c3a1d6dc7
+      internalID: 752774874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_155
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a58a825ac815c4e8695c596c4888ca
+      internalID: -604643910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_156
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8dcc13913d12247a465d82235693f9
+      internalID: -1958042445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_157
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8304973356cdede4a8d06c5d96061645
+      internalID: -268982882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_158
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 895
+        width: 28
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c3705cfd5ddb9439da8224f4a86985
+      internalID: 798108434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_159
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 832
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ccb95e9dfaaf84aa5247b9c38cfeea
+      internalID: 1471387607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_160
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 832
+        width: 27
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17acf705ab0ff04dbe10eaf023740da
+      internalID: -864736226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_161
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 832
+        width: 34
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058cb617d8fa4324a811fc7c69e114a3
+      internalID: 1098903873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_162
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 831
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f5fc2b206fc1a4fa728bf06e6dcae2
+      internalID: -1583467228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_163
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 831
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c3322a02df30242930babbc0e4c0f4
+      internalID: 2060465287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_164
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 831
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a094974ef09dcb54eb4da2368fabc0e7
+      internalID: -1471036333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_165
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 831
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff6cc0fc24929342aaa3df8259c0c45
+      internalID: 617639865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_166
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 831
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf33424e102b0734d8f1d5aef5d0330e
+      internalID: 1339429744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_167
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 831
+        width: 40
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 837cce5fd6ccc8d4c86ad678d6debba3
+      internalID: -2075532044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_168
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 831
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f845923bbfda74c90300d096dcbba5
+      internalID: -1327022361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_169
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 831
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6486cf64e465f7c4f97cb7a2b37f3d18
+      internalID: 938889320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_170
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 831
+        width: 35
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f79a7d6864721ad439ddef93323b3d3f
+      internalID: -1441150823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_171
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 831
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371da2108f21f1b4abb5c3fa8f43aa84
+      internalID: -1257278595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_172
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 767
+        width: 32
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555c2e5df7278a44799b242efbae2320
+      internalID: -187136910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_173
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 767
+        width: 33
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba25a7e81db977409ebb9e9fd2c8600
+      internalID: -106901849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_174
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 767
+        width: 32
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8838788e92784347aa945ff519247f3
+      internalID: 526837338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_175
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 767
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535fd090c88b282498b3e4336365a8ea
+      internalID: 1654482022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_176
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 767
+        width: 35
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bacc3b61e5de76145a440815f68fe484
+      internalID: 40164055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_177
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 767
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea1592ab7a844c459cb88f6a96b345f
+      internalID: -565571007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_178
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 767
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a696a85b02fbfe4f8b6452601c7a5b5
+      internalID: -891844456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_179
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 768
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517dd82db9631aa41b4b05851cf9109c
+      internalID: 1379116246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_180
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 767
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15963f26417de9c4ca3a9396c4901614
+      internalID: -1714649143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_181
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 767
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaceaaf058dca7545af34960cd18b29d
+      internalID: 1932061494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_182
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 641
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98150268ca6d7542bc328d9b6846744
+      internalID: 1147404392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_183
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 640
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79edaabd5fcf39a4190e32054b2ad110
+      internalID: -1041484833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_184
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 640
+        width: 48
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d19ca6b7904044945a3c4c5c1d25ac34
+      internalID: -1497294912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_185
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 640
+        width: 60
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3215a99e21d669742bbff7bdc7667ca5
+      internalID: -709220869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_186
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 640
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfb700cb8edb4e34ebc86357768ec88f
+      internalID: 411713024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_187
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 640
+        width: 84
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4667db2f5b1bf9a4980c7cd48a5a4282
+      internalID: -1899486852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_188
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 446
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4e5061c5a04794aba85979066e390b
+      internalID: -462017755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_189
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 447
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4dfaf9410f2c6247b67475e500d7d6e
+      internalID: -733984119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_190
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 447
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065796b9a25d3bb45a8178596ac0d9b7
+      internalID: 1353486237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_191
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 447
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e74a3a02c327a24aa22a1c4b5fc6b74
+      internalID: 79513477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_192
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 447
+        width: 99
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca3dd9c6e683d442bd58adc5c699d7c
+      internalID: -471121475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_193
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 447
+        width: 100
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80d6303ecc3e09c4c8a5b3998523ed84
+      internalID: 421727904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_194
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 254
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebe4931a3e694a4696769e414f7d996
+      internalID: -500658430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_195
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 255
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a0f7e0db8d95c4b975f4f4fc51866c
+      internalID: -1582577999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_196
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 255
+        width: 45
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d5f39e015cd844d82b6c0ad193cc58
+      internalID: -1273878426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_197
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 256
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b58c214052db98f45ab7a71f72076fa4
+      internalID: 768182476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_198
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 236
+        width: 83
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc74f2c63ec16ba41a6a8a17c4d6e37b
+      internalID: -1982885338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_199
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 239
+        width: 83
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e97c290405582c4ba9ba11cd49e0044
+      internalID: -1322689037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_200
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 61
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d1e532b2ea8814e9d3bb3936cd138b
+      internalID: 2083331258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_201
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 62
+        width: 39
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2964e80ded7e255469eb9025cf985440
+      internalID: 74541558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_202
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 62
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f8029b76d19e34dbb5c67022366a88
+      internalID: -1466658635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_203
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 62
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 351a764fed703744db094b4cf28007cc
+      internalID: -1666060953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_204
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 62
+        width: 98
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2453b5087c7616b4b901fb5df72a6ce4
+      internalID: 331667205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_RedGuard_205
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 62
+        width: 100
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2dc84085b0795848933ae35c7f643d0
+      internalID: -192314641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sprite_RedGuard_97: -1160120520
+      Sprite_RedGuard_125: 1548017781
+      Sprite_RedGuard_86: -1986638022
+      Sprite_RedGuard_165: 617639865
+      Sprite_RedGuard_182: 1147404392
+      Sprite_RedGuard_17: -839008634
+      Sprite_RedGuard_142: -698648067
+      Sprite_RedGuard_187: -1899486852
+      Sprite_RedGuard_54: -1764852151
+      Sprite_RedGuard_6: -1594765076
+      Sprite_RedGuard_36: 1658852665
+      Sprite_RedGuard_56: -1048748962
+      Sprite_RedGuard_33: 639790145
+      Sprite_RedGuard_2: 1106457247
+      Sprite_RedGuard_144: -811436777
+      Sprite_RedGuard_140: 1919497273
+      Sprite_RedGuard_35: -530014895
+      Sprite_RedGuard_78: 84724155
+      Sprite_RedGuard_73: -1650531300
+      Sprite_RedGuard_202: -1466658635
+      Sprite_RedGuard_163: 2060465287
+      Sprite_RedGuard_3: -1292050618
+      Sprite_RedGuard_92: -450522134
+      Sprite_RedGuard_22: -1818075801
+      Sprite_RedGuard_61: -472521684
+      Sprite_RedGuard_192: -471121475
+      Sprite_RedGuard_80: -1946193289
+      Sprite_RedGuard_198: -1982885338
+      Sprite_RedGuard_19: -57893050
+      Sprite_RedGuard_128: -1959054655
+      Sprite_RedGuard_148: 1080624064
+      Sprite_RedGuard_89: 125322786
+      Sprite_RedGuard_134: -245538770
+      Sprite_RedGuard_135: -352267292
+      Sprite_RedGuard_28: 1969273055
+      Sprite_RedGuard_64: 822536495
+      Sprite_RedGuard_119: 552748171
+      Sprite_RedGuard_46: 1965071702
+      Sprite_RedGuard_195: -1582577999
+      Sprite_RedGuard_180: -1714649143
+      Sprite_RedGuard_83: -1775385701
+      Sprite_RedGuard_178: -891844456
+      Sprite_RedGuard_106: -318169603
+      Sprite_RedGuard_174: 526837338
+      Sprite_RedGuard_50: 882823113
+      Sprite_RedGuard_24: 283671733
+      Sprite_RedGuard_199: -1322689037
+      Sprite_RedGuard_66: -462007335
+      Sprite_RedGuard_126: -1411696735
+      Sprite_RedGuard_155: -604643910
+      Sprite_RedGuard_38: 1840858921
+      Sprite_RedGuard_158: 798108434
+      Sprite_RedGuard_74: 1977625402
+      Sprite_RedGuard_53: 289657719
+      Sprite_RedGuard_166: 1339429744
+      Sprite_RedGuard_164: -1471036333
+      Sprite_RedGuard_43: 494930697
+      Sprite_RedGuard_44: 474970036
+      Sprite_RedGuard_94: -1163780064
+      Sprite_RedGuard_81: 105600767
+      Sprite_RedGuard_151: -1271657587
+      Sprite_RedGuard_196: -1273878426
+      Sprite_RedGuard_45: 1679869146
+      Sprite_RedGuard_11: -1436148461
+      Sprite_RedGuard_51: -279303485
+      Sprite_RedGuard_34: 535026248
+      Sprite_RedGuard_20: -1909265828
+      Sprite_RedGuard_183: -1041484833
+      Sprite_RedGuard_30: -1497665110
+      Sprite_RedGuard_121: -434910986
+      Sprite_RedGuard_18: 2135965627
+      Sprite_RedGuard_41: 1089261448
+      Sprite_RedGuard_154: 752774874
+      Sprite_RedGuard_25: -291674541
+      Sprite_RedGuard_104: -312794189
+      Sprite_RedGuard_168: -1327022361
+      Sprite_RedGuard_200: 2083331258
+      Sprite_RedGuard_68: 1660564048
+      Sprite_RedGuard_118: 1787412329
+      Sprite_RedGuard_39: 1073475679
+      Sprite_RedGuard_110: -1863469326
+      Sprite_RedGuard_167: -2075532044
+      Sprite_RedGuard_172: -187136910
+      Sprite_RedGuard_63: 1776988749
+      Sprite_RedGuard_88: 2087416007
+      Sprite_RedGuard_150: -1828344198
+      Sprite_RedGuard_103: 1085404388
+      Sprite_RedGuard_105: 928715812
+      Sprite_RedGuard_138: -309913473
+      Sprite_RedGuard_149: 1378070500
+      Sprite_RedGuard_60: 80943533
+      Sprite_RedGuard_79: -1520148527
+      Sprite_RedGuard_157: -268982882
+      Sprite_RedGuard_26: -1074986847
+      Sprite_RedGuard_181: 1932061494
+      Sprite_RedGuard_49: -538249114
+      Sprite_RedGuard_117: -1276931956
+      Sprite_RedGuard_177: -565571007
+      Sprite_RedGuard_112: -1396548169
+      Sprite_RedGuard_153: -2123589166
+      Sprite_RedGuard_32: -172457921
+      Sprite_RedGuard_90: -59097446
+      Sprite_RedGuard_113: 2053889627
+      Sprite_RedGuard_0: 804928199
+      Sprite_RedGuard_95: 1434158815
+      Sprite_RedGuard_40: -713337781
+      Sprite_RedGuard_137: 1962397266
+      Sprite_RedGuard_10: -1651511464
+      Sprite_RedGuard_145: 927346140
+      Sprite_RedGuard_58: 1797078985
+      Sprite_RedGuard_65: -1864786590
+      Sprite_RedGuard_93: -679278003
+      Sprite_RedGuard_72: 410163249
+      Sprite_RedGuard_160: -864736226
+      Sprite_RedGuard_162: -1583467228
+      Sprite_RedGuard_171: -1257278595
+      Sprite_RedGuard_185: -709220869
+      Sprite_RedGuard_77: 1013993653
+      Sprite_RedGuard_67: -198881589
+      Sprite_RedGuard_70: 949633174
+      Sprite_RedGuard_37: 1743163740
+      Sprite_RedGuard_48: 1297952826
+      Sprite_RedGuard_21: 27589962
+      Sprite_RedGuard_147: 678249459
+      Sprite_RedGuard_91: 1671522571
+      Sprite_RedGuard_190: 1353486237
+      Sprite_RedGuard_204: 331667205
+      Sprite_RedGuard_176: 40164055
+      Sprite_RedGuard_16: 891797304
+      Sprite_RedGuard_101: -410464518
+      Sprite_RedGuard_173: -106901849
+      Sprite_RedGuard_152: 594480998
+      Sprite_RedGuard_4: 134083695
+      Sprite_RedGuard_8: 1929715394
+      Sprite_RedGuard_42: -557793705
+      Sprite_RedGuard_96: 152790638
+      Sprite_RedGuard_99: 667595650
+      Sprite_RedGuard_75: -841146420
+      Sprite_RedGuard_102: 468213150
+      Sprite_RedGuard_69: -1512001547
+      Sprite_RedGuard_29: -1056920525
+      Sprite_RedGuard_108: -603502776
+      Sprite_RedGuard_159: 1471387607
+      Sprite_RedGuard_122: -718909492
+      Sprite_RedGuard_115: 1994573058
+      Sprite_RedGuard_130: 393590067
+      Sprite_RedGuard_82: 504263785
+      Sprite_RedGuard_129: 926585750
+      Sprite_RedGuard_194: -500658430
+      Sprite_RedGuard_85: 1735093009
+      Sprite_RedGuard_161: 1098903873
+      Sprite_RedGuard_59: -1590942745
+      Sprite_RedGuard_189: -733984119
+      Sprite_RedGuard_186: 411713024
+      Sprite_RedGuard_191: 79513477
+      Sprite_RedGuard_9: 1361055812
+      Sprite_RedGuard_100: 1476777987
+      Sprite_RedGuard_127: -910126033
+      Sprite_RedGuard_87: -698885188
+      Sprite_RedGuard_141: 73161669
+      Sprite_RedGuard_139: 1523761742
+      Sprite_RedGuard_184: -1497294912
+      Sprite_RedGuard_15: -1489832488
+      Sprite_RedGuard_23: 1852688799
+      Sprite_RedGuard_123: 351157144
+      Sprite_RedGuard_120: -575178583
+      Sprite_RedGuard_107: 1947526390
+      Sprite_RedGuard_133: 1748722098
+      Sprite_RedGuard_76: -893544390
+      Sprite_RedGuard_5: 1321054291
+      Sprite_RedGuard_205: -192314641
+      Sprite_RedGuard_169: 938889320
+      Sprite_RedGuard_143: 86899209
+      Sprite_RedGuard_71: -1383957491
+      Sprite_RedGuard_111: -1815296284
+      Sprite_RedGuard_98: 1842664641
+      Sprite_RedGuard_57: 2059814795
+      Sprite_RedGuard_124: -1173847370
+      Sprite_RedGuard_156: -1958042445
+      Sprite_RedGuard_179: 1379116246
+      Sprite_RedGuard_203: -1666060953
+      Sprite_RedGuard_146: 536285127
+      Sprite_RedGuard_114: -1336135371
+      Sprite_RedGuard_109: 1418396611
+      Sprite_RedGuard_197: 768182476
+      Sprite_RedGuard_132: -1159881404
+      Sprite_RedGuard_170: -1441150823
+      Sprite_RedGuard_193: 421727904
+      Sprite_RedGuard_131: -201284060
+      Sprite_RedGuard_1: -1336420487
+      Sprite_RedGuard_188: -462017755
+      Sprite_RedGuard_136: -431824260
+      Sprite_RedGuard_55: 912557690
+      Sprite_RedGuard_14: 1534218435
+      Sprite_RedGuard_31: -862866449
+      Sprite_RedGuard_62: 10898556
+      Sprite_RedGuard_12: -1761732648
+      Sprite_RedGuard_201: 74541558
+      Sprite_RedGuard_7: -1409469078
+      Sprite_RedGuard_116: 897839520
+      Sprite_RedGuard_27: 1730606877
+      Sprite_RedGuard_84: 1372960073
+      Sprite_RedGuard_13: -193471149
+      Sprite_RedGuard_47: -278896132
+      Sprite_RedGuard_52: 8250386
+      Sprite_RedGuard_175: 1654482022
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
