@@ -11,22 +11,24 @@ public class Movements : MonoBehaviour
     private float timeForMoove = 0.2f;
     void Update()
     {
-        if (Input.GetKey(KeyCode.Z) && !isMoving)
+        float axeX = Input.GetAxisRaw("Horizontal");
+        float axeY = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(KeyCode.Z) && !isMoving || axeY > 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.up));
         }
 
-        if (Input.GetKey(KeyCode.Q) && !isMoving)
+        if (Input.GetKey(KeyCode.Q) && !isMoving || axeX < 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.left));
         }
 
-        if (Input.GetKey(KeyCode.S) && !isMoving)
+        if (Input.GetKey(KeyCode.S) && !isMoving || axeY < 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.down));
         }
 
-        if (Input.GetKey(KeyCode.D) && !isMoving)
+        if (Input.GetKey(KeyCode.D) && !isMoving || axeX > 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.right));
         }
