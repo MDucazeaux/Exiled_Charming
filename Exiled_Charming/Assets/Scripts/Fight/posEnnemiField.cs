@@ -9,6 +9,7 @@ public class posEnnemiField : MonoBehaviour
     int posX, posY;
     int randomMovement;
     public int nbTurn = 1;
+    public float timerTurn = 2f;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class posEnnemiField : MonoBehaviour
     {
         randomMovement = Random.Range(0, 5);
 
-        if(nbTurn > 0)
+        if(timerTurn <= 0 && nbTurn > 0)
         switch(randomMovement)
         {
             case 0:
@@ -30,6 +31,7 @@ public class posEnnemiField : MonoBehaviour
                 {
                     transform.position += new Vector3(0, 1, 0);
                     nbTurn -= 1;
+                    timerTurn = 2f;
                 }
                 else
                     randomMovement = Random.Range(0, 5);
@@ -40,7 +42,8 @@ public class posEnnemiField : MonoBehaviour
                 {
                     transform.position += new Vector3(0, -1, 0);
                     nbTurn -= 1;
-                }
+                        timerTurn = 2f;
+                    }
                 else
                     randomMovement = Random.Range(0, 5);
                 break;
@@ -50,7 +53,8 @@ public class posEnnemiField : MonoBehaviour
                 {
                     transform.position += new Vector3(1, 0, 0);
                     nbTurn -= 1;
-                }
+                        timerTurn = 2f;
+                    }
                 else
                     randomMovement = Random.Range(0, 5);
                 break;
@@ -60,7 +64,8 @@ public class posEnnemiField : MonoBehaviour
                 {
                     transform.position += new Vector3(-1, 0, 0);
                     nbTurn -= 1;
-                }
+                        timerTurn = 2f;
+                    }
                 else
                     randomMovement = Random.Range(0, 5);
                 break;

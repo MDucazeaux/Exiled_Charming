@@ -39,5 +39,9 @@ public class playermovement : MonoBehaviour
                 ennemi.GetComponent<posEnnemiField>().nbTurn += 1;
             }
         }
+        else
+        {
+            ennemi.GetComponent<posEnnemiField>().timerTurn -= Time.deltaTime;
+        }
     }
 }
