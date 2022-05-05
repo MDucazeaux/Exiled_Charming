@@ -5,23 +5,26 @@ using UnityEngine;
 public class gridSystem : MonoBehaviour
 {
     [SerializeField] private int width, height;
-    [SerializeField] private GameObject tile;
+    [SerializeField] private tileColor tile;
     [SerializeField] private Camera camMain;
+    public int x, y;
 
-    private void Update()
+    private void Start()
     {
         createGrid();
     }
     void createGrid()
     {
-        for(int x = 0; x < width; x++)
+        for(x = 0; x < width; x++)
         {
-            for(int y = 0; y < height; y++)
+            for(y = 0; y < height; y++)
             {
                 var spawnTiles = Instantiate(tile, new Vector3(x, y), Quaternion.identity);
                 spawnTiles.name = $"Tile{x}{y}";
 
-                var offTile = (x % 2 == 0 && y % 2 != 0) || (x % 2 != 0 && x % 2 == 0);
+                var offTile = (x + y) % 2 == 1;
+                tile.makeTiles(offTile);
+
             }
         }
         camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
