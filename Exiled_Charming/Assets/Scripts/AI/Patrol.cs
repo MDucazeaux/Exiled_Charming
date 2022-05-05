@@ -9,9 +9,16 @@ public class Patrol : Node
 
     private float _waitTime = 1f; // in seconds
     private float _waitCounter = 0f;
+    private float posangle;
+
+    private bool wasMovingRight = false;
+    private bool wasMovingLeft = false;
+    private bool wasMovingUp = false;
+    private bool wasMovingDown = false;
     private bool _waiting = false;
+    private bool isMoving = false;
 
-
+    private int limit = 0;
     private Animator _animGuard;
     private Transform wp;
     private Transform _transform;
@@ -26,12 +33,12 @@ public class Patrol : Node
     public override NodeState Evaluate()
     {
         wp = _waypoints[_currentWaypointIndex];
-        float angle = Vector2.Angle(Vector2.up, wp.position);
         if (_waiting)
         {
             _waitCounter += Time.deltaTime;
             if (_waitCounter >= _waitTime)
             {
+                limit = 0;
                 _waiting = false;
             }
         }
@@ -41,73 +48,156 @@ public class Patrol : Node
             {
                 _transform.position = wp.position;
                 _waitCounter = 0f;
+                isMoving = false;
                 _waiting = true;
 
                 _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
             }
             else
             {
-                int limit = 0;
-                if (angle > 340 && angle < 20 && limit == 0)
-                {
-                    if (_transform.CompareTag("Rguard"))
-                    {
-                        _animGuard.SetInteger("RGBehaviour", 0);
-                        limit++;
-                    }
-                    if (_transform.CompareTag("Bguard"))
-                    {
-                        _animGuard.SetInteger("BGBehaviour", 0);
-                    }
-                }
-                else if (angle > 70 && angle < 110 && limit == 0)
-                {
-                    if (_transform.CompareTag("Rguard"))
-                    {
-                        _animGuard.SetInteger("RGBehaviour", 1);
-                        limit++;
-                    }
-                    if (_transform.CompareTag("Bguard"))
-                    {
-                        _animGuard.SetInteger("BGBehaviour", 1);
-                    }
-                }
-                else if (angle > 160 && angle < 200 && limit == 0)
-                {
-                    if (_transform.CompareTag("Rguard"))
-                    {
-                        _animGuard.SetInteger("RGBehaviour", 2);
-                        limit++;
-                    }
-                    if (_transform.CompareTag("Bguard"))
-                    {
-                        _animGuard.SetInteger("BGBehaviour", 2);
-                    }
-                }
-                else if (angle > 250 && angle < 290 && limit == 0)
-                {
-                    if (_transform.CompareTag("Rguard"))
-                    {
-                        _animGuard.SetInteger("RGBehaviour", 3);
-                        limit++;
-                    }
-                    if (_transform.CompareTag("Bguard"))
-                    {
-                        _animGuard.SetInteger("BGBehaviour", 3);
-                    }
-                    
-                }
-                else
-                {
-                    _animGuard.SetInteger("RGBehaviour", -1);
-                    limit = 0;
-                }
                 _transform.position = Vector3.MoveTowards(
                     _transform.position,
                     wp.position,
                     AIBT.speed * Time.deltaTime);
+                isMoving = true;
             }
         }
+        float angle = Vector2.SignedAngle(Vector2.up, wp.position);
+        posangle = angle + 180;
+
+        if (posangle > 210 && posangle < 220 && limit == 0)
+        {
+            //gauche
+            if (_transform.CompareTag("Rguard"))
+            {
+                _animGuard.SetInteger("RGBehaviour", 0);
+                limit++;
+            }
+            if (_transform.CompareTag("Bguard"))
+            {
+                _animGuard.SetInteger("BGBehaviour", 0);
+                limit++;
+            }
+            wasMovingLeft = true;
+            wasMovingUp = false;
+            wasMovingRight = false;
+            wasMovingDown = false;
+        }
+        if (posangle > 260 && posangle < 270 && limit == 0)
+        {
+            //bas
+            if (_transform.CompareTag("Rguard"))
+            {
+                _animGuard.SetInteger("RGBehaviour", 3);
+                limit++;
+            }
+            if (_transform.CompareTag("Bguard"))
+            {
+                _animGuard.SetInteger("BGBehaviour", 3);
+                limit++;
+            }
+            wasMovingLeft = false;
+            wasMovingUp = false;
+            wasMovingRight = false;
+            wasMovingDown = true;
+        }
+        if (posangle > 80 && posangle < 100 && limit == 0)
+        {
+            //droite
+            if (_transform.CompareTag("Rguard"))
+            {
+                _animGuard.SetInteger("RGBehaviour", 1);
+                limit++;
+            }
+            if (_transform.CompareTag("Bguard"))
+            {
+                _animGuard.SetInteger("BGBehaviour", 1);
+                limit++;
+            }
+            wasMovingLeft = false;
+            wasMovingUp = false;
+            wasMovingRight = true;
+            wasMovingDown = false;
+        }
+        if (posangle > 120 && posangle < 135 && limit == 0)
+        {
+            //haut
+            if (_transform.CompareTag("Rguard"))
+            {
+                _animGuard.SetInteger("RGBehaviour", 2);
+                limit++;
+            }
+            if (_transform.CompareTag("Bguard"))
+            {
+                _animGuard.SetInteger("BGBehaviour", 2);
+                limit++;
+            }
+            wasMovingLeft = false;
+            wasMovingUp = true;
+            wasMovingRight = false;
+            wasMovingDown = false;
+        }
+
+        //if(!isMoving)
+        //{
+        //    if (_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", -1);
+        //    }
+        //    if (_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", -1);
+        //    }
+        //}
+
+        //if (!isMoving && wasMovingDown)
+        //{
+        //    if (_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", -1);
+        //    }
+        //    if (_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", -1);
+        //    }
+        //}
+
+        //if (!isMoving && wasMovingLeft)
+        //{
+        //    if (_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", -2);
+        //    }
+        //    if (_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", -2);
+        //    }
+        //}
+
+        //if (!isMoving && wasMovingUp)
+        //{
+        //    if (_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", -4);
+        //    }
+        //    if (_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", -4);
+        //    }
+        //}
+
+        //if (!isMoving && wasMovingRight)
+        //{
+        //    if (_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", -3);
+        //    }
+        //    if (_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", -3);
+        //    }
+        //}
+
         state = NodeState.RUNNING;
         return state;
     }

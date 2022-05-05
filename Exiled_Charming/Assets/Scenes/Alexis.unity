@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48861005}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -185,7 +185,7 @@ Animator:
   m_GameObject: {fileID: 244148825}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0f7e60818163cde42862352bfd46ab91, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9cce3a55656f4cc4a91b934680e0e52d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -464,7 +464,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 885971228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -684,7 +684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1372198930}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5, y: 5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -702,13 +702,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite_RedGuard_78 1
       objectReference: {fileID: 0}
+    - target: {fileID: 350612037808370322, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
+      propertyPath: m_TagString
+      value: Rguard
+      objectReference: {fileID: 0}
+    - target: {fileID: 4353050900328481557, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 538510ac6ff8e434b9f47b37ae6573be, type: 2}
     - target: {fileID: 4403698891008792967, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 244148828}
     - target: {fileID: 4403698891008792967, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
       propertyPath: waypoints.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4403698891008792967, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -718,6 +726,14 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[1]
       value: 
       objectReference: {fileID: 885971229}
+    - target: {fileID: 4403698891008792967, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1372198931}
+    - target: {fileID: 4403698891008792967, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 48861006}
     - target: {fileID: 7571250071019679778, guid: f0107f887334a2246a4b18d20e15a4e7, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -819,7 +835,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954429826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.73, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
