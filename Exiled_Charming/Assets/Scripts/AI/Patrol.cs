@@ -49,56 +49,55 @@ public class Patrol : Node
                     _transform.position,
                     wp.position,
                     AIBT.speed *Time.deltaTime);
-                _transform.LookAt(wp.position);
             }
         }
 
         float angle = Vector2.Angle(Vector2.up, wp.position);
 
-        if(angle == 0)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 0);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 0);
-            }
-        }
-        if(angle == 90)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 1);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 1);
-            }
-        }
-        if(angle == 180)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 2);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 2);
-            }
-        }
-        if(angle == 270)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 3);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 3);
-            }
-        }
+        //if(angle == 0)
+        //{
+        //    if(_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 0);
+        //    }
+        //    if(_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", 0);
+        //    }
+        //}
+        //if(angle == 90)
+        //{
+        //    if(_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 1);
+        //    }
+        //    if(_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", 1);
+        //    }
+        //}
+        //if(angle == 180)
+        //{
+        //    if(_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 2);
+        //    }
+        //    if(_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", 2);
+        //    }
+        //}
+        //if(angle == 270)
+        //{
+        //    if(_transform.CompareTag("Rguard"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 3);
+        //    }
+        //    if(_transform.CompareTag("Bguard"))
+        //    {
+        //        _animGuard.SetInteger("BGBehaviour", 3);
+        //    }
+        //}
 
         state = NodeState.RUNNING;
         return state;

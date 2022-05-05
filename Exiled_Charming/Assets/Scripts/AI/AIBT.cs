@@ -17,8 +17,8 @@ public class AIBT : TreeBehav
     {
         Node root = new Selector(new List<Node>
         {
-            new PrincesseDetector(transform,Player,rguard)
-            
+            new PrincesseDetector(transform,Player,rguard),
+            new Patrol(transform,rguard,waypoints)
         });
 
         return root;
