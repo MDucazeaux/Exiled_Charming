@@ -11,6 +11,7 @@ public class Patrol : Node
     private float _waitCounter = 0f;
     private bool _waiting = false;
 
+
     private Animator _animGuard;
     private Transform wp;
     private Transform _transform;
@@ -24,6 +25,8 @@ public class Patrol : Node
 
     public override NodeState Evaluate()
     {
+        wp = _waypoints[_currentWaypointIndex];
+        float angle = Vector2.Angle(Vector2.up, wp.position);
         if (_waiting)
         {
             _waitCounter += Time.deltaTime;
@@ -34,8 +37,7 @@ public class Patrol : Node
         }
         else
         {
-            wp = _waypoints[_currentWaypointIndex];
-            if (Vector3.Distance(_transform.position, wp.position) < 0.01f)
+            if (Vector2.Distance(_transform.position, wp.position) < 0.01f)
             {
                 _transform.position = wp.position;
                 _waitCounter = 0f;
@@ -45,61 +47,67 @@ public class Patrol : Node
             }
             else
             {
+                int limit = 0;
+                if (angle > 340 && angle < 20 && limit == 0)
+                {
+                    if (_transform.CompareTag("Rguard"))
+                    {
+                        _animGuard.SetInteger("RGBehaviour", 0);
+                        limit++;
+                    }
+                    if (_transform.CompareTag("Bguard"))
+                    {
+                        _animGuard.SetInteger("BGBehaviour", 0);
+                    }
+                }
+                else if (angle > 70 && angle < 110 && limit == 0)
+                {
+                    if (_transform.CompareTag("Rguard"))
+                    {
+                        _animGuard.SetInteger("RGBehaviour", 1);
+                        limit++;
+                    }
+                    if (_transform.CompareTag("Bguard"))
+                    {
+                        _animGuard.SetInteger("BGBehaviour", 1);
+                    }
+                }
+                else if (angle > 160 && angle < 200 && limit == 0)
+                {
+                    if (_transform.CompareTag("Rguard"))
+                    {
+                        _animGuard.SetInteger("RGBehaviour", 2);
+                        limit++;
+                    }
+                    if (_transform.CompareTag("Bguard"))
+                    {
+                        _animGuard.SetInteger("BGBehaviour", 2);
+                    }
+                }
+                else if (angle > 250 && angle < 290 && limit == 0)
+                {
+                    if (_transform.CompareTag("Rguard"))
+                    {
+                        _animGuard.SetInteger("RGBehaviour", 3);
+                        limit++;
+                    }
+                    if (_transform.CompareTag("Bguard"))
+                    {
+                        _animGuard.SetInteger("BGBehaviour", 3);
+                    }
+                    
+                }
+                else
+                {
+                    _animGuard.SetInteger("RGBehaviour", -1);
+                    limit = 0;
+                }
                 _transform.position = Vector3.MoveTowards(
                     _transform.position,
                     wp.position,
-                    AIBT.speed *Time.deltaTime);
-                _transform.LookAt(wp.position);
+                    AIBT.speed * Time.deltaTime);
             }
         }
-
-        float angle = Vector2.Angle(Vector2.up, wp.position);
-
-        if(angle == 0)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 0);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 0);
-            }
-        }
-        if(angle == 90)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 1);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 1);
-            }
-        }
-        if(angle == 180)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 2);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 2);
-            }
-        }
-        if(angle == 270)
-        {
-            if(_transform.CompareTag("Rguard"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 3);
-            }
-            if(_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 3);
-            }
-        }
-
         state = NodeState.RUNNING;
         return state;
     }
