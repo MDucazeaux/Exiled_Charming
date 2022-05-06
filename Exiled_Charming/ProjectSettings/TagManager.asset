@@ -4,15 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - obstacle
+  - Rguard
+  - Bguard
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - FightScene
+  - 
   - Water
   - UI
-  - obstacle
+  - 
   - 
   - 
   - 
