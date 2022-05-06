@@ -12,7 +12,7 @@ public class playermovement : MonoBehaviour
         posX = Random.Range(1, 20);
         posY = Random.Range(1, 10);
 
-        transform.position = new Vector3(posX, posY, 0);
+        transform.position = new Vector3(posX, posY, -3);
     }
     void Update()
     {
