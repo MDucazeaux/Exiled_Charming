@@ -5,7 +5,7 @@ using UnityEngine;
 public class choicesPlayer : MonoBehaviour
 {
     public static choicesPlayer Instance;
-    public playermovement Player;
+
     public int choice;
 
     private void Awake()
@@ -18,7 +18,7 @@ public class choicesPlayer : MonoBehaviour
 
     private void Update()
     {
-        if(Player.PlayerTurn)
+        if(this.GetComponent<playermovement>().PlayerTurn)
         switch(choice)
         {
             case 0:
@@ -44,12 +44,18 @@ public class choicesPlayer : MonoBehaviour
                 }
                     break;
             case 1:
-                break;
+                    transform.GetComponent<HpManager>().heal += 50;
+                    Debug.Log("heal");
+                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                    break;
             case 2:
+                    transform.GetComponent<attackType>().typeAttack = 0;
                 break;
             case 3:
-                break;
+                    transform.GetComponent<attackType>().typeAttack = 1;
+                    break;
             case 4:
+                    fightManager.Instance.updateState(GameState.EnemyTurn);
                 break;
         }
     }

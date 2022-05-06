@@ -5,7 +5,7 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     public bool PlayerTurn;
-    int posX, posY;
+    float posX, posY;
 
     private void Awake()
     {
@@ -17,7 +17,6 @@ public class playermovement : MonoBehaviour
         posX = Random.Range(1, 20);
         posY = Random.Range(1, 10);
 
-        transform.position = new Vector3(posX, posY, -3);
     }
     void Update()
     {

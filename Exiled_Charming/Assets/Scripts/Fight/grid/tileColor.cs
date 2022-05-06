@@ -22,4 +22,5 @@ public class tileColor : MonoBehaviour
     {
         tileOpen.SetActive(false);
     }
+
 }

@@ -15,10 +15,10 @@ public class StatsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int level = transform.GetComponent<XpManager>().Level;
+        //int level = transform.GetComponent<XpManager>().Level;
 
-        Def = Def + 10 * level;
-        AD = AD + 15 * level;
+        //Def = Def + 10 * level;
+        //AD = AD + 15 * level;
         
     }
 }
