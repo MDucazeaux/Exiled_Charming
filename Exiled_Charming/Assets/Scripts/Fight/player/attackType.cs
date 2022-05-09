@@ -1,12 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class attackType : MonoBehaviour
 {
+    public static attackType Instance;
     public int typeAttack = -1;
     public GameObject hTiles;
     public GameObject vTiles;
+    public Button btnValided;
+    public Button btnReturn;
+
+    public bool isValided = false;
 
     public List<GameObject> hSideTiles;
 
@@ -22,11 +28,19 @@ public class attackType : MonoBehaviour
                 {
                     hTiles.SetActive(true);
                     vTiles.SetActive(false);
+
+                    btnValided.gameObject.SetActive(true);
+                    btnReturn.gameObject.SetActive(true);
+                    
                 }
                 else
                 {
                     hTiles.SetActive(false);
                     vTiles.SetActive(false);
+
+                    isValided = false;
+                    btnValided.gameObject.SetActive(false);
+                    btnReturn.gameObject.SetActive(false);
                 }
                 break;
 
@@ -35,14 +49,31 @@ public class attackType : MonoBehaviour
                 {
                     hTiles.SetActive(false);
                     vTiles.SetActive(true);
+
+                    btnValided.gameObject.SetActive(true);
+                    btnReturn.gameObject.SetActive(true);
                 }
                 else
                 {
                     hTiles.SetActive(false);
                     vTiles.SetActive(false);
+
+                    isValided = false;
+                    btnValided.gameObject.SetActive(false);
+                    btnReturn.gameObject.SetActive(false);
                 }
                 break;
         }
+    }
+
+    public void Valid()
+    {
+        isValided = true;
+    }
+
+    public void Return()
+    {
+        isValided = false;
     }
 
 }

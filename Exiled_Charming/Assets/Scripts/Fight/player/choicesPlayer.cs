@@ -5,7 +5,9 @@ using UnityEngine;
 public class choicesPlayer : MonoBehaviour
 {
     public static choicesPlayer Instance;
+    private bool canMove, canHeal ;
 
+    public bool canAttack;
     public int choice;
 
     private void Awake()
@@ -14,49 +16,70 @@ public class choicesPlayer : MonoBehaviour
     }
     private void Start()
     {
+        canAttack = true;
+        canMove  = true;
     }
 
     private void Update()
     {
-        if(this.GetComponent<playermovement>().PlayerTurn)
-        switch(choice)
+        if (this.GetComponent<playermovement>().PlayerTurn)
         {
-            case 0:
-                if(Input.GetKeyDown(KeyCode.W))
-                {
-                    transform.position += new Vector3(0, 1, 0);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
-                }
-                else if (Input.GetKeyDown(KeyCode.A))
-                {
-                    transform.position -= new Vector3(1, 0, 0);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
-                }
-                else if (Input.GetKeyDown(KeyCode.S))
-                {
-                    transform.position -= new Vector3(0, 1, 0);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
-                }
-                else if (Input.GetKeyDown(KeyCode.D))
-                {
-                    transform.position += new Vector3(1, 0, 0);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
-                }
+            switch (choice)
+            {
+                case 0:
+                    if (canMove)
+                    {
+                        if (Input.GetKeyDown(KeyCode.W))
+                        {
+                            transform.position += new Vector3(0, 1, 0);
+                            choice = -1;
+                            canMove = false;
+                        }
+                        else if (Input.GetKeyDown(KeyCode.A))
+                        {
+                            transform.position -= new Vector3(1, 0, 0);
+                            choice = -1;
+                            canMove = false;
+                        }
+                        else if (Input.GetKeyDown(KeyCode.S))
+                        {
+                            transform.position -= new Vector3(0, 1, 0);
+                            choice = -1;
+                            canMove = false;
+                        }
+                        else if (Input.GetKeyDown(KeyCode.D))
+                        {
+                            transform.position += new Vector3(1, 0, 0);
+                            choice = -1;
+                            canMove = false;
+                        }
+                    }
                     break;
-            case 1:
-                    transform.GetComponent<HpManager>().heal += 50;
-                    Debug.Log("heal");
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                case 1:
+                    if (!canMove)
+                    {
+                        transform.GetComponent<HpManager>().heal += 50;
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        choice = -1;
+                    }
                     break;
-            case 2:
-                    transform.GetComponent<attackType>().typeAttack = 0;
-                break;
-            case 3:
-                    transform.GetComponent<attackType>().typeAttack = 1;
+                case 2:
+                    if (!canMove)
+                    {
+                        transform.GetComponent<attackType>().typeAttack = 0;
+                    }
                     break;
-            case 4:
+                case 3:
+                    if (!canMove)
+                    {
+                        transform.GetComponent<attackType>().typeAttack = 1;
+                    }
+                    break;
+                case 4:
                     fightManager.Instance.updateState(GameState.EnemyTurn);
-                break;
+                    choice = -1;
+                    break;
+            }
         }
     }
     public void pickMove()

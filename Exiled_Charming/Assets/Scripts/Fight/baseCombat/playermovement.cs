@@ -23,7 +23,7 @@ public class playermovement : MonoBehaviour
         // waits for the player turn to make action
         if(fightManager.Instance.state == GameState.playerTurn && PlayerTurn)
         {
-            //player can use heal, attack1, attack2, move
+            //player keyboard controls
 
             
             if(Input.GetKeyDown(KeyCode.DownArrow))
@@ -46,8 +46,7 @@ public class playermovement : MonoBehaviour
                 choicesPlayer.Instance.pickPass();
             }
 
-            //switch to false
-            //call EnemyTurn
+            //player controller controls
         }
     }
 
