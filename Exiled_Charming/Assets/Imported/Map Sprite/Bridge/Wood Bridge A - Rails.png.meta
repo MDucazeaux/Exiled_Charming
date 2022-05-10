@@ -112,7 +112,7 @@ TextureImporter:
         width: 96
         height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -120,6 +120,27 @@ TextureImporter:
       bones: []
       spriteID: 49d4aa6f94b24b043a98510ac84e8e8b
       internalID: -1839351474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wood Bridge A - Rails_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 208
+        width: 96
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2116c8d0e9bb767449450bfb469eb9b4
+      internalID: 912153300
       vertices: []
       indices: 
       edges: []
@@ -135,6 +156,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Wood Bridge A - Rails_1: 912153300
       Wood Bridge A - Rails_0: -1839351474
   spritePackingTag: 
   pSDRemoveMatte: 0
