@@ -50,10 +50,4 @@ public class playermovement : MonoBehaviour
         }
     }
 
-    private void EnemyTurn()
-    {
-        //end of the player turn , switch to the enemyTurn
-        fightManager.Instance.updateState(GameState.EnemyTurn);
-    }
-
 }
