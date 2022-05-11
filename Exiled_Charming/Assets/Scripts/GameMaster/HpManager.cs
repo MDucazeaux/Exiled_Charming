@@ -7,11 +7,14 @@ public class HpManager : MonoBehaviour
     public int BasedHP;
     public int heal;
     public int Hp;
+    public int totalHp;
     // Start is called before the first frame update
     void Start()
     {
         BasedHP = 100;
         heal = 0;
+
+        totalHp = Hp;
     }
 
     // Update is called once per frame
@@ -20,6 +23,7 @@ public class HpManager : MonoBehaviour
         int level = transform.GetComponent<XpManager>().Level;
         //int hpEquipment = transform.GetComponentInChildren<Inventorycomponent>().HpStat;
 
-        Hp = BasedHP + 10 * level + heal; // + hpEquipment;
+        Hp = BasedHP + (10 * level + heal); // + hpEquipment;
+        
     }
 }

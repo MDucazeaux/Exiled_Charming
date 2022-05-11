@@ -8,6 +8,7 @@ TagManager:
   - Bguard
   - ennemi
   - nearSlash
+  - farSlash
   layers:
   - Default
   - TransparentFX

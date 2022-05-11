@@ -1,10 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class choicesPlayer : MonoBehaviour
 {
     public static choicesPlayer Instance;
+
+    public Button Move;
+    public Button Heal;
+    public Button Pass;
+    public Button Atk1;
+    public Button Atk2;
+
     private bool canMove, canHeal ;
 
     public bool canAttack;
@@ -18,6 +26,11 @@ public class choicesPlayer : MonoBehaviour
     {
         canAttack = true;
         canMove  = true;
+
+
+        Heal.gameObject.SetActive(false);
+        Atk1.gameObject.SetActive(false);
+        Atk2.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -33,21 +46,37 @@ public class choicesPlayer : MonoBehaviour
                         if (Input.GetKeyDown(KeyCode.W))
                         {
                             transform.position += new Vector3(0, 1, 0);
+                            Move.gameObject.SetActive(false);
+                            Atk1.gameObject.SetActive(true);
+                            Atk2.gameObject.SetActive(true);
+                            Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
                         else if (Input.GetKeyDown(KeyCode.A))
                         {
                             transform.position -= new Vector3(1, 0, 0);
+                            Move.gameObject.SetActive(false);
+                            Atk1.gameObject.SetActive(true);
+                            Atk2.gameObject.SetActive(true);
+                            Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
                         else if (Input.GetKeyDown(KeyCode.S))
                         {
                             transform.position -= new Vector3(0, 1, 0);
+                            Move.gameObject.SetActive(false);
+                            Atk1.gameObject.SetActive(true);
+                            Atk2.gameObject.SetActive(true);
+                            Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
                         else if (Input.GetKeyDown(KeyCode.D))
                         {
                             transform.position += new Vector3(1, 0, 0);
+                            Move.gameObject.SetActive(false);
+                            Atk1.gameObject.SetActive(true);
+                            Atk2.gameObject.SetActive(true);
+                            Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
                     }
