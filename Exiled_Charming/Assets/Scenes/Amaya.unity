@@ -1360,7 +1360,7 @@ GameObject:
   - component: {fileID: 1380983434}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1565,7 +1565,9 @@ MonoBehaviour:
   btnValided: {fileID: 32424439}
   btnReturn: {fileID: 1484938510}
   isValided: 0
-  hSideTiles: []
+  tile: {fileID: 0}
+  nbChoice: -1
+  enableAttack: 0
 --- !u!1 &1463367374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1987194161825009731, guid: 61b706e49c9b039429c56218fb07736f, type: 3}
@@ -2062,7 +2064,7 @@ GameObject:
   - component: {fileID: 1669837020}
   - component: {fileID: 1669837019}
   - component: {fileID: 1669837018}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ennemi
   m_TagString: ennemi
   m_Icon: {fileID: 0}
