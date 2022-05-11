@@ -6,65 +6,56 @@ using UnityEngine.UI;
 public class attackType : MonoBehaviour
 {
     public static attackType Instance;
+
+    public detectionHighLight highLights;
     public int typeAttack = -1;
-    public GameObject hTiles;
-    public GameObject vTiles;
     public Button btnValided;
     public Button btnReturn;
 
     public bool isValided = false;
 
-    public List<GameObject> hSideTiles;
+    public GameObject tile = null;
+
+    public int nbChoice = -1;
+    public bool enableAttack;
 
     private void Start()
     {
+        nbChoice = choicesPlayer.Instance.choice;
+        enableAttack = GameObject.FindGameObjectWithTag("nearSlash").GetComponent<detectionHighLight>().GetComponentInChildren<triggerHighLights>().enableAttack;
     }
     public void Update()
     {
+        if(tile != null)
+        {
+            enableAttack = true;
+        }
+
         switch(typeAttack)
         {
             case 0:
-                if (choicesPlayer.Instance.choice == 2 && fightManager.Instance.state == GameState.playerTurn)
+                //player need to pick atk1                it needs to be the player's turn                        the highlight concerned need to be enabled;
+                if (enableAttack)
                 {
-                    hTiles.SetActive(true);
-                    vTiles.SetActive(false);
-
                     btnValided.gameObject.SetActive(true);
                     btnReturn.gameObject.SetActive(true);
-                    
-                }
-                else
-                {
-                    hTiles.SetActive(false);
-                    vTiles.SetActive(false);
+                    Debug.Log("coucou");
 
-                    isValided = false;
-                    btnValided.gameObject.SetActive(false);
-                    btnReturn.gameObject.SetActive(false);
                 }
                 break;
 
             case 1:
-                if (choicesPlayer.Instance.choice == 3 && fightManager.Instance.state == GameState.playerTurn)
+                //player need to pick atk2                it needs to be the player's turn                        the highlight concerned need to be enabled;
+                if (enableAttack)
                 {
-                    hTiles.SetActive(false);
-                    vTiles.SetActive(true);
-
                     btnValided.gameObject.SetActive(true);
                     btnReturn.gameObject.SetActive(true);
-                }
-                else
-                {
-                    hTiles.SetActive(false);
-                    vTiles.SetActive(false);
-
-                    isValided = false;
-                    btnValided.gameObject.SetActive(false);
-                    btnReturn.gameObject.SetActive(false);
                 }
                 break;
         }
     }
+
+    //the player cant attack if he has nothing in range since it would be useless, if he doesnt have to heal, cant move and doesnt have anyone in range he'll need to pass his turn.
 
     public void Valid()
     {

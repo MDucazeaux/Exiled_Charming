@@ -26,6 +26,7 @@ public class choicesPlayer : MonoBehaviour
         {
             switch (choice)
             {
+                //the player has to move first (one case range).
                 case 0:
                     if (canMove)
                     {
@@ -51,6 +52,11 @@ public class choicesPlayer : MonoBehaviour
                         }
                     }
                     break;
+
+                //once the player moved he has many choices : 
+
+
+                //he can heal.
                 case 1:
                     if (!canMove)
                     {
@@ -59,18 +65,24 @@ public class choicesPlayer : MonoBehaviour
                         choice = -1;
                     }
                     break;
+
+                //he can do the first type of attack (crit).
                 case 2:
                     if (!canMove)
                     {
                         transform.GetComponent<attackType>().typeAttack = 0;
                     }
                     break;
+
+                //he can do the second type of attack(no crit).
                 case 3:
                     if (!canMove)
                     {
                         transform.GetComponent<attackType>().typeAttack = 1;
                     }
                     break;
+
+                //he can also pass if he doesnt want to do anything.
                 case 4:
                     fightManager.Instance.updateState(GameState.EnemyTurn);
                     choice = -1;

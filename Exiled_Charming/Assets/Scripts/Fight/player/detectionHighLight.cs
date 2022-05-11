@@ -4,26 +4,14 @@ using UnityEngine;
 
 public class detectionHighLight : MonoBehaviour
 {
-    public bool dealDamage;
+    public GameObject Player;
 
-    private GameObject ennemi;
-
-    void dealDamageToEnemy()
+    private void Update()
     {
-        if (dealDamage && GetComponentInParent<attackType>().isValided)
-        {
-            ennemi.GetComponent<HpManager>().BasedHP -= this.GetComponentInParent<StatsManager>().AD;
-            dealDamage = false;
-        }
-    }
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.gameObject.name == "ennemi")
-        {
-            ennemi = other.gameObject;
-            dealDamage = true;
+        float x = Player.transform.position.x;
+        float y = Player.transform.position.y;
 
-            dealDamageToEnemy(),
-        }
+        transform.position = new Vector3(x, y, -0.1f);
+
     }
 }

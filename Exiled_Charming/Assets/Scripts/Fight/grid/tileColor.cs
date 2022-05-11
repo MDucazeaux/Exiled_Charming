@@ -6,21 +6,13 @@ public class tileColor : MonoBehaviour
 {
     [SerializeField] private Color color1, color2;
     [SerializeField] private SpriteRenderer rendererTile;
-    [SerializeField] private GameObject tileOpen;
+    [SerializeField] private GameObject tileOccuped;
+
+    private GameObject tile = null;
 
     public void makeTiles(bool offSet)
     {
-        rendererTile.color = offSet ? color1 : color2;
-    }
-
-    void OnMouseEnter()
-    {
-        tileOpen.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        tileOpen.SetActive(false);
+        rendererTile.color = offSet ? color1 : color2; //ground colors
     }
 
 }
