@@ -21,7 +21,7 @@ public class attackType : MonoBehaviour
     private void Start()
     {
         enableAttack1 = GameObject.FindGameObjectWithTag("nearSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight1>().enableAttack;
-        enableAttack1 = GameObject.FindGameObjectWithTag("farSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight2>().enableAttack;
+        enableAttack2 = GameObject.FindGameObjectWithTag("farSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight2>().enableAttack;
     }
     public void Update()
     {
@@ -87,7 +87,7 @@ public class attackType : MonoBehaviour
         int def = tile.GetComponent<StatsManager>().Def;
         tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
         enableAttack2 = false;
-        atkNb = 0;
+        atkNb = 2;
     }
 
     public void emptyTile()

@@ -9,6 +9,7 @@ TagManager:
   - ennemi
   - nearSlash
   - farSlash
+  - Border
   layers:
   - Default
   - TransparentFX

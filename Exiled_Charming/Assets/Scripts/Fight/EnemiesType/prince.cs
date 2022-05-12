@@ -16,9 +16,5 @@ public class prince : MonoBehaviour
 
             enabledTurn = false;
         }
-        else
-        {
-            Debug.Log("not his turn...");
-        }
     }
 }

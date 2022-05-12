@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class choicesIA : MonoBehaviour
 {
-    public static choicesIA Instance;
+    [HideInInspector] public static choicesIA Instance;
 
-    public int x;
+    [HideInInspector] public GameObject isCollider = null;
 
-    public int choice = -1;
+    [HideInInspector] public int x;
 
-    private int healCapacity;
+    [HideInInspector] public int choice = -1;
+
+    [HideInInspector] private int healCapacity;
+
+    public List<GameObject> sensors = new List<GameObject>();
 
     public int entityType = 0;
 
-    public bool canMove = true;
+    [HideInInspector] public bool canMove = true;
 
     private void Start()
     {
@@ -36,10 +40,50 @@ public class choicesIA : MonoBehaviour
                     x = Random.Range(0, 6);
                     switch (x)
                     {
-                        case 0: this.gameObject.transform.position += new Vector3(1, 0, 0); canMove = false; break;
-                        case 1: this.gameObject.transform.position += new Vector3(0, 1, 0); canMove = false; break;
-                        case 2: this.gameObject.transform.position += new Vector3(0, -1, 0); canMove = false; break;
-                        case 3: this.gameObject.transform.position += new Vector3(-1, 0, 0); canMove = false; break;
+                        case 0:
+                                if (sensors[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                                {
+                                    this.gameObject.transform.position += new Vector3(1, 0, 0);
+                                    canMove = false;
+                                }
+                                else
+                                {
+                                    Debug.Log("no space for me here :(");
+                                }
+                                break;
+                        case 1:
+                                if (sensors[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                                {
+                                    this.gameObject.transform.position += new Vector3(0, 1, 0);
+                                    canMove = false;
+                                }
+                                else
+                                {
+                                    Debug.Log("no space for me here :(");
+                                }
+                                break;
+                        case 2:
+                                if (sensors[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                                {
+                                    this.gameObject.transform.position += new Vector3(0, -1, 0);
+                                    canMove = false;
+                                }
+                                else
+                                {
+                                    Debug.Log("no space for me here :(");
+                                }
+                                break;
+                        case 3:
+                                if (sensors[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                                {
+                                    this.gameObject.transform.position += new Vector3(-1, 0, 0);
+                                    canMove = false;
+                                }
+                                else
+                                {
+                                    Debug.Log("no space for me here :(");
+                                }
+                                break;
                     }
                 }
                 else if (!canMove)

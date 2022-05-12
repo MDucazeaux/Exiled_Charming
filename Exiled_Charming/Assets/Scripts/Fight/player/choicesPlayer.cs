@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class choicesPlayer : MonoBehaviour
 {
-    public static choicesPlayer Instance;
+    [HideInInspector] public static choicesPlayer Instance;
+
+    public List<GameObject> possibleMove = new List<GameObject>();
 
     public Button Move;
     public Button Heal;
@@ -13,10 +15,9 @@ public class choicesPlayer : MonoBehaviour
     public Button Atk1;
     public Button Atk2;
 
-    private bool canMove, canHeal ;
+    private bool canMove, canHeal;
 
-    public bool canAttack;
-    public int choice;
+    [HideInInspector] public int choice;
 
     private void Awake()
     {
@@ -24,7 +25,6 @@ public class choicesPlayer : MonoBehaviour
     }
     private void Start()
     {
-        canAttack = true;
         canMove  = true;
 
 
@@ -44,7 +44,7 @@ public class choicesPlayer : MonoBehaviour
                 case 0:
                     if (canMove)
                     {
-                        if (Input.GetKeyDown(KeyCode.W))
+                        if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position += new Vector3(0, 1, 0);
                             Move.gameObject.SetActive(false);
@@ -53,7 +53,13 @@ public class choicesPlayer : MonoBehaviour
                             Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
-                        else if (Input.GetKeyDown(KeyCode.A))
+                        else
+                        {
+                           
+                        }
+                        
+                        
+                        if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position -= new Vector3(1, 0, 0);
                             Move.gameObject.SetActive(false);
@@ -62,7 +68,12 @@ public class choicesPlayer : MonoBehaviour
                             Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
-                        else if (Input.GetKeyDown(KeyCode.S))
+                        else
+                        {
+                        }
+
+
+                        if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position -= new Vector3(0, 1, 0);
                             Move.gameObject.SetActive(false);
@@ -71,7 +82,12 @@ public class choicesPlayer : MonoBehaviour
                             Heal.gameObject.SetActive(true);
                             canMove = false;
                         }
-                        else if (Input.GetKeyDown(KeyCode.D))
+                        else
+                        {
+                        }
+
+
+                        if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position += new Vector3(1, 0, 0);
                             Move.gameObject.SetActive(false);
@@ -79,6 +95,9 @@ public class choicesPlayer : MonoBehaviour
                             Atk2.gameObject.SetActive(true);
                             Heal.gameObject.SetActive(true);
                             canMove = false;
+                        }
+                        else
+                        {
                         }
                     }
                     break;

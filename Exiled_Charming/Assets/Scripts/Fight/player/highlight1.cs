@@ -9,8 +9,6 @@ public class highlight1 : MonoBehaviour
     private GameObject Player;
     private GameObject colliderGO = null; //empty game object that will be initialized after through collision
 
-    public GameObject playerSelector;
-
     private Color originalColor;
 
     public bool enableAttack; //will tell if the player will be able to attack it or not
@@ -19,8 +17,6 @@ public class highlight1 : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<attackType>().gameObject;
 
         enableAttack = false; //set the attack permission to false since colliderGO is empty
-
-        originalColor = playerSelector.GetComponent<SpriteRenderer>().color;//will permite to go back on the original color when the player finished selecting its tile to attack on
     }
 
     private void Update()
@@ -65,46 +61,17 @@ public class highlight1 : MonoBehaviour
         this.gameObject.GetComponent<SpriteRenderer>().enabled = true; //enable the symbol to show the player's range (enabled if enemy out of range)
     }
 
-
-
-    private void OnMouseEnter()
-    {
-        if(this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
-            playerSelector.SetActive(true);// player can see which tile he will select
-    }
-
-
-
-    private void OnMouseExit()
-    {
-        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
-            playerSelector.SetActive(false); //player out of the tile so we disable the playerSelector tile so that the player knows which tile his mouse's on
-    }
-
-
-
     private void OnMouseDown()
     {
-        playerSelector.GetComponent<SpriteRenderer>().color = Color.green; //will show that the player valided the tile
-
-        if (colliderGO != null)
+        if (colliderGO != null && choicesPlayer.Instance.choice == 2)
         {
             Player.GetComponent<attackType>().tile = colliderGO;
             Player.GetComponent<attackType>().atkNb = 1;
         }
 
-        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true && colliderGO == null)
+        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true && colliderGO == null && choicesPlayer.Instance.choice == 2)
         {
             Player.GetComponent<attackType>().emptyTile();
         }
-    }
-
-
-
-    private void OnMouseUp()
-    {
-        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
-            playerSelector.GetComponent<SpriteRenderer>().color = originalColor;// will unrelease the touch so that the tile doesnt stay green
-        else playerSelector.GetComponent<SpriteRenderer>().enabled = false;
     }
 }
