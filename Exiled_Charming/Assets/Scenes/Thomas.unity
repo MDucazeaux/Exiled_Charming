@@ -318,6 +318,9 @@ MonoBehaviour:
     baseValue: 0
   Armor:
     baseValue: 0
+  Damagetxt: {fileID: 1916307009}
+  Armortxt: {fileID: 1907497747}
+  Currenthealth: {fileID: 338884292}
 --- !u!1 &175473114
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,12 +1113,12 @@ GameObject:
   - component: {fileID: 381089575}
   - component: {fileID: 381089574}
   m_Layer: 5
-  m_Name: Armor image
+  m_Name: Armorimage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &381089573
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2145,12 +2148,12 @@ GameObject:
   - component: {fileID: 1016551143}
   - component: {fileID: 1016551142}
   m_Layer: 5
-  m_Name: Weopon Image
+  m_Name: WeoponImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016551141
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2442,7 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1887606d87c1e72488b928c76e577236, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryItemController: {fileID: 0}
+  equipment: {fileID: 0}
   Health: 100
   Damage: 0
   Armor: 0

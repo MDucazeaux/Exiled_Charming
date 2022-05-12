@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class CharacterStats : MonoBehaviour
 {
     public int MaxHealth = 100;
@@ -7,6 +7,10 @@ public class CharacterStats : MonoBehaviour
 
     public Stats Damage;
     public Stats Armor;
+
+    public Text Damagetxt;
+    public Text Armortxt;
+    public Text Currenthealth;
 
     private void Awake()
     {
@@ -17,8 +21,12 @@ public class CharacterStats : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.T))
         {
-            TakeDamage(10);
+            TakeDamage(10000000);
         }
+
+      Damagetxt.text = $"Damage : {Damage.GetValue()}";
+      Armortxt.text = $"Armor : {Armor.GetValue()}";
+      Currenthealth.text = $"Health : {CurrentHealth}";
     }
     public void TakeDamage(int Damage)
     {

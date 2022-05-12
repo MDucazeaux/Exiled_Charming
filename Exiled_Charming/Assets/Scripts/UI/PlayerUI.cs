@@ -20,14 +20,7 @@ public class PlayerUI : MonoBehaviour
     {
         Instance = this;
     }
-
-    public void update()
-    {
-
-        Damage = equipment.DamageModifier;
-        Armor = equipment.ArmorModifier;
-    }
-
+   
     public void IncreaseHealth(int value)
     {
         Health += value;
@@ -36,7 +29,7 @@ public class PlayerUI : MonoBehaviour
 
     public void IncreaseDamage(int value)
     {
-        Damage += value;
+        Damage += equipment.DamageModifier;
         DamageTxt.text = $"Damage : {Damage}";
     }
 
