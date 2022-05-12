@@ -98,6 +98,14 @@ public class SaveData
     public Vector3 RespawnPositionSaved;
     
     public int HpSaved;
+    public int LevelSaved;
 
-    
+    public float XpSaved;
+    public float MaxXpSaved;
+
+    public int DefSaved;
+    public int ADSaved;
+
+
+
 }

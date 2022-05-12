@@ -7,6 +7,8 @@ public class StatsManager : MonoBehaviour
     // Start is called before the first frame update
     public int Def;
     public int AD;
+    public int BaseAd;
+    public int BaseDef;
     void Start()
     {
         
@@ -17,8 +19,21 @@ public class StatsManager : MonoBehaviour
     {
         int level = transform.GetComponent<XpManager>().Level;
 
-        Def = Def + 10 * level;
-        AD = AD + 15 * level;
-        
+        Def = BaseDef + 10 * level;//+ Stats armure
+        AD = BaseAd + 15 * level;// + Stats armure
+
+        if (transform.GetComponent<Movements>())
+        {
+            if (SaveManager.instance.HasLoaded)
+            {
+                BaseDef = SaveManager.instance.ActiveSave.DefSaved;
+                BaseAd = SaveManager.instance.ActiveSave.ADSaved;
+            }
+
+            SaveManager.instance.ActiveSave.DefSaved = BaseDef;
+            SaveManager.instance.ActiveSave.ADSaved = BaseAd;
+
+        }
+       
     }
 }

@@ -156,6 +156,11 @@ MonoBehaviour:
     SaveName: test1
     RespawnPositionSaved: {x: 0, y: 0, z: 0}
     HpSaved: 0
+    LevelSaved: 0
+    XpSaved: 0
+    MaxXpSaved: 0
+    DefSaved: 0
+    ADSaved: 0
   HasLoaded: 0
 --- !u!4 &1071648710
 Transform:
@@ -172,6 +177,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1072964396 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5097061940754661889, guid: d51758606dbf4b1438e286a518b1f3ac, type: 3}
+  m_PrefabInstance: {fileID: 1712026891}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1072964397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072964396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d5428a086e4ee4da981049ca32016a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  Xp: 0
+--- !u!114 &1072964398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072964396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 212f62c5f0787bf438bb6e349c8e4295, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Def: 0
+  AD: 0
+  BaseAd: 0
+  BaseDef: 0
+--- !u!114 &1072964399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072964396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d057adc18abd0743a4a515a6845973d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Hp: 0
 --- !u!1001 &1712026891
 PrefabInstance:
   m_ObjectHideFlags: 0

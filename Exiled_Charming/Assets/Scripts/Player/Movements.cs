@@ -21,6 +21,7 @@ public class Movements : MonoBehaviour
             SaveManager.instance.HasLoaded = false;
         }
 
+        SaveManager.instance.ActiveSave.RespawnPositionSaved = transform.position;
 
         if (Input.GetKey(KeyCode.Z) && !isMoving)
         {
