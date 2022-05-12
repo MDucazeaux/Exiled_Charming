@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EquipmentManager : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class EquipmentManager : MonoBehaviour
     public delegate void OnEquipmentChanged(Equipment newItem, Equipment oldItem);
     public OnEquipmentChanged onEquipmentChanged;
 
+    public List<Image> images;
+
     private void Start()
     {
         inventory = InventoryManager.Instance;
@@ -38,15 +41,20 @@ public class EquipmentManager : MonoBehaviour
         {
             oldItem = CurrentEquipment[Slotindex];
             inventory.Add(oldItem);
-            inventory.ListItems();
         }
 
         if (onEquipmentChanged != null)
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
-            inventory.ListItems();
         }
 
         CurrentEquipment[Slotindex] = newItem;
+        EquipeUI(newItem);
+    }
+
+    public void EquipeUI(Equipment equipment)
+    {
+        images[(int)equipment.equipmentSlot].enabled = true;
+        images[(int)equipment.equipmentSlot].sprite = equipment.Icon;
     }
 }
