@@ -38,11 +38,13 @@ public class EquipmentManager : MonoBehaviour
         {
             oldItem = CurrentEquipment[Slotindex];
             inventory.Add(oldItem);
+            inventory.ListItems();
         }
 
         if (onEquipmentChanged != null)
         {
             onEquipmentChanged.Invoke(newItem, oldItem);
+            inventory.ListItems();
         }
 
         CurrentEquipment[Slotindex] = newItem;
