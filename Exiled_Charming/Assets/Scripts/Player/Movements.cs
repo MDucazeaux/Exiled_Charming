@@ -6,7 +6,8 @@ public class Movements : MonoBehaviour
 {
     private Vector3 originPos, targetPos;
 
-    private bool isMoving;
+    [HideInInspector]
+    public bool isMoving;
 
     private float timeForMoove = 0.2f;
     void Update()
