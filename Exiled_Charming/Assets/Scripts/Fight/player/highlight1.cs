@@ -7,17 +7,19 @@ using UnityEngine;
 public class highlight1 : MonoBehaviour
 {
     private GameObject Player;
-
     private GameObject colliderGO = null; //empty game object that will be initialized after through collision
 
     public GameObject playerSelector;
 
     private Color originalColor;
+
     public bool enableAttack; //will tell if the player will be able to attack it or not
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<attackType>().gameObject;
+
         enableAttack = false; //set the attack permission to false since colliderGO is empty
+
         originalColor = playerSelector.GetComponent<SpriteRenderer>().color;//will permite to go back on the original color when the player finished selecting its tile to attack on
     }
 

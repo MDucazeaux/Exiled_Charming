@@ -7,8 +7,8 @@ public class fightManager : MonoBehaviour
     public static fightManager Instance;
     public GameState state;
 
-    [SerializeField] playermovement Player;
-    [SerializeField] posEnnemiField Ennemi;
+    public playermovement Player;
+    public prince Ennemi;
 
 
     private void Awake()
@@ -43,12 +43,12 @@ public class fightManager : MonoBehaviour
                 break;
             case GameState.playerTurn:
                 Player.GetComponent<playermovement>().PlayerTurn = true;
-                Ennemi.GetComponent<posEnnemiField>().EnemyTurn = false;
+                Ennemi.GetComponent<prince>().EnemyTurn = false;
                 this.gameObject.GetComponent<updatePlayer>().update = false;
                 break;
             case GameState.EnemyTurn:
-                Ennemi.GetComponent<posEnnemiField>().EnemyTurn = true;
-                Ennemi.GetComponent<posEnnemiField>().makeDecision();
+                Ennemi.GetComponent<prince>().EnemyTurn = true;
+                Ennemi.GetComponent<prince>().makeDecision();
                 Player.GetComponent<playermovement>().PlayerTurn = false;
                 this.gameObject.GetComponent<updatePlayer>().update = false;
                 break;

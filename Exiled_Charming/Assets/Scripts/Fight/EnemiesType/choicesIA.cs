@@ -14,7 +14,7 @@ public class choicesIA : MonoBehaviour
 
     public int entityType = 0;
 
-    private bool canMove = true;
+    public bool canMove = true;
 
     private void Start()
     {
@@ -27,7 +27,7 @@ public class choicesIA : MonoBehaviour
     }
     private void Update()
     {
-        if(this.GetComponent<posEnnemiField>().EnemyTurn)
+        if(this.GetComponent<prince>().EnemyTurn)
         switch(choice)
         {
             case 0:
@@ -52,29 +52,40 @@ public class choicesIA : MonoBehaviour
                 {
                     Debug.Log("feeling good to heal a lot :D");
                     healCapacity -= 1;
-                    this.gameObject.GetComponent<HpManager>().Hp += 50;
+                    this.gameObject.GetComponent<HpManager>().BasedHP += 50;
+                    this.gameObject.GetComponent<prince>().enabledTurn = true;
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     choice = -1;
 
                 }
-                else if(healCapacity == 0 && !canMove || this.gameObject.GetComponent<HpManager>().Hp == this.gameObject.GetComponent<HpManager>().maxHp &&!canMove)
+                else if(healCapacity <= 0 && !canMove || this.gameObject.GetComponent<HpManager>().Hp == this.gameObject.GetComponent<HpManager>().maxHp &&!canMove)
                 {
                     Debug.Log("the ia doesnt have any heal or she doesnt need it, she lost one round...");
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        fightManager.Instance.updateState(GameState.UpdatePlayer);
                     choice = -1;
                 }
+                else
+                {
+                        Debug.Log("another reason to lose a round...");
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        fightManager.Instance.updateState(GameState.UpdatePlayer);
+                        choice = -1;
+                    }
                 break;
             case 2:
                 if(!canMove)
                 {
                     Debug.Log("IA Attack1");
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
-                    choice = -1;
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        choice = -1;
                 }
                 else
                 {
                     Debug.Log("didnt pick a tile to move on...");
-                    choice = Random.Range(0, 5);
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        choice = Random.Range(0, 5);
                 }
                 break;
             case 3:
@@ -82,11 +93,13 @@ public class choicesIA : MonoBehaviour
                 {
                     Debug.Log("IA Attack2");
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
-                    choice = -1;
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        choice = -1;
                 }
                 else
                 {
                         Debug.Log("didnt pick a tile to move on...");
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
                         choice = Random.Range(0, 5);
                 }
                 break;
@@ -94,11 +107,13 @@ public class choicesIA : MonoBehaviour
                 if(canMove)
                 {
                     canMove = false;
-                }
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                    }
                 if(!canMove)
                 {
                         Debug.Log("i'll pass on this round (:");
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
+                        this.gameObject.GetComponent<prince>().enabledTurn = true;
+                        fightManager.Instance.updateState(GameState.UpdatePlayer);
                     choice = -1;
                 }
                 break;

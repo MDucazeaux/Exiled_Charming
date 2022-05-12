@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class prince : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool EnemyTurn;
+    public bool enabledTurn = true;
 
-    // Update is called once per frame
-    void Update()
+    public void makeDecision()
     {
-        
+        if(EnemyTurn && enabledTurn)
+        {
+            this.gameObject.GetComponent<choicesIA>().choice = 0;
+            this.gameObject.GetComponent<choicesIA>().canMove = true ;
+
+            enabledTurn = false;
+        }
+        else
+        {
+            Debug.Log("not his turn...");
+        }
     }
 }

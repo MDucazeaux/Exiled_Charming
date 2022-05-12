@@ -1978,7 +1978,6 @@ GameObject:
   - component: {fileID: 1669837020}
   - component: {fileID: 1669837019}
   - component: {fileID: 1669837018}
-  - component: {fileID: 1669837022}
   m_Layer: 2
   m_Name: ennemi
   m_TagString: ennemi
@@ -2157,21 +2156,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyTurn: 0
   nbChoice: 1
---- !u!114 &1669837022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669837013}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83bd2446b0043db4b893b1289e6cee22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x: 0
-  choice: 0
-  entityType: 0
 --- !u!1 &1672761302
 GameObject:
   m_ObjectHideFlags: 0
