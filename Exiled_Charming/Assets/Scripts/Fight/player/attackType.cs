@@ -76,7 +76,7 @@ public class attackType : MonoBehaviour
     {
         Debug.Log("yay dmg1");
         int def = tile.GetComponent<StatsManager>().Def;
-        tile.gameObject.GetComponent<HpManager>().totalHp += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
         enableAttack1 = false;
         atkNb = 0;
     }
@@ -85,9 +85,15 @@ public class attackType : MonoBehaviour
     {
         Debug.Log("yay dmg2");
         int def = tile.GetComponent<StatsManager>().Def;
-        tile.gameObject.GetComponent<HpManager>().totalHp += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
         enableAttack2 = false;
         atkNb = 0;
+    }
+
+    public void emptyTile()
+    {
+        Debug.Log("there is nobody there maybe next time (:");
+        fightManager.Instance.updateState(GameState.EnemyTurn);
     }
 
 }

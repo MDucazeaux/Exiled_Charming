@@ -37,6 +37,7 @@ public class choicesPlayer : MonoBehaviour
     {
         if (this.GetComponent<playermovement>().PlayerTurn)
         {
+
             switch (choice)
             {
                 //the player has to move first (one case range).
@@ -113,10 +114,32 @@ public class choicesPlayer : MonoBehaviour
 
                 //he can also pass if he doesnt want to do anything.
                 case 4:
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
-                    choice = -1;
+                    if(canMove)
+                    {
+                        canMove = false;
+
+                        Move.gameObject.SetActive(false);
+                        Atk1.gameObject.SetActive(true);
+                        Atk2.gameObject.SetActive(true);
+                        Heal.gameObject.SetActive(true);
+
+                        choice = -1;
+                    }
+                    else if (!canMove)
+                    {
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        choice = -1;
+                    }
                     break;
             }
+        }
+        else if(fightManager.Instance.state == GameState.EnemyTurn)
+        {
+            Move.gameObject.SetActive(false);
+            Atk1.gameObject.SetActive(false);
+            Atk2.gameObject.SetActive(false);
+            Heal.gameObject.SetActive(false);
+            Pass.gameObject.SetActive(false);
         }
     }
     public void pickMove()
@@ -140,5 +163,29 @@ public class choicesPlayer : MonoBehaviour
     public void pickPass()
     {
         choice = 4;
+    }
+
+    public void activateButtons()
+    {
+        Move.gameObject.SetActive(true);
+        Atk1.gameObject.SetActive(true);
+        Atk2.gameObject.SetActive(true);
+        Heal.gameObject.SetActive(true);
+        Pass.gameObject.SetActive(true);
+
+        this.gameObject.GetComponent<attackType>().tile = null;
+        canMove = true;
+        choice = -1;
+
+        setButtons();
+    }
+
+    private void setButtons()
+    {
+        Move.gameObject.SetActive(true);
+        Atk1.gameObject.SetActive(false);
+        Atk2.gameObject.SetActive(false);
+        Heal.gameObject.SetActive(false);
+        Pass.gameObject.SetActive(true);
     }
 }

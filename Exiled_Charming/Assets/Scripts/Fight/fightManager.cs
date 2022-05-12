@@ -44,17 +44,29 @@ public class fightManager : MonoBehaviour
             case GameState.playerTurn:
                 Player.GetComponent<playermovement>().PlayerTurn = true;
                 Ennemi.GetComponent<posEnnemiField>().EnemyTurn = false;
+                this.gameObject.GetComponent<updatePlayer>().update = false;
                 break;
             case GameState.EnemyTurn:
                 Ennemi.GetComponent<posEnnemiField>().EnemyTurn = true;
+                Ennemi.GetComponent<posEnnemiField>().makeDecision();
                 Player.GetComponent<playermovement>().PlayerTurn = false;
+                this.gameObject.GetComponent<updatePlayer>().update = false;
+                break;
+            case GameState.UpdatePlayer:
+                this.gameObject.GetComponent<updatePlayer>().updateHero();
                 break;
         }
     }
 
     void startFight()
     {
-        state = GameState.playerTurn;
+        int random = Random.Range(0, 2);
+
+        switch(random)
+        {
+            case 0: updateState(GameState.EnemyTurn); break;
+            case 1: updateState(GameState.playerTurn); break;
+        }
     }
 }
 public enum GameState
@@ -62,5 +74,7 @@ public enum GameState
         waitForStart,
         startFight,
         playerTurn,
-        EnemyTurn
+        EnemyTurn,
+        UpdatePlayer,
+        DestroyScene
     }

@@ -71,14 +71,16 @@ public class highlight2 : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        playerSelector.SetActive(true);// player can see which tile he will select
+        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
+            playerSelector.SetActive(true);// player can see which tile he will select
     }
 
 
 
     private void OnMouseExit()
     {
-        playerSelector.SetActive(false); //player out of the tile so we disable the playerSelector tile so that the player knows which tile his mouse's on
+        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
+            playerSelector.SetActive(false); //player out of the tile so we disable the playerSelector tile so that the player knows which tile his mouse's on
     }
 
 
@@ -93,9 +95,9 @@ public class highlight2 : MonoBehaviour
             Player.GetComponent<attackType>().atkNb = 2;
         }
 
-        if (colliderGO = null)
+        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true && colliderGO == null)
         {
-            Player.GetComponent<attackType>().tile = null;
+            Player.GetComponent<attackType>().emptyTile();
         }
     }
 
@@ -103,6 +105,8 @@ public class highlight2 : MonoBehaviour
 
     private void OnMouseUp()
     {
-        playerSelector.GetComponent<SpriteRenderer>().color = originalColor;// will unrelease the touch so that the tile doesnt stay green
+        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true)
+            playerSelector.GetComponent<SpriteRenderer>().color = originalColor;// will unrelease the touch so that the tile doesnt stay green
+        else playerSelector.GetComponent<SpriteRenderer>().enabled = false;
     }
 }
