@@ -19,6 +19,8 @@ public class choicesPlayer : MonoBehaviour
 
     [HideInInspector] public int choice;
 
+    public GameObject deplacementsPlayer = null;
+
     private void Awake()
     {
         Instance = this;
@@ -26,6 +28,8 @@ public class choicesPlayer : MonoBehaviour
     private void Start()
     {
         canMove  = true;
+
+        deplacementsPlayer.SetActive(false);
 
 
         Heal.gameObject.SetActive(false);
@@ -44,6 +48,7 @@ public class choicesPlayer : MonoBehaviour
                 case 0:
                     if (canMove)
                     {
+                        deplacementsPlayer.SetActive(true);
                         if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position += new Vector3(0, 1, 0);
@@ -51,6 +56,8 @@ public class choicesPlayer : MonoBehaviour
                             Atk1.gameObject.SetActive(true);
                             Atk2.gameObject.SetActive(true);
                             Heal.gameObject.SetActive(true);
+
+                            deplacementsPlayer.SetActive(false);
                             canMove = false;
                         }
                         else
@@ -66,6 +73,8 @@ public class choicesPlayer : MonoBehaviour
                             Atk1.gameObject.SetActive(true);
                             Atk2.gameObject.SetActive(true);
                             Heal.gameObject.SetActive(true);
+
+                            deplacementsPlayer.SetActive(false);
                             canMove = false;
                         }
                         else
@@ -80,6 +89,8 @@ public class choicesPlayer : MonoBehaviour
                             Atk1.gameObject.SetActive(true);
                             Atk2.gameObject.SetActive(true);
                             Heal.gameObject.SetActive(true);
+
+                            deplacementsPlayer.SetActive(false);
                             canMove = false;
                         }
                         else
@@ -94,6 +105,8 @@ public class choicesPlayer : MonoBehaviour
                             Atk1.gameObject.SetActive(true);
                             Atk2.gameObject.SetActive(true);
                             Heal.gameObject.SetActive(true);
+
+                            deplacementsPlayer.SetActive(false);
                             canMove = false;
                         }
                         else
@@ -206,5 +219,11 @@ public class choicesPlayer : MonoBehaviour
         Atk2.gameObject.SetActive(false);
         Heal.gameObject.SetActive(false);
         Pass.gameObject.SetActive(true);
+    }
+
+
+    private void OnMouseEnter()
+    {
+        Debug.Log(gameObject.name);
     }
 }
