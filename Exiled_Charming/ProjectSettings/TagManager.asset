@@ -10,6 +10,7 @@ TagManager:
   - nearSlash
   - farSlash
   - Border
+  - pnj
   layers:
   - Default
   - TransparentFX
