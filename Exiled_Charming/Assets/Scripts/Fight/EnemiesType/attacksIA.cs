@@ -16,7 +16,7 @@ public class attacksIA : MonoBehaviour
 
     private void Start()
     {
-        def = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>().baseDef;
+        def = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().Armor.GetValue();
     }
     public void Update()
     {
@@ -52,13 +52,21 @@ public class attacksIA : MonoBehaviour
     }
     private void dealDamage1(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
+
+        //CharacterStats.Instance.HealthBarImage.fillAmount = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth / colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
+        //CharacterStats.Instance.healthText.text = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
         enableAttack1 = false;
     }
 
     private void dealDamage2(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
+
+        //get healthbar via function in characterStats
+
+        //CharacterStats.Instance.HealthBarImage.fillAmount = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth / colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
+        //CharacterStats.Instance.healthText.text = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
         enableAttack2 = false;
     }
 
