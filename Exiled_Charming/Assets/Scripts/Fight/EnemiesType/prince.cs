@@ -16,10 +16,11 @@ public class prince : MonoBehaviour
     public void makeDecision() 
     {
         enabledTurn = true;
+
         if(EnemyTurn && enabledTurn)
         {
             this.gameObject.GetComponent<choicesIA>().choice = 0;
-            this.gameObject.GetComponent<choicesIA>().canMove = true ;
+            this.gameObject.GetComponent<choicesIA>().canMove = true;
 
             enabledTurn = false;
         }

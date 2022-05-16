@@ -62,10 +62,10 @@ public class choicesPlayer : MonoBehaviour
                         }
                         else
                         {
-                           
+
                         }
-                        
-                        
+
+
                         if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position -= new Vector3(1, 0, 0);
@@ -112,6 +112,10 @@ public class choicesPlayer : MonoBehaviour
                         else
                         {
                         }
+                    }
+                    else
+                    {
+                        deplacementsPlayer.SetActive(false);
                     }
                     break;
 
