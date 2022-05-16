@@ -9,9 +9,6 @@ public class attacksIA : MonoBehaviour
     [HideInInspector] public int def;
     [HideInInspector] public int typeAttack = -1;
 
-    public GameObject nearSlashIA;
-    public GameObject farSlashIA;
-
     private GameObject colliderPlayer = null;
 
     public bool isValided = false;
@@ -22,20 +19,11 @@ public class attacksIA : MonoBehaviour
     private void Start()
     {
         def = GameObject.FindGameObjectWithTag("Player").GetComponent<StatsManager>().baseDef;
-        nearSlashIA.SetActive(true);
     }
     public void Update()
     {
         if(colliderPlayer != null && fightManager.Instance.state == GameState.EnemyTurn)
         {
-            nearSlashIA.SetActive(true);
-
-            switch(atkNb)
-            {
-                case 1: enableAttack1 = true; enableAttack2 = false; break;
-                case 2: enableAttack2 = true; enableAttack1 = false; break;
-            }
-
             if(enableAttack1)
             {
                 //deal damage to player (crit)
