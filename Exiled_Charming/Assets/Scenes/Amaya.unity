@@ -3358,6 +3358,7 @@ MonoBehaviour:
   - {fileID: 938163043}
   - {fileID: 930093016}
   - {fileID: 2047548315}
+  sensorSupport: {fileID: 1907431605}
   entityType: 1
   canMove: 1
 --- !u!114 &1669837023
