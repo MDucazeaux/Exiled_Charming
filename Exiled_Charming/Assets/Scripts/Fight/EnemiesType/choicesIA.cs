@@ -134,9 +134,8 @@ public class choicesIA : MonoBehaviour
                 {
                     Debug.Log("attk1");
 
-                    this.gameObject.GetComponent<attacksIA>().atkNb = 0;
-                            fightManager.Instance.updateState(GameState.UpdatePlayer);
-                            thinkingTimer = 2;
+                    this.gameObject.GetComponent<attacksIA>().enableAttack1 = true ;
+                    thinkingTimer = 2;
                     choice = -1;
                 }
                 else
@@ -153,9 +152,8 @@ public class choicesIA : MonoBehaviour
                 {
                     Debug.Log("attk2");
 
-                    this.gameObject.GetComponent<attacksIA>().atkNb = 0;
-                            fightManager.Instance.updateState(GameState.UpdatePlayer);
-                            thinkingTimer = 2;
+                    this.gameObject.GetComponent<attacksIA>().enableAttack2 = true;
+                    thinkingTimer = 2;
                     choice = -1;
                 }
                 else

@@ -9,12 +9,9 @@ public class attacksIA : MonoBehaviour
     [HideInInspector] public int def;
     [HideInInspector] public int typeAttack = -1;
 
-    private GameObject colliderPlayer = null;
+    public GameObject colliderPlayer = null;
 
-    public bool isValided = false;
-
-    public int atkNb = -1;
-    public bool enableAttack1, enableAttack2;
+    [HideInInspector] public bool enableAttack1, enableAttack2;
 
     private void Start()
     {
@@ -26,10 +23,8 @@ public class attacksIA : MonoBehaviour
         {
             if(enableAttack1)
             {
-                //deal damage to player (crit)
-                //disable slashes
-
-                //update fight manager to updatePlayer
+                dealDamage1(this.gameObject.GetComponent<StatsManager>().AD + 15);
+                fightManager.Instance.updateState(GameState.UpdatePlayer);
 
                 //verify game object identity (wolf, prince, guard ?)
                 //-> set boolean of the game object personal script to false since its not his turn anymore
@@ -38,8 +33,9 @@ public class attacksIA : MonoBehaviour
 
             if (enableAttack2)
             {
+                dealDamage2(this.gameObject.GetComponent<StatsManager>().AD);
+                fightManager.Instance.updateState(GameState.UpdatePlayer);
                 //deal damage to player (no crit)
-                //disable slashes
 
                 //update fight manager to updatePlayer
 
@@ -49,29 +45,16 @@ public class attacksIA : MonoBehaviour
             }
         }
     }
-
-    public void Valid()
-    {
-        isValided = true;
-    }
-
-    public void Return()
-    {
-        isValided = false;
-    }
-
     private void dealDamage1(int dmg)
     {
         colliderPlayer.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
         enableAttack1 = false;
-        atkNb = 0; //we set back the atk Nb under the lower number or itll repeat itself
     }
 
     private void dealDamage2(int dmg)
     {
         colliderPlayer.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
         enableAttack2 = false;
-        atkNb = 0;//we set back the atk Nb under the lower number or itll repeat itself
     }
 
     public void emptyTile()

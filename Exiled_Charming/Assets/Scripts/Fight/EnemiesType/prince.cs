@@ -15,6 +15,7 @@ public class prince : MonoBehaviour
     //else if its still the enemy turn itll know that this one isnt concerned...
     public void makeDecision() 
     {
+        enabledTurn = true;
         if(EnemyTurn && enabledTurn)
         {
             this.gameObject.GetComponent<choicesIA>().choice = 0;

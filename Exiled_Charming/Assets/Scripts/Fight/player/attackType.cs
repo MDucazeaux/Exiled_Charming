@@ -47,7 +47,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<StatsManager>().baseAD + 15);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
 

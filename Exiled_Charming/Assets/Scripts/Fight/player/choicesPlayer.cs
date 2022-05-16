@@ -15,7 +15,7 @@ public class choicesPlayer : MonoBehaviour
     public Button Atk1;
     public Button Atk2;
 
-    private bool canMove, canHeal;
+    public bool canMove;
 
     [HideInInspector] public int choice;
 

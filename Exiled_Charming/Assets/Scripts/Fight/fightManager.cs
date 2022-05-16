@@ -20,16 +20,14 @@ public class fightManager : MonoBehaviour
 
     private void Start()
     {
-        updateState(GameState.waitForStart);
+        updateState(GameState.startFight);
     }
+
     public void updateState(GameState stateAsked)
     {
         state = stateAsked;
-    }
 
-    private void Update()
-    {
-        if(state == GameState.waitForStart)
+        if (state == GameState.waitForStart)
         {
             if(Input.GetKeyDown(KeyCode.P))
             {
