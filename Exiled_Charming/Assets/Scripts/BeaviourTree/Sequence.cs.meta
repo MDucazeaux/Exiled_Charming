@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: b30b2042be9805d49926dd8382cabf83
+<<<<<<<< HEAD:Exiled_Charming/Assets/Scripts/BeaviourTree/Sequence.cs.meta
+guid: b2983da0bab9f8f439290ad7ae997ff6
+========
+guid: 4d059cd632276e94088656ff41baafe4
+>>>>>>>> origin/Combat:Exiled_Charming/Assets/Scripts/Fight/fightManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Rguard
   - Bguard
+  - ennemi
+  - nearSlash
+  - farSlash
+  - Border
+  - pnj
   layers:
   - Default
   - TransparentFX
