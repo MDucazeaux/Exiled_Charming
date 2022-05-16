@@ -220,10 +220,4 @@ public class choicesPlayer : MonoBehaviour
         Heal.gameObject.SetActive(false);
         Pass.gameObject.SetActive(true);
     }
-
-
-    private void OnMouseEnter()
-    {
-        Debug.Log(gameObject.name);
-    }
 }

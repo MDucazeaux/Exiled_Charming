@@ -7,7 +7,13 @@ public class prince : MonoBehaviour
     public bool EnemyTurn;
     public bool enabledTurn = true;
 
-    public void makeDecision()
+    //called in the fight manager if:
+    //-Identity = prince
+    //-state = enemyTurn
+    //turn is enabled
+
+    //else if its still the enemy turn itll know that this one isnt concerned...
+    public void makeDecision() 
     {
         if(EnemyTurn && enabledTurn)
         {

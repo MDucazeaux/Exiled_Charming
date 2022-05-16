@@ -20,6 +20,8 @@ public class choicesIA : MonoBehaviour
 
     [HideInInspector] public bool canMove = true;
 
+    private float thinkingTimer = 2.0f;
+
     private void Start()
     {
         switch(entityType)
@@ -35,55 +37,60 @@ public class choicesIA : MonoBehaviour
         switch(choice)
         {
             case 0:
+                    //MOVEMENTS IA
                 if (canMove)
                 {
-                    x = Random.Range(0, 6);
-                    switch (x)
+                    thinkingTimer -= Time.deltaTime;
+                    if(thinkingTimer <= 0)
                     {
-                        case 0:
+                        x = Random.Range(0, 6);
+                        switch (x)
+                        {
+                            case 0:
                                 if (sensors[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                                 {
                                     this.gameObject.transform.position += new Vector3(1, 0, 0);
                                     canMove = false;
+                                    thinkingTimer = 2;
                                 }
                                 else
                                 {
-                                    Debug.Log("no space for me here :(");
                                 }
                                 break;
-                        case 1:
+                            case 1:
                                 if (sensors[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                                 {
                                     this.gameObject.transform.position += new Vector3(0, 1, 0);
                                     canMove = false;
+                                    thinkingTimer = 2;
                                 }
                                 else
                                 {
-                                    Debug.Log("no space for me here :(");
                                 }
                                 break;
-                        case 2:
+                            case 2:
                                 if (sensors[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                                 {
                                     this.gameObject.transform.position += new Vector3(0, -1, 0);
                                     canMove = false;
+                                    thinkingTimer = 2;
                                 }
                                 else
                                 {
-                                    Debug.Log("no space for me here :(");
                                 }
                                 break;
-                        case 3:
+                            case 3:
                                 if (sensors[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                                 {
                                     this.gameObject.transform.position += new Vector3(-1, 0, 0);
                                     canMove = false;
+                                    thinkingTimer = 2;
                                 }
                                 else
                                 {
-                                    Debug.Log("no space for me here :(");
                                 }
                                 break;
+                        }
                     }
                 }
                 else if (!canMove)
@@ -92,72 +99,85 @@ public class choicesIA : MonoBehaviour
                 }
                 break;
             case 1:
-                if(healCapacity >0 && this.gameObject.GetComponent<HpManager>().Hp < 60 && !canMove)
+                    //HEALTH IA
+                thinkingTimer -= Time.deltaTime;
+                if (thinkingTimer <= 0)
+                if (healCapacity >0 && this.gameObject.GetComponent<HpManager>().Hp < 60 && !canMove)
                 {
-                    Debug.Log("feeling good to heal a lot :D");
                     healCapacity -= 1;
                     this.gameObject.GetComponent<HpManager>().BasedHP += 50;
                     this.gameObject.GetComponent<prince>().enabledTurn = true;
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     choice = -1;
+                    thinkingTimer = 2;
 
                 }
                 else if(healCapacity <= 0 && !canMove || this.gameObject.GetComponent<HpManager>().Hp == this.gameObject.GetComponent<HpManager>().maxHp &&!canMove)
                 {
-                    Debug.Log("the ia doesnt have any heal or she doesnt need it, she lost one round...");
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    this.gameObject.GetComponent<prince>().enabledTurn = true;
+                    fightManager.Instance.updateState(GameState.UpdatePlayer);
                     choice = -1;
                 }
                 else
                 {
-                        Debug.Log("another reason to lose a round...");
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        fightManager.Instance.updateState(GameState.UpdatePlayer);
-                        choice = -1;
-                    }
+                     this.gameObject.GetComponent<prince>().enabledTurn = true;
+                     fightManager.Instance.updateState(GameState.UpdatePlayer);
+                     thinkingTimer = 2;
+                     choice = -1;
+                }
                 break;
             case 2:
-                if(!canMove)
+                    //ATTACK 1
+                thinkingTimer -= Time.deltaTime;
+                if (thinkingTimer <= 0)
+                if (!canMove)
                 {
-                    Debug.Log("IA Attack1");
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        choice = -1;
+                    Debug.Log("attk1");
+
+                    this.gameObject.GetComponent<attacksIA>().atkNb = 0;
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
+                            thinkingTimer = 2;
+                    choice = -1;
                 }
                 else
                 {
-                    Debug.Log("didnt pick a tile to move on...");
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        choice = Random.Range(0, 5);
+                    thinkingTimer = 2;
+                    choice = Random.Range(0, 5);
                 }
                 break;
             case 3:
+                    //ATTACK2
+                thinkingTimer -= Time.deltaTime;
+                if (thinkingTimer <= 0)
                 if (!canMove)
                 {
-                    Debug.Log("IA Attack2");
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        choice = -1;
+                    Debug.Log("attk2");
+
+                    this.gameObject.GetComponent<attacksIA>().atkNb = 0;
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
+                            thinkingTimer = 2;
+                    choice = -1;
                 }
                 else
                 {
-                        Debug.Log("didnt pick a tile to move on...");
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        choice = Random.Range(0, 5);
+                    thinkingTimer = 2;
+                    choice = Random.Range(0, 5);    
                 }
                 break;
             case 4:
-                if(canMove)
+                    //PASS TURN
+                thinkingTimer -= Time.deltaTime;
+                if (thinkingTimer <= 0)
+                if (canMove)
                 {
                     canMove = false;
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                    }
+                    thinkingTimer = 2;
+                }
                 if(!canMove)
                 {
-                        Debug.Log("i'll pass on this round (:");
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    this.gameObject.GetComponent<prince>().enabledTurn = false;
+                    fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    thinkingTimer = 2;
                     choice = -1;
                 }
                 break;
