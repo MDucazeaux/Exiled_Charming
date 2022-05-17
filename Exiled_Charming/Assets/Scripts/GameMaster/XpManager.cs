@@ -5,47 +5,30 @@ using UnityEngine;
 public class XpManager : MonoBehaviour
 {
     public int Level;
-
-    public float Xp;
-    private float basemaxxp;
-    private float maxXP;
+   
+    private float xp;
+    private float maxxp;
     void Start()
     {
-        basemaxxp = 10f;
+        maxxp = 10f;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (transform.GetComponent<Movements>())
-        {
-            if (SaveManager.instance.HasLoaded)
-            {
-                Level = SaveManager.instance.ActiveSave.LevelSaved;
-                maxXP = SaveManager.instance.ActiveSave.MaxXpSaved;
-                Xp = SaveManager.instance.ActiveSave.XpSaved;
-            }
-            if (maxXP<1)
-            {
-                maxXP = 10f;
-            }
-            else
-            {
+        //if (transform.GetComponent<Movements>())
+        //{
 
-                maxXP = basemaxxp * Level;
-            }
-        if (Xp >= maxXP)
+        if (xp >= maxxp)
         {
             Level += 1;
-            Xp = 0;
+            maxxp *= 2;
+            xp = 0;
 
         }
-           
-            SaveManager.instance.ActiveSave.LevelSaved = Level;
-            SaveManager.instance.ActiveSave.MaxXpSaved = basemaxxp;
-            SaveManager.instance.ActiveSave.XpSaved = Xp;
-        }
+
+        //}
 
 
 

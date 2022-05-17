@@ -29,6 +29,8 @@ public class CharacterStats : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             TakeDamage(10);
+            HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
+            healthText.text = CurrentHealth + " / " + MaxHealth;
         }
 
         Damagetxt.text = $"Damage : {Damage.GetValue()}";
@@ -68,12 +70,11 @@ public class CharacterStats : MonoBehaviour
         CurrentHealth -= Damage;
         Debug.Log(transform.name + "take" + Damage + " damage. ");
 
-
-        HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
-        healthText.text = CurrentHealth + " / " + MaxHealth;
+        //HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
+        //healthText.text = CurrentHealth + " / " + MaxHealth;
     }
 
-    public void IncreaseHealth(int value)
+        public void IncreaseHealth(int value)
     {
         CurrentHealth += value;
         Healthtxt.text = $"HP : {CurrentHealth.ToString()}";
