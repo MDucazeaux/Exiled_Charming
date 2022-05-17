@@ -29,7 +29,6 @@ public class attackType : MonoBehaviour
     {
         if (tile != null)
         {
-            Debug.Log(tile.name);
             switch (atkNb)
             {
                 case 1: enableAttack1 = true; enableAttack2 = false; break;
@@ -44,19 +43,19 @@ public class attackType : MonoBehaviour
         switch (typeAttack)
         {
             case 0:
-                //player need to select a case
+                //player selects a case
                 if (enableAttack1)
                 {
-                    dealDamage1(this.gameObject.GetComponent<StatsManager>().baseAD + 15);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                    dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
 
             case 1:
-                //player need to select a case
+                //player selects a case
                 if (enableAttack2)
                 {
-                    dealDamage2(this.gameObject.GetComponent<StatsManager>().baseAD);
+                    dealDamage2(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue());
                     fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
@@ -90,7 +89,6 @@ public class attackType : MonoBehaviour
 
     public void emptyTile()
     {
-        Debug.Log("there is nobody there maybe next time (:");
         fightManager.Instance.updateState(GameState.EnemyTurn);
     }
 

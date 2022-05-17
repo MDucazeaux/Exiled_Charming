@@ -15,7 +15,7 @@ public class choicesPlayer : MonoBehaviour
     public Button Atk1;
     public Button Atk2;
 
-    private bool canMove, canHeal;
+    public bool canMove;
 
     [HideInInspector] public int choice;
 
@@ -62,10 +62,10 @@ public class choicesPlayer : MonoBehaviour
                         }
                         else
                         {
-                           
+
                         }
-                        
-                        
+
+
                         if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
                             transform.position -= new Vector3(1, 0, 0);
@@ -113,6 +113,10 @@ public class choicesPlayer : MonoBehaviour
                         {
                         }
                     }
+                    else
+                    {
+                        deplacementsPlayer.SetActive(false);
+                    }
                     break;
 
                 //once the player moved he has many choices : 
@@ -122,7 +126,10 @@ public class choicesPlayer : MonoBehaviour
                 case 1:
                     if (!canMove)
                     {
-                        transform.GetComponent<HpManager>().heal += 50;
+                        transform.GetComponent<CharacterStats>().CurrentHealth += 50;
+                        CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
+                        CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
+
                         fightManager.Instance.updateState(GameState.EnemyTurn);
                         choice = -1;
                     }
@@ -219,11 +226,5 @@ public class choicesPlayer : MonoBehaviour
         Atk2.gameObject.SetActive(false);
         Heal.gameObject.SetActive(false);
         Pass.gameObject.SetActive(true);
-    }
-
-
-    private void OnMouseEnter()
-    {
-        Debug.Log(gameObject.name);
     }
 }

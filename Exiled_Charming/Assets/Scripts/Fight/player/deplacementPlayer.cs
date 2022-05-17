@@ -9,6 +9,14 @@ public class deplacementPlayer : MonoBehaviour
     public int type = 0;
     private void Update()
     {
+        if(fightManager.Instance.state == GameState.playerTurn && !choicesPlayer.Instance.canMove)
+        {
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
+        else
+        {
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

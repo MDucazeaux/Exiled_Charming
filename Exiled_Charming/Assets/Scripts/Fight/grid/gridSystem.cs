@@ -11,11 +11,7 @@ public class gridSystem : MonoBehaviour
 
     private Dictionary<Vector2, tileColor> tiles;
 
-    private void Start()
-    {
-        createGrid();
-    }
-    void createGrid()
+    public void createGrid()
     {
         tiles = new Dictionary<Vector2, tileColor>();
         for(x = 0; x < width; x++)
@@ -33,10 +29,12 @@ public class gridSystem : MonoBehaviour
 
             }
         }
+        //spawn tiles for the columns and rows to make a grid with 2 differents colors :)
         camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+        //set the camera on the middle of the grid so well be able to see every character (not needed if you dont want a fixed camera)
     }
 
-    public tileColor tilePosition(Vector2 tilePos)
+    public tileColor tilePosition(Vector2 tilePos) //?
     {
         if(tiles.TryGetValue(tilePos,out var tile))
         {
