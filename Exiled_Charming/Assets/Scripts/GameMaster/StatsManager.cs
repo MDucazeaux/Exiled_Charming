@@ -19,8 +19,8 @@ public class StatsManager : MonoBehaviour
     public void updateStats()
     {
         //int level = transform.GetComponent<XpManager>().Level;
-
-        baseDef += Def + 10;
+        
+        baseDef += Def + 10 ;
         baseAD += AD + 15;
         
     }
