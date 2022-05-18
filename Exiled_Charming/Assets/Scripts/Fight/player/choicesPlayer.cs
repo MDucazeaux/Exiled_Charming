@@ -41,6 +41,10 @@ public class choicesPlayer : MonoBehaviour
     {
         if (this.GetComponent<playermovement>().PlayerTurn)
         {
+            if(choice != 0)
+            {
+                deplacementsPlayer.SetActive(false);
+            }
 
             switch (choice)
             {

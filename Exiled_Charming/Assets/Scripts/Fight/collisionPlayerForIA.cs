@@ -9,7 +9,6 @@ public class collisionPlayerForIA : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("yes collision");
             IA.colliderPlayer = collision.gameObject;
         }
     }

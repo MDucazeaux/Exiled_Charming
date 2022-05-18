@@ -5,48 +5,37 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     public bool PlayerTurn;
-    float posX, posY;
-
-    private void Awake()
-    {
-    }
     private void Start()
     {
         PlayerTurn = false;
-        //define where the player spawns on the map
-        posX = Random.Range(1, 20);
-        posY = Random.Range(1, 10);
 
     }
     void Update()
     {
         // waits for the player turn to make action
-        if(fightManager.Instance.state == GameState.playerTurn && PlayerTurn)
+        if (fightManager.Instance.state == GameState.playerTurn && PlayerTurn)
         {
-            //player keyboard controls
-
-            
-            if(Input.GetKeyDown(KeyCode.DownArrow))
+            if(Input.GetKeyUp(KeyCode.Joystick1Button1) && choicesPlayer.Instance.canMove)
             {
-                choicesPlayer.Instance.pickHeal();
-            }
-            
-            if(Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                choicesPlayer.Instance.pickAttack1();
-            }
-            
-            if(Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                choicesPlayer.Instance.pickAttack2();
+                choicesPlayer.Instance.choice = 4;
             }
 
-            if(Input.GetKeyDown(KeyCode.G))
+            if(Input.GetKey(KeyCode.Joystick1Button5) && !choicesPlayer.Instance.canMove)
             {
-                choicesPlayer.Instance.pickPass();
+                choicesPlayer.Instance.choice = 2;
             }
-
-            //player controller controls
+            else if(Input.GetKey(KeyCode.Joystick1Button4) && !choicesPlayer.Instance.canMove)
+            {
+                choicesPlayer.Instance.choice = 3;
+            }
+            else if(Input.GetKey(KeyCode.Joystick1Button3) && !choicesPlayer.Instance.canMove)
+            {
+                choicesPlayer.Instance.choice = 1;
+            }
+            else if(Input.GetKeyUp(KeyCode.Joystick1Button1) && !choicesPlayer.Instance.canMove)
+            {
+                choicesPlayer.Instance.choice = 4;
+            }
         }
     }
 

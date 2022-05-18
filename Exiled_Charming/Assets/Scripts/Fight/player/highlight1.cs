@@ -7,7 +7,7 @@ using UnityEngine;
 public class highlight1 : MonoBehaviour
 {
     private GameObject Player;
-    private GameObject colliderGO = null; //empty game object that will be initialized after through collision
+    public GameObject colliderGO = null; //empty game object that will be initialized after through collision
 
     public bool enableAttack; //will tell if the player will be able to attack it or not
     private void Start()
@@ -61,13 +61,14 @@ public class highlight1 : MonoBehaviour
 
     private void OnMouseDown()
     {
+        Debug.Log(gameObject.name);
         if (colliderGO != null && choicesPlayer.Instance.choice == 2)
         {
             Player.GetComponent<attackType>().tile = colliderGO;
             Player.GetComponent<attackType>().atkNb = 1;
         }
 
-        if (this.gameObject.GetComponent<SpriteRenderer>().enabled == true && colliderGO == null && choicesPlayer.Instance.choice == 2)
+        if (colliderGO == null && choicesPlayer.Instance.choice == 2)
         {
             Player.GetComponent<attackType>().emptyTile();
         }

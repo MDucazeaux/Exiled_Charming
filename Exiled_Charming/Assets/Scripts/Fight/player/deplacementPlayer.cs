@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class deplacementPlayer : MonoBehaviour
 {
-    private GameObject mainUser = null;
-
-    public int type = 0;
     private void Update()
     {
         if(fightManager.Instance.state == GameState.playerTurn && !choicesPlayer.Instance.canMove)

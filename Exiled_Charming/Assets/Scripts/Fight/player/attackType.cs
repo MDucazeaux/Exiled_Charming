@@ -39,7 +39,7 @@ public class attackType : MonoBehaviour
             }
         }
 
-        if (fightManager.Instance.state == GameState.playerTurn)
+        if (fightManager.Instance.state == GameState.playerTurn && tile != null)
         switch (typeAttack)
         {
             case 0:
@@ -47,7 +47,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                    fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
 
@@ -60,17 +60,6 @@ public class attackType : MonoBehaviour
                 }
                 break;
         }
-    }
-    //the player cant attack if he has nothing in range since it would be useless, if he doesnt have to heal, cant move and doesnt have anyone in range he'll need to pass his turn.
-
-    public void Valid()
-    {
-        isValided = true;
-    }
-
-    public void Return()
-    {
-        isValided = false;
     }
 
     private void dealDamage1(int dmg)
