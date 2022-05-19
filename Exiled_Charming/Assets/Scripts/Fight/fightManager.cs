@@ -58,6 +58,9 @@ public class fightManager : MonoBehaviour
             case GameState.UpdatePlayer://verify that everything that touches the player will be ok (no boolean set to false and ui gestion)
                 this.gameObject.GetComponent<updatePlayer>().updateHero();
                 break;
+            case GameState.UpdateEnnemi:
+                this.gameObject.GetComponent<updateEnnemi>().UpdateEnnemi();
+                break;
         }
     }
 
@@ -67,7 +70,7 @@ public class fightManager : MonoBehaviour
 
         switch(random)
         {
-            case 0: updateState(GameState.EnemyTurn); break;
+            case 0: updateState(GameState.UpdateEnnemi); ; break;
             case 1: updateState(GameState.UpdatePlayer); break;
         }
     }
@@ -79,5 +82,6 @@ public enum GameState //all states of the game
         playerTurn,
         EnemyTurn,
         UpdatePlayer,
+        UpdateEnnemi,
         DestroyScene //NOT IN THE SWITCH FOR NOW SINCE ITLL TP AND UNLOAD THE GRID
     }

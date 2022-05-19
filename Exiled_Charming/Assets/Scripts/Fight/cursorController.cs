@@ -144,20 +144,15 @@ public class cursorController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Tile")
         {
             tileSelected = collision.gameObject;
-
-            if(tileSelected != collision.gameObject)
-            {
-                tileSelected = collision.gameObject;
-            }
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         tileSelected = null;
     }

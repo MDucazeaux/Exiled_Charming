@@ -15,7 +15,7 @@ public class deplacementPlayer : MonoBehaviour
             this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Border" || collision.gameObject.tag == "ennemi")
         {

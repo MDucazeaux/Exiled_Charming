@@ -35,10 +35,6 @@ public class playermovement : MonoBehaviour
         {
             supportMovementsTiles.SetActive(true);
         }
-        else if (Input.GetAxis("trigger right") <= 0)
-        {
-            supportMovementsTiles.SetActive(false);
-        }
     }
     public void selectChoice()
     {

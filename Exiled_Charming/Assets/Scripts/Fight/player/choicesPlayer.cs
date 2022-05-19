@@ -62,22 +62,24 @@ public class choicesPlayer : MonoBehaviour
                         Player.showMovementAllowed(deplacementsPlayer);
                         Player.selectChoice();
 
-
-                        if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                        if (deplacementsPlayer.activeSelf)
                         {
-                            Player.makeMovement(new Vector3(0, 1, 0));
-                        }
-                        else if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            Player.makeMovement(new Vector3(-1, 0, 0));
-                        }
-                        else if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") > 0 && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            Player.makeMovement(new Vector3(0, -1, 0));
-                        }
-                        else if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") > 0 && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            Player.makeMovement(new Vector3(1, 0, 0));
+                            if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            {
+                                Player.makeMovement(new Vector3(0, 1, 0));
+                            }
+                            else if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            {
+                                Player.makeMovement(new Vector3(-1, 0, 0));
+                            }
+                            else if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") > 0 && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            {
+                                Player.makeMovement(new Vector3(0, -1, 0));
+                            }
+                            else if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") > 0 && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            {
+                                Player.makeMovement(new Vector3(1, 0, 0));
+                            }
                         }
                     }
                     else
@@ -98,7 +100,7 @@ public class choicesPlayer : MonoBehaviour
                         CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
                         CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
 
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
                         choice = -1;
                     }
                     break;
@@ -136,7 +138,7 @@ public class choicesPlayer : MonoBehaviour
                     }
                     else if (!canMove)
                     {
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
                         choice = -1;
                     }
                     break;
@@ -153,6 +155,7 @@ public class choicesPlayer : MonoBehaviour
     }
     public void pickMove()
     {
+        deplacementsPlayer.SetActive(true);
         choice = 0;
     }
 
@@ -183,6 +186,7 @@ public class choicesPlayer : MonoBehaviour
         Pass.gameObject.SetActive(true);
 
         this.gameObject.GetComponent<attackType>().tile = null;
+        deplacementsPlayer.GetComponentInChildren<SpriteRenderer>().enabled = true;
         canMove = true;
         choice = -1;
 

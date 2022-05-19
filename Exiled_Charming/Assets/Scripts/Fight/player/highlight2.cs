@@ -41,7 +41,7 @@ public class highlight2 : MonoBehaviour
 
     //===================================================================================//
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         //search a collision with a game object "ennemi" else it will ignore it
         if (collision.gameObject.tag == "ennemi")
