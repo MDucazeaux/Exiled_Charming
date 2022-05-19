@@ -9,7 +9,7 @@ public class p1_GetQuest : MonoBehaviour
 
     private void Update()
     {
-        if(questManager.currentQuest == 2)
+        if(questManager.currentQuest == 1)
         {
             if(Input.GetKeyDown(KeyCode.V))
             {

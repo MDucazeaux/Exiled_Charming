@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Rguard
   - Bguard
+  - quete1
+  - quete2
+  - quete3
+  - item1
+  - item2
+  - item3
   layers:
   - Default
   - TransparentFX

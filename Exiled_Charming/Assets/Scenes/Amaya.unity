@@ -133,11 +133,11 @@ GameObject:
   m_Component:
   - component: {fileID: 635757535}
   - component: {fileID: 635757534}
-  - component: {fileID: 635757536}
   - component: {fileID: 635757537}
   - component: {fileID: 635757538}
   - component: {fileID: 635757540}
   - component: {fileID: 635757541}
+  - component: {fileID: 635757542}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -212,20 +212,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &635757536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 635757532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e709bd5feed5d004ea6e9ed5866d52df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  originalSpeed: 9
-  speed: 9
 --- !u!50 &635757537
 Rigidbody2D:
   serializedVersion: 4
@@ -302,6 +288,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainQuestManager: {fileID: 1854456638}
+--- !u!114 &635757542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635757532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1a0bd5d8f46054bba52d3e672d1da1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &692241125
 GameObject:
   m_ObjectHideFlags: 0
