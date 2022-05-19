@@ -14,66 +14,25 @@ public class cursorController : MonoBehaviour
     private float timerCursor = 0.3f;
 
     private bool mouseCursor = false;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<attackType>().gameObject;
-
         cursor = GameObject.FindGameObjectWithTag("Cursor").gameObject;
 
         Cursor.visible = false;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (tileSelected != null)
-        {
-            if (tileSelected.GetComponent<highlight1>())
-            {
-                if (tileSelected.GetComponent<highlight1>().colliderGO != null)
-                {
-                    player.GetComponent<attackType>().tile = tileSelected.GetComponent<highlight1>().colliderGO;
+        setCursorPos();
+        checkTile();
+    }
 
-                    if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 2)
-                    {
-                        Debug.Log("attaque 1");
-                        player.GetComponent<attackType>().atkNb = 1;
-                    }
-                }
-                else if (tileSelected.GetComponent<highlight1>().colliderGO == null)
-                {
-                    if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 2)
-                    {
-                        Debug.Log("empty tile");
-                        player.GetComponent<attackType>().emptyTile();
-                    }
-                }
-            }
-
-            if (tileSelected.GetComponent<highlight2>())
-            {
-                if (tileSelected.GetComponent<highlight2>().colliderGO != null)
-                {
-                    player.GetComponent<attackType>().tile = tileSelected.GetComponent<highlight2>().colliderGO;
-
-                    if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 3)
-                    {
-                        Debug.Log("attaque 2");
-                        player.GetComponent<attackType>().atkNb = 2;
-                    }
-                }
-                else if (tileSelected.GetComponent<highlight2>().colliderGO == null)
-                {
-                    if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 3)
-                    {
-                        Debug.Log("empty tile");
-                        player.GetComponent<attackType>().emptyTile();
-                    }
-                }
-            }
-        }
+    private void setCursorPos()
+    {
         // add the changes to the actual cursor position
         timerCursor -= Time.deltaTime;
 
@@ -121,18 +80,84 @@ public class cursorController : MonoBehaviour
         {
             cursor.transform.position = new Vector3(h, v, -9);
         }
-
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
+    private void checkTile()
     {
-        if (collision.gameObject.tag == "Tile")
+        if (tileSelected != null)
         {
-            tileSelected = collision.gameObject;
+            if (tileSelected.GetComponent<highlight1>())
+            {
+                tileH1();
+            }
+
+            if (tileSelected.GetComponent<highlight2>())
+            {
+                tileH2();
+            }
+        }
+        else if (tileSelected == null)
+        {
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void tileH1()
+    {
+        if (tileSelected.GetComponent<highlight1>().colliderGO != null)
+        {
+            player.GetComponent<attackType>().tile = tileSelected.GetComponent<highlight1>().colliderGO;
+
+            if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 2)
+            {
+                Debug.Log("attaque 1");
+                player.GetComponent<attackType>().atkNb = 1;
+            }
+        }
+        else if (tileSelected.GetComponent<highlight1>().colliderGO == null)
+        {
+            if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 2)
+            {
+                Debug.Log("empty tile");
+                player.GetComponent<attackType>().emptyTile();
+            }
+        }
+    }
+    
+    private void tileH2()
+    {
+        if (tileSelected.GetComponent<highlight2>().colliderGO != null)
+        {
+            player.GetComponent<attackType>().tile = tileSelected.GetComponent<highlight2>().colliderGO;
+
+            if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 3)
+            {
+                Debug.Log("attaque 2");
+                player.GetComponent<attackType>().atkNb = 2;
+            }
+        }
+        else if (tileSelected.GetComponent<highlight2>().colliderGO == null)
+        {
+            if (Input.GetKeyUp(KeyCode.JoystickButton0) && choicesPlayer.Instance.choice == 3)
+            {
+                Debug.Log("empty tile");
+                player.GetComponent<attackType>().emptyTile();
+            }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Tile")
+        {
+            tileSelected = collision.gameObject;
+
+            if(tileSelected != collision.gameObject)
+            {
+                tileSelected = collision.gameObject;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D other)
     {
         tileSelected = null;
     }

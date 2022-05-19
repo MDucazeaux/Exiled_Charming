@@ -21,12 +21,16 @@ public class choicesPlayer : MonoBehaviour
 
     public GameObject deplacementsPlayer = null;
 
+    private playermovement Player;
+
     private void Awake()
     {
         Instance = this;
     }
     private void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<playermovement>();
+
         canMove  = true;
 
         deplacementsPlayer.SetActive(false);
@@ -48,73 +52,32 @@ public class choicesPlayer : MonoBehaviour
 
             switch (choice)
             {
+                case -1:
+                    Player.selectChoice();
+                    break;
                 //the player has to move first (one case range).
                 case 0:
                     if (canMove)
                     {
-                        deplacementsPlayer.SetActive(true);
-                        if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            transform.position += new Vector3(0, 1, 0);
-                            Move.gameObject.SetActive(false);
-                            Atk1.gameObject.SetActive(true);
-                            Atk2.gameObject.SetActive(true);
-                            Heal.gameObject.SetActive(true);
+                        Player.showMovementAllowed(deplacementsPlayer);
+                        Player.selectChoice();
 
-                            deplacementsPlayer.SetActive(false);
-                            canMove = false;
+
+                        if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                        {
+                            Player.makeMovement(new Vector3(0, 1, 0));
                         }
-                        else
+                        else if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
-
+                            Player.makeMovement(new Vector3(-1, 0, 0));
                         }
-
-
-                        if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                        else if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") > 0 && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
-                            transform.position -= new Vector3(1, 0, 0);
-                            Move.gameObject.SetActive(false);
-                            Atk1.gameObject.SetActive(true);
-                            Atk2.gameObject.SetActive(true);
-                            Heal.gameObject.SetActive(true);
-
-                            deplacementsPlayer.SetActive(false);
-                            canMove = false;
+                            Player.makeMovement(new Vector3(0, -1, 0));
                         }
-                        else
+                        else if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") > 0 && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                         {
-                        }
-
-
-                        if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            transform.position -= new Vector3(0, 1, 0);
-                            Move.gameObject.SetActive(false);
-                            Atk1.gameObject.SetActive(true);
-                            Atk2.gameObject.SetActive(true);
-                            Heal.gameObject.SetActive(true);
-
-                            deplacementsPlayer.SetActive(false);
-                            canMove = false;
-                        }
-                        else
-                        {
-                        }
-
-
-                        if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
-                        {
-                            transform.position += new Vector3(1, 0, 0);
-                            Move.gameObject.SetActive(false);
-                            Atk1.gameObject.SetActive(true);
-                            Atk2.gameObject.SetActive(true);
-                            Heal.gameObject.SetActive(true);
-
-                            deplacementsPlayer.SetActive(false);
-                            canMove = false;
-                        }
-                        else
-                        {
+                            Player.makeMovement(new Vector3(1, 0, 0));
                         }
                     }
                     else
@@ -130,6 +93,7 @@ public class choicesPlayer : MonoBehaviour
                 case 1:
                     if (!canMove)
                     {
+                        Player.selectChoice();
                         transform.GetComponent<CharacterStats>().CurrentHealth += 50;
                         CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
                         CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
@@ -143,6 +107,7 @@ public class choicesPlayer : MonoBehaviour
                 case 2:
                     if (!canMove)
                     {
+                        Player.selectChoice();
                         transform.GetComponent<attackType>().typeAttack = 0;
                     }
                     break;
@@ -151,6 +116,7 @@ public class choicesPlayer : MonoBehaviour
                 case 3:
                     if (!canMove)
                     {
+                        Player.selectChoice();
                         transform.GetComponent<attackType>().typeAttack = 1;
                     }
                     break;
