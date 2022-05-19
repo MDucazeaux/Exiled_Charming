@@ -4,48 +4,75 @@ using UnityEngine;
 
 public class AnimManager : MonoBehaviour
 {
-    public Animator PlayerAnim;
+    //public Animator[] PlayerAnim;
+    private Animator PlayerAnim;
     public int ArmorType = 0;
-    public GameObject[] playerVisuals;
+    public GameObject casual;
+    public GameObject disguise;
+    public GameObject steel;
+    public GameObject gold;
     private bool wasMovingRight = false;
     private bool wasMovingLeft = false;
     private bool wasMovingUp = false;
     private bool wasMovingDown = false;
     private bool IsMooving = false;
+    private int i;
     private void Start()
     {
-        //playerAnim = GetComponent<Animator>();
+        i = 0;
+        PlayerAnim = this.gameObject.GetComponent<Animator>();
+        
     }
     private void Update()
     {
+        
+        if (ArmorType == 0)
+        {
+            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = casual.GetComponent<Animator>().runtimeAnimatorController;
+        }
+        
+        if(ArmorType == 1)
+        {
+            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = disguise.GetComponent<Animator>().runtimeAnimatorController;
+        }
+        
+        if(ArmorType == 2)
+        {
+            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = steel.GetComponent<Animator>().runtimeAnimatorController;
+        }
+        
+        if(ArmorType == 3)
+        {
+            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = gold.GetComponent<Animator>().runtimeAnimatorController;
+        }
 
         float axeX = Input.GetAxisRaw("Horizontal");
         float axeY = Input.GetAxisRaw("Vertical");
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 0);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 1);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 2);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 3);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
         }
         
         if (axeX < 0)
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 0);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
             wasMovingLeft = true;
             wasMovingUp = false;
             wasMovingRight = false;
@@ -54,7 +81,7 @@ public class AnimManager : MonoBehaviour
         if (axeX > 0)
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 1);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
             wasMovingLeft = false;
             wasMovingUp = false;
             wasMovingRight = true;
@@ -63,7 +90,7 @@ public class AnimManager : MonoBehaviour
         if (axeY > 0)
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 2);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
             wasMovingLeft = false;
             wasMovingUp = true;
             wasMovingRight = false;
@@ -72,33 +99,31 @@ public class AnimManager : MonoBehaviour
         if (axeY < 0)
         {
             IsMooving = true;
-            PlayerAnim.SetInteger("Behaviour", 3);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
             wasMovingLeft = false;
             wasMovingUp = false;
             wasMovingRight = false;
             wasMovingDown = true;
         }
 
-        
-
-        if (Input.GetKeyUp(KeyCode.Q) || wasMovingLeft && !IsMooving)
+        if (Input.GetKeyUp(KeyCode.Z) || wasMovingUp && !IsMooving)
         {
-            PlayerAnim.SetInteger("Behaviour", -2);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -4);
         }
 
         if (Input.GetKeyUp(KeyCode.D) || wasMovingRight && !IsMooving)
         {
-            PlayerAnim.SetInteger("Behaviour", -3);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -3);
         }
 
-        if (Input.GetKeyUp(KeyCode.Z) || wasMovingUp && !IsMooving)
+        if (Input.GetKeyUp(KeyCode.Q) || wasMovingLeft && !IsMooving)
         {
-            PlayerAnim.SetInteger("Behaviour", -4);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -2);
         }
 
         if (Input.GetKeyUp(KeyCode.S) || wasMovingDown && !IsMooving)
         {
-            PlayerAnim.SetInteger("Behaviour", -1);
+            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -1);
         }
 
         IsMooving = false;

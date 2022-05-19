@@ -5,30 +5,40 @@ using UnityEngine;
 public class Movements : MonoBehaviour
 {
     private Vector3 originPos, targetPos;
+    private Vector2 respawnPoint;
 
     private bool isMoving;
 
     private float timeForMoove = 0.2f;
     void Update()
     {
-        float axeX = Input.GetAxisRaw("Horizontal");
-        float axeY = Input.GetAxisRaw("Vertical");
-        if (Input.GetKey(KeyCode.Z) && !isMoving || axeY > 0 && !isMoving)
+
+        if (SaveManager.instance.HasLoaded)
+        {
+           // add saved HP//
+            respawnPoint = SaveManager.instance.ActiveSave.RespawnPositionSaved;
+            transform.position = SaveManager.instance.ActiveSave.RespawnPositionSaved;
+            SaveManager.instance.HasLoaded = false;
+        }
+
+        SaveManager.instance.ActiveSave.RespawnPositionSaved = transform.position;
+
+        if (Input.GetKey(KeyCode.Z) && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.up));
         }
 
-        if (Input.GetKey(KeyCode.Q) && !isMoving || axeX < 0 && !isMoving)
+        if (Input.GetKey(KeyCode.Q) && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.left));
         }
 
-        if (Input.GetKey(KeyCode.S) && !isMoving || axeY < 0 && !isMoving)
+        if (Input.GetKey(KeyCode.S) && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.down));
         }
 
-        if (Input.GetKey(KeyCode.D) && !isMoving || axeX > 0 && !isMoving)
+        if (Input.GetKey(KeyCode.D) && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.right));
         }

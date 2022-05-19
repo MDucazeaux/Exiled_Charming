@@ -6,19 +6,22 @@ public class StatsManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int Def;
+    public int baseDef = 25;
     public int AD;
+    public int baseAD = 10;
     void Start()
     {
-        
+        baseDef += Def + 10;
+        baseAD += AD + 15;
     }
 
     // Update is called once per frame
-    void Update()
+    public void updateStats()
     {
-        int level = transform.GetComponent<XpManager>().Level;
+        //int level = transform.GetComponent<XpManager>().Level;
 
-        Def = Def + 10 * level;
-        AD = AD + 15 * level;
+        baseDef += Def + 10;
+        baseAD += AD + 15;
         
     }
 }
