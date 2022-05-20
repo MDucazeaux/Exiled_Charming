@@ -37,6 +37,14 @@ public class DialogueManager : MonoBehaviour
         {
             nextText.SetActive(true);
         }
+        if(Input.GetMouseButtonDown(0))
+        {
+            speed = 0.01f;
+        }
+        else
+        {
+            speed = 0.05f;
+        }
     }
     private IEnumerator Typing()
     {
@@ -46,7 +54,6 @@ public class DialogueManager : MonoBehaviour
             textZone.text += letter;
             yield return new WaitForSeconds(speed);
         }
-
     }
 
     public void nextSentence()
