@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 33.759, y: 35.528076}
-  m_SizeDelta: {x: 1245.038, y: 108.622}
+  m_AnchoredPosition: {x: 33.759014, y: 35.528076}
+  m_SizeDelta: {x: 1245, y: 171.58}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &290338123
 MonoBehaviour:
@@ -283,7 +283,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: '
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
@@ -310,8 +312,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 94.2
-  m_fontSizeBase: 94.2
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -346,7 +348,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.700073, y: -146.389, z: 0, w: 0}
+  m_margin: {x: -3.7363586, y: -2.9956205, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -540,6 +542,7 @@ GameObject:
   - component: {fileID: 692421839}
   - component: {fileID: 692421838}
   - component: {fileID: 692421837}
+  - component: {fileID: 692421841}
   m_Layer: 0
   m_Name: servante 1
   m_TagString: Untagged
@@ -644,13 +647,32 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692421836}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 0, z: 0}
+  m_LocalPosition: {x: 8.42, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692421841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692421836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7dd5e96112b2514182ae17109de8cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableMainDialogue: 0
+  dialogue:
+  - "Emilie : Que vous est t'il arriv\xE9 ? [affol\xE9e]"
+  - "\xCAtes vous bless\xE9e quelque part Miss Keena ?"
+  - "Miss Keena : Je vais tr\xE8s bien, mais un gros rat m'a attaqu\xE9"
+  - "dans la biblioth\xE8que..."
+  typeDialogue: 0
 --- !u!1 &829059115
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +752,7 @@ GameObject:
   - component: {fileID: 910579049}
   - component: {fileID: 910579048}
   - component: {fileID: 910579047}
+  - component: {fileID: 910579051}
   m_Layer: 0
   m_Name: prince
   m_TagString: Untagged
@@ -841,6 +864,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910579051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910579046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67827f9169549c47b8c5161c3c76d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - Va voir ailleurs gros rat.
+  talkEnable: 0
 --- !u!1 &1271677671
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,7 +894,7 @@ GameObject:
   - component: {fileID: 1271677677}
   m_Layer: 0
   m_Name: princesse
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -958,7 +996,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271677671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15, y: 0, z: 0}
+  m_LocalPosition: {x: 15.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -974,24 +1012,60 @@ MonoBehaviour:
   m_GameObject: {fileID: 1271677671}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 341fc26b7c749eb4188cc299597b54ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainDialogue:
+  - 'Princesse : Laisse moi tranquille'
+  - Arrete de me regarder !
+--- !u!1 &1434973342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1434973344}
+  - component: {fileID: 1434973343}
+  m_Layer: 0
+  m_Name: dialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1434973343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434973342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9637c3b1029597e47b09671909d0e441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueChoice: -1
   speed: 0.05
   textZone: {fileID: 290338123}
   nextText: {fileID: 1915739733}
-  dialogue1:
-  - 'Miss Keena : Bonjour, je m''appelle Miss Keena'
-  - '??? : Je suis venu vous marier [heureux]'
-  - 'Sum Tin Wong : Je m''appelle Sum Tin Wong !'
-  dialogue2:
-  - "Servante : Que vous arrive t'il ? [inqui\xE8te]"
-  - "Miss Keena : Un \xE9norme rat est apparu dans la biblioth\xE8que! [apeur\xE9e]"
-  - 'Servante : Je vais appeler un garde.'
-  - "Je pensais qu'il vous \xE9tait arriv\xE9 quelque chose de grave [rassur\xE9e]"
-  dialogue3: []
-  dialogue4: []
+  talkEnabled: 1
+--- !u!4 &1434973344
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434973342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.5998263, y: 0.3192218, z: 102.35283}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915739733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,7 +1084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1915739734
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1028,7 +1102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -52.325317, y: 55.362732}
+  m_AnchoredPosition: {x: -123.70001, y: 60}
   m_SizeDelta: {x: 125.89, y: 76.72}
   m_Pivot: {x: 0.8308129, y: 0.50000024}
 --- !u!114 &1915739735
@@ -1075,8 +1149,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1271677677}
-        m_TargetAssemblyTypeName: princessDialogue, Assembly-CSharp
+      - m_Target: {fileID: 1434973343}
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: nextSentence
         m_Mode: 1
         m_Arguments:
@@ -1134,8 +1208,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 67.76
-  m_fontSizeBase: 67.76
+  m_fontSize: 55
+  m_fontSizeBase: 55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
