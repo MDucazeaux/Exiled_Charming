@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Rguard
   - Bguard
+  - Collider
+  - TriggerTrip
+  - TriggerCastle
   layers:
   - Default
   - TransparentFX
@@ -27,7 +30,7 @@ TagManager:
   - 
   - 
   - 
-  - Layer 1
+  - Collider
   - Layer 2
   - Layer 3
   - 
