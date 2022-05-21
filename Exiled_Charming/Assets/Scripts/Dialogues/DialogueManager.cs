@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DialogueManager : MonoBehaviour
@@ -8,51 +9,61 @@ public class DialogueManager : MonoBehaviour
     public float speed;
 
     public TextMeshProUGUI textZone;
+
+    public GameObject panels;
+
     public GameObject nextText;
 
     private int index;
     private string[] dialogue;
 
-    public bool talkEnabled = true;
+    private bool talkEnabled = true;
 
     private string[] newdialogue;
-
 
     public void SetDialogue(string[] _dialogue)
     {
         newdialogue = _dialogue;
 
+        dialogue = newdialogue;
+
         if (talkEnabled)
-        {
+        { 
+            panels.SetActive(true);
             StartCoroutine(Typing());
             talkEnabled = false;
         }
 
     }
 
+    private void Start()
+    {
+        panels.SetActive(false);
+        nextText.SetActive(false);
+    }
     private void Update()
     {
-        if(dialogue != null)
+        if (dialogue != null)
         if(textZone.text == dialogue[index])
         {
             nextText.SetActive(true);
         }
-        if(Input.GetMouseButtonDown(0))
+
+        if(talkEnabled)
         {
-            speed = 0.01f;
+            Time.timeScale = 1f;
         }
-        else
+        else if(!talkEnabled)
         {
-            speed = 0.05f;
+            Time.timeScale = 0f;
         }
     }
     private IEnumerator Typing()
     {
-        dialogue = newdialogue;
         foreach (char letter in dialogue[index].ToCharArray())
         {
             textZone.text += letter;
-            yield return new WaitForSeconds(speed);
+            yield return new WaitForSecondsRealtime(speed);
         }
     }
 
@@ -71,6 +82,8 @@ public class DialogueManager : MonoBehaviour
             talkEnabled = true;
             textZone.text = "";
             index = 0;
+
+            panels.SetActive(false) ;
             nextText.SetActive(false);
         }
     }
