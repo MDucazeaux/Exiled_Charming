@@ -13,17 +13,14 @@ public class SaveManager : MonoBehaviour
 
     public bool HasLoaded;
 
+    // When awake load the last saved//
     private void Awake()
     {
         instance = this;
         Load();
     }
+    //
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -44,52 +41,64 @@ public class SaveManager : MonoBehaviour
 
     public void Save()
     {
+        // Path where the saved is kept //
         string dataPath = Application.persistentDataPath;
+        //
 
-        
-
+        // creation of the save document//
         var stream = new FileStream(dataPath + "/" + ActiveSave.SaveName + ".save", FileMode.Create);
+        //
+        // Creation of hte serializer de type of SaveData//
         var serializer = new XmlSerializer(typeof(SaveData));
+        //
 
+        //Writing the save into the document //
         serializer.Serialize(stream, ActiveSave);
         stream.Close();
+        //
         
         Debug.Log("Saved");
     }
 
     public void Load()
     {
+        // Same path than where is located the save file//
         string dataPath = Application.persistentDataPath;
+        //
 
+        // Searching if there is a save//
         if (System.IO.File.Exists(dataPath + "/" + ActiveSave.SaveName + ".save"))
         {
+            // if there is the save then load the save//
             var serializer = new XmlSerializer(typeof(SaveData));
             var stream = new FileStream(dataPath + "/" + ActiveSave.SaveName + ".save", FileMode.Open);
 
             ActiveSave = serializer.Deserialize(stream) as SaveData;
             stream.Close();
-
+            //
             Debug.Log("loaded");
             HasLoaded = true;
             
 
         }
-
+        //
     }
 
     public void DeleteSaveData()
     {
+        // Same path where the save is located//
         string dataPath = Application.persistentDataPath;
-
+        // if there is a save delete it //
         if (System.IO.File.Exists(dataPath + "/" + ActiveSave.SaveName + ".save"))
         {
             File.Delete(dataPath + "/" + ActiveSave.SaveName + ".save");
             Debug.Log("Deleted");
         }
+        //
     }
 }
 
-
+// Class that stock all the data that need to be save and load //
 [System.Serializable]
 public class SaveData
 {
@@ -108,4 +117,7 @@ public class SaveData
 
 
 
+
+
 }
+//
