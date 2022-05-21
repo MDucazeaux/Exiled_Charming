@@ -29,6 +29,7 @@ public class attacksIA : MonoBehaviour
                 {
                     dealDamage1(this.gameObject.GetComponent<StatsManager>().AD + 15);
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    this.gameObject.GetComponent<choicesIA>().choice = -1;
 
                     //verify game object identity (wolf, prince, guard ?)
                     //-> set boolean of the game object personal script to false since its not his turn anymore
@@ -39,6 +40,7 @@ public class attacksIA : MonoBehaviour
                 {
                     dealDamage2(this.gameObject.GetComponent<StatsManager>().AD);
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    this.gameObject.GetComponent<choicesIA>().choice = -1;
                     //deal damage to player (no crit)
 
                     //update fight manager to updatePlayer
@@ -48,14 +50,16 @@ public class attacksIA : MonoBehaviour
 
                 }
             }
+            else if (colliderPlayer == null && this.gameObject.GetComponent<choicesIA>().choice == 2 || colliderPlayer == null && this.gameObject.GetComponent<choicesIA>().choice == 3)
+            {
+                emptyTile();
+                this.gameObject.GetComponent<choicesIA>().choice = -1;
+            }
         }
     }
     private void dealDamage1(int dmg)
     {
         colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
-
-        //CharacterStats.Instance.HealthBarImage.fillAmount = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth / colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
-        //CharacterStats.Instance.healthText.text = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
         enableAttack1 = false;
     }
 
@@ -64,10 +68,12 @@ public class attacksIA : MonoBehaviour
         colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
 
         //get healthbar via function in characterStats
-
-        //CharacterStats.Instance.HealthBarImage.fillAmount = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth / colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
-        //CharacterStats.Instance.healthText.text = colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + colliderPlayer.gameObject.GetComponent<CharacterStats>().MaxHealth;
         enableAttack2 = false;
+    }
+
+    private void emptyTile()
+    {
+        fightManager.Instance.updateState(GameState.UpdatePlayer);
     }
 
 }

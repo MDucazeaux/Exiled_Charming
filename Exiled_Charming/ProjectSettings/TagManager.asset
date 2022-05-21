@@ -11,6 +11,8 @@ TagManager:
   - farSlash
   - Border
   - pnj
+  - Cursor
+  - Tile
   layers:
   - Default
   - TransparentFX
