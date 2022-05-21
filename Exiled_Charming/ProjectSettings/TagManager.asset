@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Rguard
   - Bguard
-<<<<<<< HEAD
   - ennemi
   - nearSlash
   - farSlash
@@ -14,11 +13,6 @@ TagManager:
   - pnj
   - Cursor
   - Tile
-=======
-  - Collider
-  - TriggerTrip
-  - TriggerCastle
->>>>>>> Mapping
   layers:
   - Default
   - TransparentFX
@@ -40,15 +34,9 @@ TagManager:
   - 
   - 
   - 
-<<<<<<< HEAD
   - 
   - 
   - 
-=======
-  - Collider
-  - Layer 2
-  - Layer 3
->>>>>>> Mapping
   - 
   - 
   - 
