@@ -284,8 +284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 57b6ce7f322ea364cba554f2b9d871e2, type: 2}
+  m_sharedMaterial: {fileID: 1779088064750686968, guid: 57b6ce7f322ea364cba554f2b9d871e2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -620,14 +620,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableMainDialogue: 0
   dialogue:
-  - "Emilie: Que se passe t'il Miss Keena ??[inqui\xE8te]"
-  - "Miss Keena : Je voulais lire un livre, mais un rat m'a attaqu\xE9e dans la librairie..."
-  - "je l'ai fait fuir mais je n'ose plus y retourner afin de r\xE9cup\xE9rer ne
-    serait-ce qu'un livre \xE0 lire... [triste]"
-  - "Emilie : Je vais envoye un garde inspecter la librairie.J'ai avec moi votre
-    livre pr\xE9f\xE9r\xE9 \"x\" *tend le livre*."
-  - "D'ailleurs votre p\xE8re le roi attend votre visite dans la salle du throne
-    en compagnie d'un invit\xE9 TRES sp\xE9cial."
+  - 'Emilie: Que se passe t''il Miss Keena ??[inquiete]'
+  - 'Miss Keena : Je voulais lire un livre, mais un rat m''a attaquee dans la librairie...'
+  - je l'ai fait fuir mais je n'ose plus y retourner afin de recuperer ne serait-ce
+    qu'un livre a lire... [triste]
+  - 'Emilie : Je vais envoyer un garde inspecter la librairie.J''ai avec moi votre
+    livre favori [tend le livre].'
+  - D'ailleurs votre pere le roi attend votre visite dans la salle du throne en compagnie
+    d'un invite TRES special.
   typeDialogue: 0
 --- !u!1 &829059115
 GameObject:
@@ -709,7 +709,6 @@ GameObject:
   - component: {fileID: 910579048}
   - component: {fileID: 910579047}
   - component: {fileID: 910579051}
-  - component: {fileID: 910579052}
   m_Layer: 0
   m_Name: PNJ
   m_TagString: Untagged
@@ -814,7 +813,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910579046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.11, y: -8.17, z: 0}
+  m_LocalPosition: {x: -6.47, y: 7.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -836,21 +835,6 @@ MonoBehaviour:
   dialogue:
   - Va voir ailleurs gros rat.
   talkEnable: 0
---- !u!114 &910579052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910579046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccba3160050abf04fa6e279d81ffd72f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0.5
-  jumph: 1
-  block: {fileID: 692421836}
 --- !u!1 &1271677671
 GameObject:
   m_ObjectHideFlags: 0
