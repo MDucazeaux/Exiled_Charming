@@ -5,11 +5,7 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     public bool PlayerTurn;
-    private void Start()
-    {
-        PlayerTurn = false;
 
-    }
     void Update()
     {
     }

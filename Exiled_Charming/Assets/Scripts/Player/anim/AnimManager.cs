@@ -26,8 +26,6 @@ public class AnimManager : MonoBehaviour
     }
     private void Update()
     {
-        
-        Debug.Log(EquipmentManager.Instance.CurrentEquipment.Length);
         if(EquipmentManager.Instance.CurrentEquipment[0] == null)
         {
             ArmorType = 10;

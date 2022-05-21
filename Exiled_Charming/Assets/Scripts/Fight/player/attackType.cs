@@ -22,8 +22,8 @@ public class attackType : MonoBehaviour
     private void Start()
     {
         def = GameObject.FindGameObjectWithTag("ennemi").GetComponent<StatsManager>().baseDef;
-        enableAttack1 = GameObject.FindGameObjectWithTag("nearSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight1>().enableAttack;
-        enableAttack2 = GameObject.FindGameObjectWithTag("farSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight2>().enableAttack;
+        enableAttack1 = GameObject.Find("nearSlashPlayer").GetComponentInChildren<highlight1>().enableAttack;
+        enableAttack2 = GameObject.Find("farSlashPlayer").GetComponentInChildren<highlight2>().enableAttack;
     }
     public void Update()
     {
@@ -47,7 +47,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
-                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                    fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
 
@@ -56,7 +56,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack2)
                 {
                     dealDamage2(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue());
-                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                    fightManager.Instance.updateState(GameState.EnemyTurn);
                 }
                 break;
         }
@@ -78,7 +78,7 @@ public class attackType : MonoBehaviour
 
     public void emptyTile()
     {
-        fightManager.Instance.updateState(GameState.UpdateEnnemi);
+        fightManager.Instance.updateState(GameState.EnemyTurn);
     }
 
 }

@@ -28,7 +28,7 @@ public class attacksIA : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<StatsManager>().AD + 15);
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    fightManager.Instance.updateState(GameState.playerTurn);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
 
                     //verify game object identity (wolf, prince, guard ?)
@@ -39,7 +39,7 @@ public class attacksIA : MonoBehaviour
                 if (enableAttack2)
                 {
                     dealDamage2(this.gameObject.GetComponent<StatsManager>().AD);
-                    fightManager.Instance.updateState(GameState.UpdatePlayer);
+                    fightManager.Instance.updateState(GameState.playerTurn);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
                     //deal damage to player (no crit)
 
@@ -73,7 +73,7 @@ public class attacksIA : MonoBehaviour
 
     private void emptyTile()
     {
-        fightManager.Instance.updateState(GameState.UpdatePlayer);
+        fightManager.Instance.updateState(GameState.playerTurn);
     }
 
 }

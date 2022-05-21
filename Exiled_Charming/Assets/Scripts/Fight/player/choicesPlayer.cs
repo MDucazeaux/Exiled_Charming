@@ -15,9 +15,11 @@ public class choicesPlayer : MonoBehaviour
     public Button Atk1;
     public Button Atk2;
 
+    public GameObject nearSlash;
+    public GameObject farSlash;
     public bool canMove;
 
-    [HideInInspector] public int choice;
+    public int choice;
 
     public GameObject deplacementsPlayer = null;
 
@@ -100,7 +102,7 @@ public class choicesPlayer : MonoBehaviour
                         CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
                         CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
 
-                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
                         choice = -1;
                     }
                     break;
@@ -111,6 +113,8 @@ public class choicesPlayer : MonoBehaviour
                     {
                         Player.selectChoice();
                         transform.GetComponent<attackType>().typeAttack = 0;
+                        nearSlash.SetActive(true);
+                        farSlash.SetActive(false);
                     }
                     break;
 
@@ -120,6 +124,8 @@ public class choicesPlayer : MonoBehaviour
                     {
                         Player.selectChoice();
                         transform.GetComponent<attackType>().typeAttack = 1;
+                        nearSlash.SetActive(false);
+                        farSlash.SetActive(true);
                     }
                     break;
 
@@ -138,7 +144,7 @@ public class choicesPlayer : MonoBehaviour
                     }
                     else if (!canMove)
                     {
-                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                        fightManager.Instance.updateState(GameState.EnemyTurn);
                         choice = -1;
                     }
                     break;
