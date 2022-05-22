@@ -110,7 +110,7 @@ public class choicesIA : MonoBehaviour
                             choice = -1;
                             this.gameObject.GetComponent<HpManager>().BasedHP += 50;
                             healCapacity -= 1;
-                            fightManager.Instance.updateState(GameState.playerTurn);
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
                             thinkingTimer = 2;
                         }
                         else
@@ -155,7 +155,7 @@ public class choicesIA : MonoBehaviour
                         if (!canMove)
                         {
                             this.gameObject.GetComponent<prince>().enabledTurn = false;
-                            fightManager.Instance.updateState(GameState.playerTurn);
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
                             thinkingTimer = 2;
                             choice = -1;
                         }

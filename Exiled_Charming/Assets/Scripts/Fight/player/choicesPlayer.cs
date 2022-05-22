@@ -103,7 +103,7 @@ public class choicesPlayer : MonoBehaviour
                         CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
                         CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
 
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
                         choice = -1;
                     }
                     break;
@@ -145,7 +145,7 @@ public class choicesPlayer : MonoBehaviour
                     }
                     else if (!canMove)
                     {
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
                         choice = -1;
                     }
                     break;

@@ -50,7 +50,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;
 
@@ -59,7 +59,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack2)
                 {
                     dealDamage2(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue());
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;
         }
@@ -67,21 +67,21 @@ public class attackType : MonoBehaviour
 
     private void dealDamage1(int dmg)
     {
-        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg); ;
         enableAttack1 = false;
         atkNb = 0;
     }
 
     private void dealDamage2(int dmg)
     {
-        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg);
         enableAttack2 = false;
         atkNb = 0;
     }
 
     public void emptyTile()
     {
-        fightManager.Instance.updateState(GameState.EnemyTurn);
+        fightManager.Instance.updateState(GameState.UpdateEnnemi);
     }
 
 }

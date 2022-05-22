@@ -40,12 +40,4 @@ public class gridSystem : MonoBehaviour
     {
         tiles.Clear();
     }
-    public tileColor tilePosition(Vector2 tilePos) //?
-    {
-        if(tiles.TryGetValue(tilePos,out var tile))
-        {
-            return tile;
-        }
-        return null;
-    }
 }

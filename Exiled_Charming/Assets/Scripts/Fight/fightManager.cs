@@ -32,9 +32,9 @@ public class fightManager : MonoBehaviour
                 break;
 
             case GameState.startFight: //permite to load the scene
-                grid.createGrid();
                 Player.transform.position = new Vector3(0, 6, -4);
-                Ennemi.transform.position = new Vector3(9, 6, -4);
+                Ennemi.transform.localPosition = new Vector3(9, 6, -4);
+                grid.createGrid();
                 break;
 
             case GameState.playerTurn://Player turn so we set everything that touch the player to true and the enemy to false(NEED TO DO SO FOR EVERY ENEMIES IDENTITY TYPE)
@@ -46,6 +46,14 @@ public class fightManager : MonoBehaviour
                 Ennemi.GetComponent<prince>().EnemyTurn = true;
                 Ennemi.GetComponent<prince>().makeDecision();
                 Player.GetComponent<playermovement>().PlayerTurn = false;
+                break;
+            case GameState.UpdatePlayer:
+                choicesPlayer.Instance.activateButtons();
+                updateState(GameState.playerTurn);
+                break;
+            case GameState.UpdateEnnemi:
+                Ennemi.GetComponent<choicesIA>().setVariables();
+                updateState(GameState.EnemyTurn);
                 break;
         }
     }
@@ -67,4 +75,6 @@ public enum GameState //all states of the game
         startFight,
         playerTurn,
         EnemyTurn,
+        UpdatePlayer,
+        UpdateEnnemi
     }

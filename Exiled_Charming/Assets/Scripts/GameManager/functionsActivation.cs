@@ -20,7 +20,8 @@ public class functionsActivation : MonoBehaviour
     public void fightState()
     {
         if (!gridSet)
-        {//disable every game components that belongs to the player
+        {
+            //disable components linked to the player that are useless to him in fight
             Player.GetComponent<enterCombat>().myColliders[0].enabled = false;
             Player.GetComponent<enterCombat>().myColliders[1].enabled = true;
             Player.GetComponent<enterCombat>().myColliders[2].enabled = true;
@@ -29,6 +30,8 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<TriggerManager>().enabled = false;
             Player.GetComponent<enterCombat>().enabled = false;
 
+
+            //enable components linked to the player that are useful to the player in fight
             Player.GetComponent<XpManager>().enabled = true;
             Player.GetComponent<HpManager>().enabled = true;
             Player.GetComponent<StatsManager>().enabled = true;
@@ -37,14 +40,8 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<attackType>().enabled = true;
             Player.GetComponent<playermovement>().enabled = true;
 
-            if (pos == 0)
-            {
-                Player.transform.position = new Vector3(0, 6, -4);
-                Ennemi.transform.position = new Vector3(9, 6, -4);
-                pos = 1;
-            }
 
-
+            //enable components linked to the enemy that are useful in fight
             Ennemi.GetComponent<XpManager>().enabled = true;
             Ennemi.GetComponent<HpManager>().enabled = true;
             Ennemi.GetComponent<StatsManager>().enabled = true;
@@ -52,11 +49,13 @@ public class functionsActivation : MonoBehaviour
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
 
+
+            //manage everything linked to the scene (gestion)
             fightStructure.SetActive(true);
             Map.SetActive(false);
             managers.SetActive(true);
             fightManager.Instance.updateState(GameState.startFight);
-            fightManager.Instance.updateState(GameState.playerTurn);
+            fightManager.Instance.updateState(GameState.UpdatePlayer);
             gridSet = true;
         }
 
@@ -72,6 +71,14 @@ public class functionsActivation : MonoBehaviour
         Player.GetComponent<TriggerManager>().enabled = true;
         Player.GetComponent<enterCombat>().enabled = true;
         Player.GetComponentInChildren<AudioListener>().enabled = true;
+
+        Player.GetComponent<XpManager>().enabled = false;
+        Player.GetComponent<HpManager>().enabled = false;
+        Player.GetComponent<StatsManager>().enabled = false;
+        Player.GetComponent<CharacterStats>().enabled = false;
+        Player.GetComponent<choicesPlayer>().enabled = false;
+        Player.GetComponent<attackType>().enabled = false;
+        Player.GetComponent<playermovement>().enabled = false;
 
 
         Ennemi.GetComponent<XpManager>().enabled = false;

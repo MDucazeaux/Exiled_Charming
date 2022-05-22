@@ -44,12 +44,13 @@ public class HpManager : MonoBehaviour
         //    Hp = 0;
         //}
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
             //    CharacterStats.Instance.TakeDamage(10);
-            Hp -= 10;
-            HealthBarImage.fillAmount = Hp / maxHp;
-            healthText.text = Hp + " / " + maxHp;
-        }
+    }
+
+    public void dealDamage(int dmg)
+    {
+        Hp -= dmg;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
     }
 }
