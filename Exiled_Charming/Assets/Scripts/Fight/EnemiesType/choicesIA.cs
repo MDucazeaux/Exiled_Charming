@@ -39,6 +39,7 @@ public class choicesIA : MonoBehaviour
     }
     private void Update()
     {
+        if(GameObject.Find("Player") != null)
         posPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<playermovement>().transform.position;
 
         if (this.GetComponent<prince>().EnemyTurn)

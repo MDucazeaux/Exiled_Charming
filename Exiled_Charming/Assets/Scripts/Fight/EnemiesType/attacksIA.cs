@@ -31,9 +31,6 @@ public class attacksIA : MonoBehaviour
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
 
-                    //verify game object identity (wolf, prince, guard ?)
-                    //-> set boolean of the game object personal script to false since its not his turn anymore
-
                 }
 
                 if (enableAttack2)
@@ -41,12 +38,6 @@ public class attacksIA : MonoBehaviour
                     dealDamage2(this.gameObject.GetComponent<StatsManager>().AD);
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
-                    //deal damage to player (no crit)
-
-                    //update fight manager to updatePlayer
-
-                    //verify game object identity (wolf, prince, guard ?)
-                    //-> set boolean of the game object personal script to false since its not his turn anymore
 
                 }
             }
@@ -59,13 +50,13 @@ public class attacksIA : MonoBehaviour
     }
     private void dealDamage1(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
+        colliderPlayer.gameObject.GetComponent<HpManager>().dealDamage(-def + dmg);
         enableAttack1 = false;
     }
 
     private void dealDamage2(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<CharacterStats>().CurrentHealth += def - dmg;
+        colliderPlayer.gameObject.GetComponent<HpManager>().dealDamage(- def + dmg);
 
         //get healthbar via function in characterStats
         enableAttack2 = false;
