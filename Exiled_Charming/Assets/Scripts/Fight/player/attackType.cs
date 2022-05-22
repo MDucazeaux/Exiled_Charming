@@ -22,8 +22,11 @@ public class attackType : MonoBehaviour
     private void Start()
     {
         def = GameObject.FindGameObjectWithTag("ennemi").GetComponent<StatsManager>().baseDef;
-        enableAttack1 = GameObject.Find("nearSlashPlayer").GetComponentInChildren<highlight1>().enableAttack;
-        enableAttack2 = GameObject.Find("farSlashPlayer").GetComponentInChildren<highlight2>().enableAttack;
+
+        enableAttack1 = choicesPlayer.Instance.nearSlash.GetComponentInChildren<highlight1>().enableAttack;
+
+        enableAttack2 = choicesPlayer.Instance.farSlash.GetComponentInChildren<highlight2>().enableAttack;
+
     }
     public void Update()
     {

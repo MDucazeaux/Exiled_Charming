@@ -17,6 +17,7 @@ public class choicesPlayer : MonoBehaviour
 
     public GameObject nearSlash;
     public GameObject farSlash;
+
     public bool canMove;
 
     public int choice;
