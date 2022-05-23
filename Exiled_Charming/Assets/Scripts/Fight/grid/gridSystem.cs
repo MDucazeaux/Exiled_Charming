@@ -27,10 +27,7 @@ public class gridSystem : MonoBehaviour
 
                 tiles[new Vector2(x, y)] = spawnTiles;
 
-                if(y >= height && x >= width)
-                {
-                    camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
-                }
+                camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
 
             }
         }

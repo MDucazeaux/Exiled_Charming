@@ -9,6 +9,8 @@ public class fightManager : MonoBehaviour
 
     public gridSystem grid;
 
+    public Camera camera;
+
     public playermovement Player;
     public prince Ennemi;
 

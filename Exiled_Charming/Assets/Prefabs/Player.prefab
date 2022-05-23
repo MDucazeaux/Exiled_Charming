@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1a0bd5d8f46054bba52d3e672d1da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
 --- !u!114 &5097061940754661944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc870c2fb4734a44b26f58427c44b71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerAnim: {fileID: 5097061940754661890}
   ArmorType: 0
-  playerVisuals: []
+  casual: {fileID: 0}
+  disguise: {fileID: 0}
+  steel: {fileID: 0}
+  gold: {fileID: 0}

@@ -10,6 +10,10 @@ public class functionsActivation : MonoBehaviour
     public GameObject Ennemi;
     public GameObject fightStructure;
 
+
+    public GameObject UIButtonsFight;
+    public GameObject UIButtonsGame;
+
     bool gridSet = false;
 
     private int pos = 0;
@@ -51,6 +55,8 @@ public class functionsActivation : MonoBehaviour
 
 
             //manage everything linked to the scene (gestion)
+            UIButtonsFight.SetActive(true);
+            UIButtonsGame.SetActive(false);
             fightStructure.SetActive(true);
             Map.SetActive(false);
             managers.SetActive(true);
@@ -88,6 +94,8 @@ public class functionsActivation : MonoBehaviour
         Ennemi.GetComponent<choicesIA>().enabled = false;
         Ennemi.GetComponent<attacksIA>().enabled = false;
 
+        UIButtonsFight.SetActive(false);
+        UIButtonsGame.SetActive(true);
         fightStructure.SetActive(false);
         Map.SetActive(true);
         fightManager.Instance.updateState(GameState.waitForStart);
