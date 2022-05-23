@@ -12,6 +12,12 @@ public class InventoryItemController : MonoBehaviour
     public static InventoryItemController instance;
 
     public Button RemoveButton;
+    private GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+    }
     public void RemoveItem()
     {
         InventoryManager.Instance.Remove(item);
@@ -25,12 +31,14 @@ public class InventoryItemController : MonoBehaviour
 
     public void Useitem()
     {
-       if (CharacterStats.Instance.CurrentHealth < 100)
+       if (player.GetComponent<HpManager>().Hp < 100)
         {
             switch (item.itemType)
             {
                 case Item.ItemType.Potion:
-                    CharacterStats.Instance.IncreaseHealth(item.Value);
+                    GameObject player = GameObject.Find("Player");
+                    player.GetComponent<HpManager>().healAmount();
+                    Debug.Log("fgjgjgjugyju");
                     RemoveItem();
                     break;
             }

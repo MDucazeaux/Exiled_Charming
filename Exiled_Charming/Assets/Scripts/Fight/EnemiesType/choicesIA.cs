@@ -69,7 +69,7 @@ public class choicesIA : MonoBehaviour
                                 this.transform.position -= new Vector3(1, 0, 0);
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
-                                choice = Random.Range(1, 5);
+                                choice = 1;
                                 canMove = false;
                             }
                             else if (sensors[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.y < posPlayer.y - 1)
@@ -109,7 +109,7 @@ public class choicesIA : MonoBehaviour
                         if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0 && !canMove)
                         {
                             choice = -1;
-                            this.gameObject.GetComponent<HpManager>().BasedHP += 50;
+                            this.gameObject.GetComponent<HpManager>().healAmount();
                             healCapacity -= 1;
                             fightManager.Instance.updateState(GameState.UpdatePlayer);
                             thinkingTimer = 2;

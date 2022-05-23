@@ -35,18 +35,16 @@ public class HpManager : MonoBehaviour
 
         //Hp = BasedHP + bonus; // + hpEquipment;
         
-        //if(Hp > maxHp)
-        //{
-        //    Hp = maxHp;
-        //}
+        if(Hp > maxHp)
+        {
+            Hp = maxHp;
+        }
 
         //if(Hp <= 0)
         //{
         //    this.gameObject.SetActive(false);
         //    Hp = 0;
         //}
-
-            //    CharacterStats.Instance.TakeDamage(10);
 
         if(this.Hp <= 0 && this.tag == "ennemi")
         {
@@ -65,7 +63,7 @@ public class HpManager : MonoBehaviour
 
     public void healAmount()
     {
-        Hp += 50;
+        Hp = 100;
         HealthBarImage.fillAmount = Hp / maxHp;
         healthText.text = Hp + " / " + maxHp;
     }

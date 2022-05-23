@@ -19,12 +19,13 @@ public class choicesPlayer : MonoBehaviour
     public GameObject farSlash;
 
     public bool canMove;
-
+    private bool hasHeal = false;
     public int choice;
 
     public GameObject deplacementsPlayer = null;
 
     private playermovement Player;
+    private List<Item> potion = new List<Item>();
 
     private void Awake()
     {
@@ -98,13 +99,33 @@ public class choicesPlayer : MonoBehaviour
                 case 1:
                     if (!canMove)
                     {
-                        Player.selectChoice();
-                        transform.GetComponent<CharacterStats>().CurrentHealth += 50;
-                        CharacterStats.Instance.HealthBarImage.fillAmount = this.gameObject.GetComponent<CharacterStats>().CurrentHealth / this.gameObject.GetComponent<CharacterStats>().MaxHealth;
-                        CharacterStats.Instance.healthText.text = this.gameObject.GetComponent<CharacterStats>().CurrentHealth + " / " + this.gameObject.GetComponent<CharacterStats>().MaxHealth;
+                        hasHeal = false;
 
-                        fightManager.Instance.updateState(GameState.UpdateEnnemi);
-                        choice = -1;
+                        if (InventoryManager.Instance.NbPotion > 0)
+                        {
+                            Player.selectChoice();
+
+                            if (InventoryManager.Instance.Items.Count > 0)
+                            {
+                                foreach (Item items in InventoryManager.Instance.Items)
+                                {
+                                    if (items.itemType == Item.ItemType.Potion && !hasHeal )
+                                    {
+                                        //InventoryManager.Instance.Remove(items);
+                                        //hasHeal = true;
+                                        potion.Add(items);
+                                    }
+                                }
+
+                            }
+                            if (potion.Count > 0)
+                            {
+                                this.GetComponent<HpManager>().healAmount();
+                                InventoryManager.Instance.Remove(potion[0]);
+                            }
+                            fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                            choice = -1;
+                        }
                     }
                     break;
 
