@@ -14,7 +14,7 @@ public class princesseDialogue : MonoBehaviour
     public string[] mainDialogue;
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.K))
+        if(Input.GetKeyUp(KeyCode.Space))
          dialogueManager.GetComponent<DialogueManager>().SetDialogue(mainDialogue);
     }
 }
