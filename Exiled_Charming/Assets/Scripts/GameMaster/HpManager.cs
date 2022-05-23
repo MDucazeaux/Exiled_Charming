@@ -52,6 +52,21 @@ public class HpManager : MonoBehaviour
             fightManager.Instance.updateState(GameState.waitForStart);
             gameM.updateState(gameState.Game);
         }
+
+        if (Hp >= 70)
+        {
+            HealthBarImage.color = Color.green;
+        }
+
+        if (Hp <= 70)
+        {
+            HealthBarImage.color = Color.yellow;
+        }
+
+        if (Hp <= 30)
+        {
+            HealthBarImage.color = Color.red;
+        }
     }
 
     public void dealDamage(int dmg)
