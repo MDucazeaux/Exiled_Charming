@@ -74,7 +74,7 @@ public class CharacterStats : MonoBehaviour
         //healthText.text = CurrentHealth + " / " + MaxHealth;
     }
 
-        public void IncreaseHealth(int value)
+    public void IncreaseHealth(int value)
     {
         CurrentHealth += value;
         Healthtxt.text = $"HP : {CurrentHealth.ToString()}";

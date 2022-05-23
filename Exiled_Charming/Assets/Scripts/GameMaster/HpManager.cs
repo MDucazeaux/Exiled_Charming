@@ -51,5 +51,20 @@ public class HpManager : MonoBehaviour
             HealthBarImage.fillAmount = Hp / maxHp;
             healthText.text = Hp + " / " + maxHp;
         }
+
+        if (Hp >= 70)
+        {
+            HealthBarImage.color = Color.green;
+        }
+
+        if (Hp <= 70)
+        {
+            HealthBarImage.color = Color.yellow;
+        }
+
+        if (Hp <= 30)
+        {
+            HealthBarImage.color = Color.red;
+        }
     }
 }
