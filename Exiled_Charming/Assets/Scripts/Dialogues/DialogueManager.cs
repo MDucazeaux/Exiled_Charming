@@ -43,7 +43,6 @@ public class DialogueManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(index);
 
         if (dialogue != null)
         if(textZone.text == dialogue[index])

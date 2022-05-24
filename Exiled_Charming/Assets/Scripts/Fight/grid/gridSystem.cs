@@ -11,6 +11,9 @@ public class gridSystem : MonoBehaviour
 
     private Dictionary<Vector2, tileColor> tiles;
 
+    private void Start()
+    {
+    }
     public void createGrid()
     {
         tiles = new Dictionary<Vector2, tileColor>();
@@ -18,7 +21,7 @@ public class gridSystem : MonoBehaviour
         {
             for(y = 0; y < height; y++)
             {
-                var spawnTiles = Instantiate(tile, new Vector3(x, y), Quaternion.identity);
+                var spawnTiles = Instantiate(tile, new Vector3(x, y - 1), Quaternion.identity);
                 spawnTiles.name = $"Tile{x}{y}";
                 spawnTiles.transform.SetParent(gameObject.transform);
 
@@ -27,10 +30,14 @@ public class gridSystem : MonoBehaviour
 
                 tiles[new Vector2(x, y)] = spawnTiles;
 
-                camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+                camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 1f, -10);
 
             }
         }
+    }
+
+    private void Update()
+    {
     }
 
     public void clearDictionary()

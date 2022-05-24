@@ -9,6 +9,7 @@ public class functionsActivation : MonoBehaviour
     private GameObject Player;
     public GameObject Ennemi;
     public GameObject fightStructure;
+    public Camera camera;
 
 
     public GameObject UIButtonsFight;
@@ -25,6 +26,8 @@ public class functionsActivation : MonoBehaviour
     {
         if (!gridSet)
         {
+            camera.transform.parent = null;
+            Player.GetComponent<Movements>().StopAllCoroutines();
             //disable components linked to the player that are useless to him in fight
             Player.GetComponent<enterCombat>().myColliders[0].enabled = false;
             Player.GetComponent<enterCombat>().myColliders[1].enabled = true;
@@ -69,6 +72,8 @@ public class functionsActivation : MonoBehaviour
 
     public void gameState()
     {
+        camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
+        camera.transform.parent = Player.transform;
         Player.GetComponent<enterCombat>().myColliders[0].enabled = true;
         Player.GetComponent<enterCombat>().myColliders[1].enabled = false;
         Player.GetComponent<enterCombat>().myColliders[2].enabled = false;
