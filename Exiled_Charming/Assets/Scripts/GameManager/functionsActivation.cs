@@ -135,6 +135,7 @@ public class functionsActivation : MonoBehaviour
         Player.GetComponent<TriggerManager>().enabled = true;
         Player.GetComponent<enterCombat>().enabled = true;
         Player.GetComponentInChildren<AudioListener>().enabled = true;
+        Player.GetComponent<Animator>().enabled = true;
         Player.GetComponent<SpriteRenderer>().sprite = null;
 
         Player.GetComponent<XpManager>().enabled = false;
