@@ -42,7 +42,7 @@ public class choicesIA : MonoBehaviour
         if(GameObject.Find("Player") != null)
         posPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<playermovement>().transform.position;
 
-        if (this.GetComponent<prince>().EnemyTurn)
+        if (this.GetComponent<enemyUnit>().EnemyTurn)
         {
             switch (choice)
             {
@@ -150,7 +150,7 @@ public class choicesIA : MonoBehaviour
                         }
                         if (!canMove)
                         {
-                            this.gameObject.GetComponent<prince>().enabledTurn = false;
+                            this.gameObject.GetComponent<enemyUnit>().enabledTurn = false;
                             fightManager.Instance.updateState(GameState.UpdatePlayer);
                             thinkingTimer = 2;
                             choice = -1;

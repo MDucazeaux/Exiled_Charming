@@ -48,9 +48,10 @@ public class HpManager : MonoBehaviour
 
         if(this.Hp <= 0 && this.tag == "ennemi")
         {
-            this.gameObject.SetActive(false);
             fightManager.Instance.updateState(GameState.waitForStart);
+            fightManager.Instance.Ennemi = null;
             gameM.updateState(gameState.Game);
+            this.gameObject.SetActive(false);
         }
 
         if (Hp >= 70)
@@ -79,6 +80,12 @@ public class HpManager : MonoBehaviour
     public void healAmount()
     {
         Hp = 100;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
+    }
+
+    public void SetHealthBar()
+    {
         HealthBarImage.fillAmount = Hp / maxHp;
         healthText.text = Hp + " / " + maxHp;
     }

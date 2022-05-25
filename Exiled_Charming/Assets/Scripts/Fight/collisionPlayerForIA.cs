@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class collisionPlayerForIA : MonoBehaviour
 {
-    public attacksIA IA;
+    private GameObject IA;
+
+    private void Update()
+    {
+        if(fightManager.Instance.Ennemi != null)
+            IA = fightManager.Instance.Ennemi;
+    }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            IA.colliderPlayer = collision.gameObject;
+            IA.GetComponent<attacksIA>().colliderPlayer = collision.gameObject;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        IA.colliderPlayer = null;
+        IA.GetComponent<attacksIA>().colliderPlayer = null;
     }
 }

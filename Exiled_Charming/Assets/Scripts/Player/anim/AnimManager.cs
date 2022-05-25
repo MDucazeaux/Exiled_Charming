@@ -57,6 +57,7 @@ public class AnimManager : MonoBehaviour
 
         float axeX = Input.GetAxisRaw("Horizontal");
         float axeY = Input.GetAxisRaw("Vertical");
+
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IsMooving = true;

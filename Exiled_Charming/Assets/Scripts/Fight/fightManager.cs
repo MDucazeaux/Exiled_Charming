@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class fightManager : MonoBehaviour
 {
@@ -12,7 +13,9 @@ public class fightManager : MonoBehaviour
     public Camera camera;
 
     public playermovement Player;
-    public prince Ennemi;
+    public GameObject Ennemi = null;
+
+    public Image HealthBar;
 
     private void Awake()
     {
@@ -34,17 +37,25 @@ public class fightManager : MonoBehaviour
 
             case GameState.startFight: //permite to load the scene
                 Ennemi.transform.localPosition = new Vector3(9, 6, -4);
-                grid.createGrid();
+                if(grid.gridCreated)
+                {
+                    grid.gridAlreadyCreated();
+                }
+                else
+                {
+                    grid.createGrid();
+                }
+
                 break;
 
             case GameState.playerTurn://Player turn so we set everything that touch the player to true and the enemy to false(NEED TO DO SO FOR EVERY ENEMIES IDENTITY TYPE)
                 Player.GetComponent<playermovement>().PlayerTurn = true;
-                Ennemi.GetComponent<prince>().EnemyTurn = false;
+                Ennemi.GetComponent<enemyUnit>().EnemyTurn = false;
                 break;
 
             case GameState.EnemyTurn: //Enemy turn so we set everything that touch the player to false and the enemy to true (NEED TO CHECK IDENTITY)
-                Ennemi.GetComponent<prince>().EnemyTurn = true;
-                Ennemi.GetComponent<prince>().makeDecision();
+                Ennemi.GetComponent<enemyUnit>().EnemyTurn = true;
+                Ennemi.GetComponent<enemyUnit>().makeDecision();
                 Player.GetComponent<playermovement>().PlayerTurn = false;
                 break;
             case GameState.UpdatePlayer:
@@ -58,16 +69,6 @@ public class fightManager : MonoBehaviour
         }
     }
 
-    public void startFight() //the first one to start is random since it would be too easy to let the player start everytime
-    {
-        //int random = Random.Range(0, 2);
-
-        //switch(random)
-        //{
-        //    case 0: updateState(GameState.EnemyTurn); ; break;
-        //    case 1: updateState(GameState.playerTurn); break;
-        //}
-    }
 }
 public enum GameState //all states of the game
     {

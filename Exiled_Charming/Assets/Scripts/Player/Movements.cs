@@ -22,30 +22,27 @@ public class Movements : MonoBehaviour
     {
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
-
-        
-
     }
 
     private void FixedUpdate()
     {
 
-        if(Input.GetKey(KeyCode.D))
+        if(Input.GetKey(KeyCode.D) || dir.x > 0)
         {
             rb.AddForce(new Vector2(7 - rb.velocity.x, 0));
         }
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q) || dir.x < 0)
         {
             rb.AddForce(new Vector2(-7 - rb.velocity.x, 0));
         }
 
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetKey(KeyCode.Z) || dir.y > 0)
         {
             rb.AddForce(new Vector2(0, 7 - rb.velocity.y));
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || dir.y < 0)
         {
             rb.AddForce(new Vector2(0, -7 - rb.velocity.y));
         }

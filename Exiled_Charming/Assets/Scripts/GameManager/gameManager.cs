@@ -7,6 +7,8 @@ public class gameManager : MonoBehaviour
     public static gameManager Instance;
     public functionsActivation functionsStates;
     public gameState state;
+
+    public int hasSetGrid = 0;
     public void updateState(gameState newState) //can be called if a change of state is needed (ex: Game->Fight || Fight -> Game)
     {
         state = newState;
@@ -37,7 +39,12 @@ public class gameManager : MonoBehaviour
                 functionsStates.gameState();
                 break;
             case gameState.Fight:
-                functionsStates.fightState();
+                if (hasSetGrid == 0)
+                { 
+                    functionsStates.fightState();
+                    functionsStates.gridSet = false;
+                    hasSetGrid = 1;
+                }
                 break;
             case gameState.Video:
                 //joueur ne joue pas mais assiste aux cinématiques

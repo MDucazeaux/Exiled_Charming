@@ -63,7 +63,7 @@ public class choicesPlayer : MonoBehaviour
                 case 0:
                     if (canMove)
                     {
-                        Player.showMovementAllowed(deplacementsPlayer);
+                        deplacementsPlayer.SetActive(true);
                         Player.selectChoice();
 
                         if (deplacementsPlayer.activeSelf)
@@ -71,18 +71,22 @@ public class choicesPlayer : MonoBehaviour
                             if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(0, 1, 0));
+                                deplacementsPlayer.SetActive(false);
                             }
                             else if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(-1, 0, 0));
+                                deplacementsPlayer.SetActive(false);
                             }
                             else if (Input.GetKeyDown(KeyCode.S) && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") > 0 && possibleMove[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(0, -1, 0));
+                                deplacementsPlayer.SetActive(false);
                             }
                             else if (Input.GetKeyDown(KeyCode.D) && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") > 0 && possibleMove[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(1, 0, 0));
+                                deplacementsPlayer.SetActive(false);
                             }
                         }
                     }
@@ -125,6 +129,12 @@ public class choicesPlayer : MonoBehaviour
                             }
                             fightManager.Instance.updateState(GameState.UpdateEnnemi);
                             choice = -1;
+                        }
+                        else
+                        {
+                            fightManager.Instance.updateState(GameState.UpdateEnnemi);
+                            choice = -1;
+
                         }
                     }
                     break;

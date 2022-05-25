@@ -23,7 +23,7 @@ public class dialoguePnj : MonoBehaviour
     private int dialogueNb = 0;
     private void Update()
     {
-        if(this.gameObject.GetComponent<prince>() && canTalk && Input.GetKeyUp(KeyCode.Space))
+        if(this.gameObject.GetComponent<enemyUnit>() && canTalk && Input.GetKeyUp(KeyCode.Space))
         {
             switch(dialogueNb)
             {
@@ -32,7 +32,7 @@ public class dialoguePnj : MonoBehaviour
                 case 2: dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialoguePrince3); dialogueNb = -1; break;
             }
         }
-        else if(canTalk && Input.GetKeyUp(KeyCode.Space) && !this.GetComponent<prince>())
+        else if(canTalk && Input.GetKeyUp(KeyCode.Space) && !this.GetComponent<enemyUnit>())
         {
             dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);
         }

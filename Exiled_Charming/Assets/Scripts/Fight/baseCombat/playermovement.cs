@@ -39,6 +39,11 @@ public class playermovement : MonoBehaviour
             choicesPlayer.Instance.choice = 4;
         }
 
+        if (Input.GetAxis("trigger right") > 0)
+        {
+            choicesPlayer.Instance.choice = 0;
+        }
+
         if (Input.GetKey(KeyCode.Joystick1Button5) && !choicesPlayer.Instance.canMove)
         {
             choicesPlayer.Instance.choice = 2;

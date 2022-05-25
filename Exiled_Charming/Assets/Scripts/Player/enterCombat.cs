@@ -32,6 +32,7 @@ public class enterCombat : MonoBehaviour
         if(collision.gameObject.tag == "ennemi")
         {
             gameManager.state = gameState.Fight;
+            fightManager.Instance.Ennemi = collision.gameObject;
             setPosTp = true;
         }
     }

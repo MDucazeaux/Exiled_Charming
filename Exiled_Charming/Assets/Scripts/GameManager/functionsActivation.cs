@@ -7,10 +7,11 @@ public class functionsActivation : MonoBehaviour
     public GameObject managers;
     public GameObject Map;
     private GameObject Player;
-    public GameObject Ennemi;
+    public GameObject Ennemi = null;
     public GameObject fightStructure;
     public Camera camera;
 
+    private gameManager gameManager;
     public Sprite princessModel;
 
     private GameObject musicManager;
@@ -19,7 +20,7 @@ public class functionsActivation : MonoBehaviour
     public GameObject UIButtonsFight;
     public GameObject UIButtonsGame;
 
-    bool gridSet = false;
+    public bool gridSet = false;
     bool setPos = false;
 
     private int pos = 0;
@@ -27,6 +28,7 @@ public class functionsActivation : MonoBehaviour
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        gameManager = GameObject.Find("gameManager").GetComponent<gameManager>();
         musicManager = GameObject.Find("musicManager");
     }
     public void fightState()
@@ -35,9 +37,9 @@ public class functionsActivation : MonoBehaviour
         { 
             musicManager.GetComponent<MusicManager>().PlayingFight = true; hasPlayed = true; 
         }
-
         if (!gridSet)
         {
+            Ennemi = fightManager.Instance.Ennemi;
             setPos = false;
 
             Player.transform.position = new Vector3(0, 6, -4);
@@ -66,10 +68,10 @@ public class functionsActivation : MonoBehaviour
 
 
             //enable components linked to the enemy that are useful in fight
+            Ennemi.GetComponent<HpManager>().SetHealthBar();
             Ennemi.GetComponent<XpManager>().enabled = true;
-            Ennemi.GetComponent<HpManager>().enabled = true;
             Ennemi.GetComponent<StatsManager>().enabled = true;
-            Ennemi.GetComponent<prince>().enabled = true;
+            Ennemi.GetComponent<enemyUnit>().enabled = true;
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
 
@@ -93,6 +95,8 @@ public class functionsActivation : MonoBehaviour
 
     public void gameState()
     {
+        gameManager.hasSetGrid = 0;
+
         if(hasPlayed)
         {
             if (musicManager.GetComponent<MusicManager>().PlayingTrip)
@@ -123,36 +127,42 @@ public class functionsActivation : MonoBehaviour
             setPos = true;
         }
 
-        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
-        camera.transform.parent = Player.transform;
-        Player.GetComponent<enterCombat>().myColliders[0].enabled = true;
-        Player.GetComponent<enterCombat>().myColliders[1].enabled = false;
-        Player.GetComponent<enterCombat>().myColliders[2].enabled = false;
-        Player.GetComponent<Movements>().enabled = true;
-        Player.GetComponent<AnimManager>().enabled = true;
-        Player.GetComponent<TriggerManager>().enabled = true;
-        Player.GetComponent<enterCombat>().enabled = true;
-        Player.GetComponentInChildren<AudioListener>().enabled = true;
-        Player.GetComponent<Animator>().enabled = true;
-        Player.GetComponent<SpriteRenderer>().sprite = null;
+        if (Player != null)
+        {
 
-        Player.GetComponent<XpManager>().enabled = false;
-        Player.GetComponent<HpManager>().enabled = false;
-        Player.GetComponent<StatsManager>().enabled = true;
-        Player.GetComponent<CharacterStats>().enabled = true;
-        Player.GetComponent<choicesPlayer>().enabled = false;
-        Player.GetComponent<attackType>().enabled = false;
-        Player.GetComponent<playermovement>().enabled = false;
+            Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+            camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
+            camera.transform.parent = Player.transform;
 
+            Player.GetComponent<enterCombat>().myColliders[0].enabled = true;
+            Player.GetComponent<enterCombat>().myColliders[1].enabled = false;
+            Player.GetComponent<enterCombat>().myColliders[2].enabled = false;
+            Player.GetComponent<Movements>().enabled = true;
+            Player.GetComponent<AnimManager>().enabled = true;
+            Player.GetComponent<TriggerManager>().enabled = true;
+            Player.GetComponent<enterCombat>().enabled = true;
+            Player.GetComponentInChildren<AudioListener>().enabled = true;
+            Player.GetComponent<Animator>().enabled = true;
+            Player.GetComponent<SpriteRenderer>().sprite = null;
 
-        Ennemi.GetComponent<XpManager>().enabled = false;
-        Ennemi.GetComponent<HpManager>().enabled = false;
-        Ennemi.GetComponent<StatsManager>().enabled = false;
-        Ennemi.GetComponent<prince>().enabled = false;
-        Ennemi.GetComponent<choicesIA>().enabled = false;
-        Ennemi.GetComponent<attacksIA>().enabled = false;
+            Player.GetComponent<XpManager>().enabled = false;
+            Player.GetComponent<HpManager>().enabled = false;
+            Player.GetComponent<StatsManager>().enabled = true;
+            Player.GetComponent<CharacterStats>().enabled = true;
+            Player.GetComponent<choicesPlayer>().enabled = false;
+            Player.GetComponent<attackType>().enabled = false;
+            Player.GetComponent<playermovement>().enabled = false;
+        }
+
+        if (Ennemi != null)
+        {
+            Ennemi.GetComponent<XpManager>().enabled = false;
+            Ennemi.GetComponent<StatsManager>().enabled = false;
+            Ennemi.GetComponent<enemyUnit>().enabled = false;
+            Ennemi.GetComponent<choicesIA>().enabled = false;
+            Ennemi.GetComponent<attacksIA>().enabled = false;
+        }
 
         //Ennemi.GetComponent<AIBT>().enabled = true;
         //Ennemi.GetComponent<Animator>().enabled = true;
