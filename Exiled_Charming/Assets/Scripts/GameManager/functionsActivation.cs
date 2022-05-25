@@ -140,8 +140,8 @@ public class functionsActivation : MonoBehaviour
 
         Player.GetComponent<XpManager>().enabled = false;
         Player.GetComponent<HpManager>().enabled = false;
-        Player.GetComponent<StatsManager>().enabled = false;
-        Player.GetComponent<CharacterStats>().enabled = false;
+        Player.GetComponent<StatsManager>().enabled = true;
+        Player.GetComponent<CharacterStats>().enabled = true;
         Player.GetComponent<choicesPlayer>().enabled = false;
         Player.GetComponent<attackType>().enabled = false;
         Player.GetComponent<playermovement>().enabled = false;
