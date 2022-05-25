@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Border
+  - TriggerCastle
+  - ennemi
+  - TriggerTrip
+  - Cursor
+  - nearSlash
+  - farSlash
+  - Tile
+  - KingOne
   layers:
   - Default
   - TransparentFX

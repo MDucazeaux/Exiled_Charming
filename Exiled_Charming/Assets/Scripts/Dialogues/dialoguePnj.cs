@@ -9,6 +9,12 @@ public class dialoguePnj : MonoBehaviour
 
     private bool canTalk = false;
 
+    //------------------------------------//
+
+    public bool hasTalkedToKingOne = false;
+    private int cancelQuest = 0;
+
+    //------------------------------------//
 
 
     public string[] dialogueNPC;
@@ -35,6 +41,12 @@ public class dialoguePnj : MonoBehaviour
         else if(canTalk && Input.GetKeyUp(KeyCode.Space) && !this.GetComponent<enemyUnit>())
         {
             dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);
+
+            if(hasTalkedToKingOne && cancelQuest == 0)
+            {
+                Essaiquest.Instance.nextQuest();
+                cancelQuest = 1;
+            }
         }
     }
 

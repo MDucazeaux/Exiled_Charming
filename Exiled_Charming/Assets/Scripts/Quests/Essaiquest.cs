@@ -6,13 +6,25 @@ using TMPro;
 
 public class Essaiquest : MonoBehaviour
 {
+    public static Essaiquest Instance;
+
     public TextMeshProUGUI showPrecision;
+    public GameObject setActiveButton;
+    public GameObject setNotActiveButton;
+
+    public GameObject questObjects;
 
     private GameObject parentButton;
-    private int index;
+    public int index;
+
+    private bool isActive = true;
 
     public string[] precisions;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     private void Start()
     {
         parentButton = this.gameObject.transform.parent.gameObject ;
@@ -20,19 +32,34 @@ public class Essaiquest : MonoBehaviour
 
     void Update()
     {
-        if (index < precisions.Length)
+        if (index < precisions.Length && isActive)
         { 
             showPrecision.text = precisions[index];
-            nextQuest();
+            questObjects.SetActive(true);
+        }
+
+        if(!isActive)
+        {
+            questObjects.SetActive(false);
         }
     }
 
-    void nextQuest()
+    public void nextQuest()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            index++;
-            showPrecision.text = precisions[index];
-        }
+         index++;
+    }
+
+    public void activateQuest()
+    {
+        isActive = false;
+        setActiveButton.SetActive(false);
+        setNotActiveButton.SetActive(true);
+    }
+
+    public void inactiveQuest()
+    {
+        isActive = true;
+        setActiveButton.SetActive(true);
+        setNotActiveButton.SetActive(false);
     }
 }

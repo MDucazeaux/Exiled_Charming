@@ -12,6 +12,7 @@ public class functionsActivation : MonoBehaviour
     public Camera camera;
 
     private gameManager gameManager;
+    private GameObject questUi;
     public Sprite princessModel;
 
     private GameObject musicManager;
@@ -27,6 +28,7 @@ public class functionsActivation : MonoBehaviour
     public bool hasPlayed = false;
     private void Start()
     {
+        questUi = GameObject.Find("QuestsUI");
         Player = GameObject.FindGameObjectWithTag("Player").gameObject;
         gameManager = GameObject.Find("gameManager").GetComponent<gameManager>();
         musicManager = GameObject.Find("musicManager");
@@ -74,6 +76,7 @@ public class functionsActivation : MonoBehaviour
             Ennemi.GetComponent<enemyUnit>().enabled = true;
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
+            Ennemi.transform.parent = null;
 
             //Ennemi.GetComponent<AIBT>().enabled = false;
             //Ennemi.GetComponent<Animator>().enabled = false;
@@ -85,6 +88,7 @@ public class functionsActivation : MonoBehaviour
             fightStructure.SetActive(true);
             Map.SetActive(false);
             managers.SetActive(true);
+            questUi.SetActive(false);
             fightManager.Instance.updateState(GameState.startFight);
             fightManager.Instance.updateState(GameState.UpdatePlayer);
 
@@ -129,7 +133,6 @@ public class functionsActivation : MonoBehaviour
 
         if (Player != null)
         {
-
             Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
@@ -162,6 +165,7 @@ public class functionsActivation : MonoBehaviour
             Ennemi.GetComponent<enemyUnit>().enabled = false;
             Ennemi.GetComponent<choicesIA>().enabled = false;
             Ennemi.GetComponent<attacksIA>().enabled = false;
+            Ennemi.transform.parent = Map.transform;
         }
 
         //Ennemi.GetComponent<AIBT>().enabled = true;
@@ -171,6 +175,7 @@ public class functionsActivation : MonoBehaviour
         UIButtonsGame.SetActive(true);
         fightStructure.SetActive(false);
         Map.SetActive(true);
+        questUi.SetActive(true);
         fightManager.Instance.updateState(GameState.waitForStart);
         managers.SetActive(false);
     }
