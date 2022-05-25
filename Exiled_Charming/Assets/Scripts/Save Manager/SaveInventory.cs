@@ -22,7 +22,6 @@ public class SaveInventory : MonoBehaviour
 
     public void InventorySave()
     {
-        string dataPath = Application.persistentDataPath;
         for (int i = 0; i < InventoryManager.Instance.Items.Count; i++)
         {
             Item item = InventoryManager.Instance.Items[i];
@@ -45,7 +44,6 @@ public class SaveInventory : MonoBehaviour
 
     public void LoadInventory()
     {
-        string dataPath = Application.persistentDataPath;
         StreamReader reader = new StreamReader("C:\\Users\\maxdu\\AppData\\LocalLow\\DefaultCompany\\Exiled_Charming\\Testinventorysave.txt");
 
         string text = reader.ReadToEnd();

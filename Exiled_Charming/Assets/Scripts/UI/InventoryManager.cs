@@ -23,7 +23,7 @@ public class InventoryManager : MonoBehaviour
         if (Items.Count>0)
         {
 
-            //Debug.Log(Items[0].itemType);
+           // Debug.Log(Items[0].itemType);
 
         }
         
