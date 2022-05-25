@@ -32,10 +32,11 @@ public class questManager : MonoBehaviour
 
             if(currentQuest > followingQuest)
             {
-                currentQuest -= 1;
+                currentQuest = currentQuest;
             }
             else
             {
+                addQuest();
                 followingQuest += 1;
             }
             nextQuest = false;

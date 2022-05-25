@@ -2,81 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Essaiquest : MonoBehaviour
 {
-    public int currentQuest = 0;
-    public EssaiUIquest QuestPrincipal;
+    public TextMeshProUGUI showPrecision;
 
-    public Image FondImageQuete1;
-    public Text textinfosQuete1;
-    public GameObject AccepterQuest1;
+    private GameObject parentButton;
+    private int index;
 
-    public Image fondImagerewardquete1;
-    public Text  RewardQuete1;
-    public GameObject butonreward1;
+    public string[] precisions;
 
-    private int sousQuete = 0;
-    private int finishQuest = 0;
-    private bool retakequest = true; private bool retakequest1 = true; private bool retakequest2 = true; private bool retakequest3 = true;
-    
-    void Start()
+    private void Start()
     {
-      
+        parentButton = this.gameObject.transform.parent.gameObject ;
     }
 
     void Update()
     {
-        if (sousQuete == 1)
-        {
-            QuestPrincipal.StartQuest("Quete 1, partie 2", 1);
+        if (index < precisions.Length)
+        { 
+            showPrecision.text = precisions[index];
+            nextQuest();
         }
-
-        if (sousQuete == 2)
-        {
-            fondImagerewardquete1.enabled = true;
-            RewardQuete1.enabled = true;
-            butonreward1.SetActive(true);
-        }
-        // FIN DE QUETE NUMERO 0
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void nextQuest()
     {
-       
-        // QUETE NUMERO 0 
-        if (collision.CompareTag("quete1") && retakequest == true)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            FondImageQuete1.enabled = true;
-            textinfosQuete1.enabled = true;
-            AccepterQuest1.SetActive(true);
-            Debug.Log("Vous avez besoin de ramasser un gros carré sur la map");
+            index++;
+            showPrecision.text = precisions[index];
         }
-
-        if (collision.CompareTag("item1") && currentQuest == 1 && retakequest1 == true)
-        {
-            QuestPrincipal.FinishQuest(1);
-            retakequest1 = false;
-            sousQuete = 1;
-        }
-
-        if (collision.CompareTag("item2") && sousQuete == 1)
-        {
-            QuestPrincipal.FinishQuest(1);
-            sousQuete = 2;
-        }
-        // FIN DE QUETE NUMERO 0
-
-        //QUETE NUMERO 1 
-    }
-
-    public void acceptQuest()
-    {
-        currentQuest = 1;
-        QuestPrincipal.StartQuest("Quete 1, partie 1", 1);
-        retakequest = false;
-        FondImageQuete1.enabled = false;
-        textinfosQuete1.enabled = false;
-        AccepterQuest1.SetActive(false);
     }
 }
