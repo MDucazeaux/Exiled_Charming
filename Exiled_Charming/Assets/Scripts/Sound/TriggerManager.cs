@@ -19,15 +19,6 @@ public class TriggerManager : MonoBehaviour
             musicManager.PlayingCastle = true;
         }
 
-        //if (collision.gameObject.CompareTag("TriggerFight") && !musicManager.PlayingFight)
-        //{
-        //    musicManager.gameObject.GetComponent<AudioSource>().Stop();
-        //    musicManager.PlayingCastle = false;
-        //    musicManager.PlayingTrip = false;
-        //    musicManager.gameObject.GetComponent<AudioSource>().PlayOneShot(musicManager.MFight, 0.2f);
-        //    musicManager.PlayingFight = true;
-        //}
-
         if (collision.gameObject.CompareTag("TriggerTrip") && !musicManager.PlayingTrip)
         {
             musicManager.gameObject.GetComponent<AudioSource>().Stop();

@@ -10,6 +10,7 @@ public class MusicManager : MonoBehaviour
 
     private GameObject musicManager;
     private GameObject player;
+    private GameObject gameManager;
 
     public bool PlayingFight;
     public bool PlayingCastle;
@@ -28,11 +29,20 @@ public class MusicManager : MonoBehaviour
 
     private void Update()
     {
-        if(!PlayOnce)
+        if (!PlayOnce)
         {
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle,0.2f);
+            this.gameObject.GetComponent<AudioSource>().Stop();
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle, 0.2f);
             PlayOnce = true;
+            PlayingFight = false;
             PlayingCastle = true;
+        }
+
+        if (PlayingFight)
+        {
+            this.gameObject.GetComponent<AudioSource>().Stop() ;
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 0.2f);
+            PlayingFight = false;
         }
     }
     

@@ -56,7 +56,6 @@ public class choicesIA : MonoBehaviour
                         {
                             if (sensors[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.x < posPlayer.x - 1)
                             {
-                                Debug.Log("right");
                                 this.transform.position += new Vector3(1, 0, 0);
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
@@ -65,7 +64,6 @@ public class choicesIA : MonoBehaviour
                             }
                             else if (sensors[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.x > posPlayer.x + 1)
                             {
-                                Debug.Log("left");
                                 this.transform.position -= new Vector3(1, 0, 0);
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
@@ -74,7 +72,6 @@ public class choicesIA : MonoBehaviour
                             }
                             else if (sensors[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.y < posPlayer.y - 1)
                             {
-                                Debug.Log("top");
                                 this.transform.position += new Vector3(0, 1, 0);
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
@@ -83,7 +80,6 @@ public class choicesIA : MonoBehaviour
                             }
                             else if (sensors[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.y > posPlayer.y + 1)
                             {
-                                Debug.Log("bot");
                                 this.transform.position -= new Vector3(0, 1, 0);
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
@@ -92,7 +88,6 @@ public class choicesIA : MonoBehaviour
                             }
                             else
                             {
-                                Debug.Log("no movement");
                                 sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
                                 choice = Random.Range(1, 5);

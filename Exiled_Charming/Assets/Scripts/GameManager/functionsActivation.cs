@@ -11,23 +11,38 @@ public class functionsActivation : MonoBehaviour
     public GameObject fightStructure;
     public Camera camera;
 
+    public Sprite princessModel;
+
+    private GameObject musicManager;
+
 
     public GameObject UIButtonsFight;
     public GameObject UIButtonsGame;
 
     bool gridSet = false;
+    bool setPos = false;
 
     private int pos = 0;
+    public bool hasPlayed = false;
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").gameObject;
+        musicManager = GameObject.Find("musicManager");
     }
     public void fightState()
     {
+        if (!hasPlayed)
+        { 
+            musicManager.GetComponent<MusicManager>().PlayingFight = true; hasPlayed = true; 
+        }
+
         if (!gridSet)
         {
+            setPos = false;
+
+            Player.transform.position = new Vector3(0, 6, -4);
             camera.transform.parent = null;
-            Player.GetComponent<Movements>().StopAllCoroutines();
+            Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
             //disable components linked to the player that are useless to him in fight
             Player.GetComponent<enterCombat>().myColliders[0].enabled = false;
             Player.GetComponent<enterCombat>().myColliders[1].enabled = true;
@@ -36,6 +51,8 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<AnimManager>().enabled = false;
             Player.GetComponent<TriggerManager>().enabled = false;
             Player.GetComponent<enterCombat>().enabled = false;
+            Player.GetComponent<Animator>().enabled = false;
+            Player.GetComponent<SpriteRenderer>().sprite = princessModel;
 
 
             //enable components linked to the player that are useful to the player in fight
@@ -56,6 +73,9 @@ public class functionsActivation : MonoBehaviour
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
 
+            //Ennemi.GetComponent<AIBT>().enabled = false;
+            //Ennemi.GetComponent<Animator>().enabled = false;
+
 
             //manage everything linked to the scene (gestion)
             UIButtonsFight.SetActive(true);
@@ -65,6 +85,7 @@ public class functionsActivation : MonoBehaviour
             managers.SetActive(true);
             fightManager.Instance.updateState(GameState.startFight);
             fightManager.Instance.updateState(GameState.UpdatePlayer);
+
             gridSet = true;
         }
 
@@ -72,6 +93,38 @@ public class functionsActivation : MonoBehaviour
 
     public void gameState()
     {
+        if(hasPlayed)
+        {
+            if (musicManager.GetComponent<MusicManager>().PlayingTrip)
+            {
+                musicManager.GetComponent<AudioSource>().Stop();
+                musicManager.GetComponent<MusicManager>().PlayingTrip = true;
+                musicManager.GetComponent<MusicManager>().PlayingFight = false;
+                musicManager.GetComponent<AudioSource>().PlayOneShot(musicManager.GetComponent<MusicManager>().Mtrip, 0.2f);
+                musicManager.GetComponent<MusicManager>().PlayingCastle = false;
+                hasPlayed = false;
+
+            }
+            else if (musicManager.GetComponent<MusicManager>().PlayingCastle)
+            {
+                musicManager.GetComponent<AudioSource>().Stop();
+                musicManager.GetComponent<MusicManager>().PlayingTrip = false;
+                musicManager.GetComponent<MusicManager>().PlayingFight = false;
+                musicManager.GetComponent<AudioSource>().PlayOneShot(musicManager.GetComponent<MusicManager>().Mcastle, 0.2f);
+                musicManager.GetComponent<MusicManager>().PlayingCastle = true;
+                hasPlayed = false;
+            }
+        }
+
+        if (!setPos)
+        { 
+            Player.transform.position = Player.GetComponent<enterCombat>().tpPos;
+            Player.GetComponent<enterCombat>().tpPoint.transform.parent = Player.transform;
+            setPos = true;
+        }
+
+        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
         camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
         camera.transform.parent = Player.transform;
         Player.GetComponent<enterCombat>().myColliders[0].enabled = true;
@@ -82,6 +135,7 @@ public class functionsActivation : MonoBehaviour
         Player.GetComponent<TriggerManager>().enabled = true;
         Player.GetComponent<enterCombat>().enabled = true;
         Player.GetComponentInChildren<AudioListener>().enabled = true;
+        Player.GetComponent<SpriteRenderer>().sprite = null;
 
         Player.GetComponent<XpManager>().enabled = false;
         Player.GetComponent<HpManager>().enabled = false;
@@ -98,6 +152,9 @@ public class functionsActivation : MonoBehaviour
         Ennemi.GetComponent<prince>().enabled = false;
         Ennemi.GetComponent<choicesIA>().enabled = false;
         Ennemi.GetComponent<attacksIA>().enabled = false;
+
+        //Ennemi.GetComponent<AIBT>().enabled = true;
+        //Ennemi.GetComponent<Animator>().enabled = true;
 
         UIButtonsFight.SetActive(false);
         UIButtonsGame.SetActive(true);

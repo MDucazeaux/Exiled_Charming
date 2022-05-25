@@ -39,9 +39,4 @@ public class gridSystem : MonoBehaviour
     private void Update()
     {
     }
-
-    public void clearDictionary()
-    {
-        tiles.Clear();
-    }
 }

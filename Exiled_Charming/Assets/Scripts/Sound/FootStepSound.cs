@@ -20,16 +20,16 @@ public class FootStepSound : MonoBehaviour
     private void Update()
     {
         
-        if (movecomponent.isMoving)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                timer = 0.5f;
-                AudioClip clip = GetRDClip();
-                audiosources.PlayOneShot(clip,0.2f);
-            }
-        }
+        //if (movecomponent.isMoving)
+        //{
+        //    timer -= Time.deltaTime;
+        //    if (timer <= 0)
+        //    {
+        //        timer = 0.5f;
+        //        AudioClip clip = GetRDClip();
+        //        audiosources.PlayOneShot(clip,0.2f);
+        //    }
+        //}
     }
 
     private AudioClip GetRDClip()

@@ -12,6 +12,7 @@ public class Movements : MonoBehaviour
     public float speed = 10f;
     private int timeForMoove;
 
+    new Vector2 dir;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,30 +20,34 @@ public class Movements : MonoBehaviour
 
     void Update()
     {
-        float dirx = Input.GetAxisRaw("Horizontal");
-        float diry = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(dirx, diry ).normalized;
-        rb.velocity *= speed;
-    }
-    private IEnumerator MovePlayer(Vector3 direction)
-    {
-        isMoving = true;
-
-        float elapsedTime = 0;
-
-        originPos = transform.position;
-        targetPos = originPos + direction;
+        dir.x = Input.GetAxisRaw("Horizontal");
+        dir.y = Input.GetAxisRaw("Vertical");
 
         
 
-        while (elapsedTime < timeForMoove)
-        {
-            transform.position = Vector3.Lerp(originPos, targetPos, (elapsedTime / timeForMoove));
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-        transform.position = targetPos;
+    }
 
-        isMoving = false;
+    private void FixedUpdate()
+    {
+
+        if(Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(new Vector2(7 - rb.velocity.x, 0));
+        }
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            rb.AddForce(new Vector2(-7 - rb.velocity.x, 0));
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            rb.AddForce(new Vector2(0, 7 - rb.velocity.y));
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(new Vector2(0, -7 - rb.velocity.y));
+        }
     }
 }

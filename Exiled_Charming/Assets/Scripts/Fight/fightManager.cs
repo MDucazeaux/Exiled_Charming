@@ -30,11 +30,9 @@ public class fightManager : MonoBehaviour
         switch (state)
         {
             case GameState.waitForStart://is waiting for a fight to start
-                grid.clearDictionary();
                 break;
 
             case GameState.startFight: //permite to load the scene
-                Player.transform.position = new Vector3(0, 6, -4);
                 Ennemi.transform.localPosition = new Vector3(9, 6, -4);
                 grid.createGrid();
                 break;

@@ -14,7 +14,7 @@ public class gameManager : MonoBehaviour
 
     private void Start()
     {
-        state = gameState.sceneMenu; //define original state
+        state = gameState.Game; //define original state
     }
 
     private void Update()

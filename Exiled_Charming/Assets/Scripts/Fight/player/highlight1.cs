@@ -61,7 +61,6 @@ public class highlight1 : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log(gameObject.name);
         if (colliderGO != null && choicesPlayer.Instance.choice == 2)
         {
             Player.GetComponent<attackType>().tile = colliderGO;
