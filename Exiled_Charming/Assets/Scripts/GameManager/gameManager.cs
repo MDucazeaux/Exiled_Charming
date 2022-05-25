@@ -5,6 +5,7 @@ using UnityEngine;
 public class gameManager : MonoBehaviour
 {
     public static gameManager Instance;
+    public functionsActivation functionsStates;
     public gameState state;
     public void updateState(gameState newState) //can be called if a change of state is needed (ex: Game->Fight || Fight -> Game)
     {
@@ -33,10 +34,10 @@ public class gameManager : MonoBehaviour
                 //recommencer la partie s'il n'y en a pas
                 break;
             case gameState.Game:
-                //joueur se trouve en jeu et se balade
+                functionsStates.gameState();
                 break;
             case gameState.Fight:
-                //joueur est en combat
+                functionsStates.fightState();
                 break;
             case gameState.Video:
                 //joueur ne joue pas mais assiste aux cinématiques

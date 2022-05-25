@@ -1,0 +1,92 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class DialogueManager : MonoBehaviour
+{
+    public float speed;
+
+    public TextMeshProUGUI textZone;
+
+    public GameObject panels;
+
+    public GameObject nextText;
+
+    private int index;
+    private string[] dialogue;
+
+    private bool talkEnabled = true;
+
+    private string[] newdialogue;
+
+    public void SetDialogue(string[] _dialogue)
+    {
+        newdialogue = _dialogue;
+
+        dialogue = newdialogue;
+
+        if (talkEnabled)
+        { 
+            panels.SetActive(true);
+            StartCoroutine(Typing());
+            talkEnabled = false;
+        }
+
+    }
+
+    private void Start()
+    {
+        panels.SetActive(false);
+        nextText.SetActive(false);
+    }
+    private void Update()
+    {
+        Debug.Log(index);
+
+        if (dialogue != null)
+        if(textZone.text == dialogue[index])
+        {
+            nextText.SetActive(true);
+        }
+
+        if(talkEnabled)
+        {
+            Time.timeScale = 1f;
+        }
+        else if(!talkEnabled)
+        {
+            Time.timeScale = 0f;
+        }
+    }
+    private IEnumerator Typing()
+    {
+        foreach (char letter in dialogue[index].ToCharArray())
+        {
+            textZone.text += letter;
+            yield return new WaitForSecondsRealtime(speed);
+        }
+    }
+
+    public void nextSentence()
+    {
+        nextText.SetActive(false);
+
+        if (index < dialogue.Length - 1)
+        {
+            textZone.text = "";
+            index++;
+            StartCoroutine(Typing());
+        }
+        else
+        {
+            talkEnabled = true;
+            textZone.text = "";
+            index = 0;
+
+            panels.SetActive(false) ;
+            nextText.SetActive(false);
+        }
+    }
+}

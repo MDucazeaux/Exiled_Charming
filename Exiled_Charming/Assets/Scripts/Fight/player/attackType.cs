@@ -22,8 +22,11 @@ public class attackType : MonoBehaviour
     private void Start()
     {
         def = GameObject.FindGameObjectWithTag("ennemi").GetComponent<StatsManager>().baseDef;
-        enableAttack1 = GameObject.FindGameObjectWithTag("nearSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight1>().enableAttack;
-        enableAttack2 = GameObject.FindGameObjectWithTag("farSlash").GetComponent<detectionHighLight>().GetComponentInChildren<highlight2>().enableAttack;
+
+        enableAttack1 = choicesPlayer.Instance.nearSlash.GetComponentInChildren<highlight1>().enableAttack;
+
+        enableAttack2 = choicesPlayer.Instance.farSlash.GetComponentInChildren<highlight2>().enableAttack;
+
     }
     public void Update()
     {
@@ -39,7 +42,7 @@ public class attackType : MonoBehaviour
             }
         }
 
-        if (fightManager.Instance.state == GameState.playerTurn)
+        if (fightManager.Instance.state == GameState.playerTurn && tile != null)
         switch (typeAttack)
         {
             case 0:
@@ -47,7 +50,7 @@ public class attackType : MonoBehaviour
                 if (enableAttack1)
                 {
                     dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
-                        fightManager.Instance.updateState(GameState.EnemyTurn);
+                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;
 
@@ -56,40 +59,29 @@ public class attackType : MonoBehaviour
                 if (enableAttack2)
                 {
                     dealDamage2(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue());
-                    fightManager.Instance.updateState(GameState.EnemyTurn);
+                    fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;
         }
     }
-    //the player cant attack if he has nothing in range since it would be useless, if he doesnt have to heal, cant move and doesnt have anyone in range he'll need to pass his turn.
-
-    public void Valid()
-    {
-        isValided = true;
-    }
-
-    public void Return()
-    {
-        isValided = false;
-    }
 
     private void dealDamage1(int dmg)
     {
-        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg); ;
         enableAttack1 = false;
         atkNb = 0;
     }
 
     private void dealDamage2(int dmg)
     {
-        tile.gameObject.GetComponent<HpManager>().BasedHP += def - dmg;
+        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg);
         enableAttack2 = false;
         atkNb = 0;
     }
 
     public void emptyTile()
     {
-        fightManager.Instance.updateState(GameState.EnemyTurn);
+        fightManager.Instance.updateState(GameState.UpdateEnnemi);
     }
 
 }

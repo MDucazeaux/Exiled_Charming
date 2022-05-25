@@ -11,7 +11,7 @@ public class detectionHighLight : MonoBehaviour
         float x = Player.transform.position.x;
         float y = Player.transform.position.y;
 
-        transform.position = new Vector3(x, y, -0.1f);
+        this.transform.localPosition = new Vector3(x, y, -0.1f);
 
     }
 }

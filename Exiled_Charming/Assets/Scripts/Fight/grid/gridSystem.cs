@@ -27,19 +27,14 @@ public class gridSystem : MonoBehaviour
 
                 tiles[new Vector2(x, y)] = spawnTiles;
 
+                camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
+
             }
         }
-        //spawn tiles for the columns and rows to make a grid with 2 differents colors :)
-        camMain.transform.position = new Vector3((float)width / 2 - 0.5f, (float)height / 2 - 0.5f, -10);
-        //set the camera on the middle of the grid so well be able to see every character (not needed if you dont want a fixed camera)
     }
 
-    public tileColor tilePosition(Vector2 tilePos) //?
+    public void clearDictionary()
     {
-        if(tiles.TryGetValue(tilePos,out var tile))
-        {
-            return tile;
-        }
-        return null;
+        tiles.Clear();
     }
 }

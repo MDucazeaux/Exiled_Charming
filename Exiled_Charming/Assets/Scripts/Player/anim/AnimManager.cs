@@ -17,6 +17,7 @@ public class AnimManager : MonoBehaviour
     private bool wasMovingDown = false;
     private bool IsMooving = false;
     private int i;
+    
     private void Start()
     {
         i = 0;
@@ -25,23 +26,31 @@ public class AnimManager : MonoBehaviour
     }
     private void Update()
     {
-        
-        if (ArmorType == 0)
+        if(EquipmentManager.Instance.CurrentEquipment[0] == null)
+        {
+            ArmorType = 10;
+        }
+        else
+        {
+
+            ArmorType = EquipmentManager.Instance.CurrentEquipment[0].Id;
+        }
+        if (ArmorType == 10)
         {
             PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = casual.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 1)
+        if(ArmorType == 11)
         {
             PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = disguise.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 2)
+        if(ArmorType == 12)
         {
             PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = steel.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 3)
+        if(ArmorType == 13)
         {
             PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = gold.GetComponent<Animator>().runtimeAnimatorController;
         }

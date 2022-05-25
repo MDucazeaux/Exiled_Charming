@@ -5,48 +5,55 @@ using UnityEngine;
 public class playermovement : MonoBehaviour
 {
     public bool PlayerTurn;
-    float posX, posY;
 
-    private void Awake()
-    {
-    }
-    private void Start()
-    {
-        PlayerTurn = false;
-        //define where the player spawns on the map
-        posX = Random.Range(1, 20);
-        posY = Random.Range(1, 10);
-
-    }
     void Update()
     {
-        // waits for the player turn to make action
-        if(fightManager.Instance.state == GameState.playerTurn && PlayerTurn)
+    }
+
+    public void makeMovement(Vector3 nextMove)
+    {
+        this.gameObject.transform.position += nextMove;
+
+        choicesPlayer.Instance.Move.gameObject.SetActive(false);
+        choicesPlayer.Instance.Atk1.gameObject.SetActive(true);
+        choicesPlayer.Instance.Atk2.gameObject.SetActive(true);
+        choicesPlayer.Instance.Heal.gameObject.SetActive(true);
+
+        choicesPlayer.Instance.deplacementsPlayer.SetActive(false);
+
+        choicesPlayer.Instance.choice = -1;
+        choicesPlayer.Instance.canMove = false;
+    }
+
+    public void showMovementAllowed(GameObject supportMovementsTiles)
+    {
+        if(Input.GetAxis("trigger right") > 0)
         {
-            //player keyboard controls
+            supportMovementsTiles.SetActive(true);
+        }
+    }
+    public void selectChoice()
+    {
+        if (Input.GetKeyUp(KeyCode.Joystick1Button1) && choicesPlayer.Instance.canMove)
+        {
+            choicesPlayer.Instance.choice = 4;
+        }
 
-            
-            if(Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                choicesPlayer.Instance.pickHeal();
-            }
-            
-            if(Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                choicesPlayer.Instance.pickAttack1();
-            }
-            
-            if(Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                choicesPlayer.Instance.pickAttack2();
-            }
-
-            if(Input.GetKeyDown(KeyCode.G))
-            {
-                choicesPlayer.Instance.pickPass();
-            }
-
-            //player controller controls
+        if (Input.GetKey(KeyCode.Joystick1Button5) && !choicesPlayer.Instance.canMove)
+        {
+            choicesPlayer.Instance.choice = 2;
+        }
+        if (Input.GetKey(KeyCode.Joystick1Button4) && !choicesPlayer.Instance.canMove)
+        {
+            choicesPlayer.Instance.choice = 3;
+        }
+        if (Input.GetKey(KeyCode.Joystick1Button3) && !choicesPlayer.Instance.canMove)
+        {
+            choicesPlayer.Instance.choice = 1;
+        }
+        if (Input.GetKeyUp(KeyCode.Joystick1Button1) && !choicesPlayer.Instance.canMove)
+        {
+            choicesPlayer.Instance.choice = 4;
         }
     }
 

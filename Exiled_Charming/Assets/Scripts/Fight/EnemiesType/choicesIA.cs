@@ -19,7 +19,7 @@ public class choicesIA : MonoBehaviour
 
     public bool canMove = true;
 
-    private float thinkingTimer = 2.0f;
+    public float thinkingTimer = 2.0f;
 
     private Vector2 posPlayer;
 
@@ -39,6 +39,7 @@ public class choicesIA : MonoBehaviour
     }
     private void Update()
     {
+        if(GameObject.Find("Player") != null)
         posPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<playermovement>().transform.position;
 
         if (this.GetComponent<prince>().EnemyTurn)
@@ -46,8 +47,6 @@ public class choicesIA : MonoBehaviour
             switch (choice)
             {
                 case 0:
-                    canMove = true;
-
                     if (canMove)
                     {
                         sensorSupport.SetActive(true);
@@ -57,102 +56,47 @@ public class choicesIA : MonoBehaviour
                         {
                             if (sensors[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.x < posPlayer.x - 1)
                             {
+                                Debug.Log("right");
                                 this.transform.position += new Vector3(1, 0, 0);
-                                canMove = false;
+                                sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
-
-                                if(this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0)
-                                { 
-                                    choice = 1;
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
-                                else
-                                {
-                                    choice = Random.Range(2, 5);
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
+                                choice = Random.Range(1, 5);
+                                canMove = false;
                             }
                             else if (sensors[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.x > posPlayer.x + 1)
                             {
+                                Debug.Log("left");
                                 this.transform.position -= new Vector3(1, 0, 0);
-                                canMove = false;
+                                sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
-
-                                if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0)
-                                {
-                                    choice = 1;
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
-                                else
-                                {
-                                    choice = Random.Range(2, 5);
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
+                                choice = 1;
+                                canMove = false;
                             }
                             else if (sensors[2].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.y < posPlayer.y - 1)
                             {
+                                Debug.Log("top");
                                 this.transform.position += new Vector3(0, 1, 0);
-                                canMove = false;
+                                sensorSupport.SetActive(false);
                                 thinkingTimer = 2;
-
-                                if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0)
-                                {
-                                    choice = 1;
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
-                                else
-                                {
-                                    choice = Random.Range(2, 5);
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
+                                choice = Random.Range(1, 5);
+                                canMove = false;
                             }
                             else if (sensors[3].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled && this.gameObject.transform.position.y > posPlayer.y + 1)
                             {
+                                Debug.Log("bot");
                                 this.transform.position -= new Vector3(0, 1, 0);
-
-                                if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0)
-                                {
-                                    choice = 1;
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
-                                else
-                                {
-                                    choice = Random.Range(2, 5);
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
+                                sensorSupport.SetActive(false);
+                                thinkingTimer = 2;
+                                choice = Random.Range(1, 5);
+                                canMove = false;
                             }
                             else
                             {
-                                if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0)
-                                {
-                                    choice = 1;
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
-                                else
-                                {
-                                    choice = Random.Range(2, 5);
-                                    sensorSupport.SetActive(false);
-                                    canMove = false;
-                                    thinkingTimer = 2;
-                                }
+                                Debug.Log("no movement");
+                                sensorSupport.SetActive(false);
+                                thinkingTimer = 2;
+                                choice = Random.Range(1, 5);
+                                canMove = false;
                             }
                         }
                     }
@@ -161,13 +105,20 @@ public class choicesIA : MonoBehaviour
                     //HEALTH IA
                     thinkingTimer -= Time.deltaTime;
                     if (thinkingTimer <= 0)
-                    { 
-                        healCapacity -= 1;
-                        this.gameObject.GetComponent<HpManager>().BasedHP += 50;
-                        this.gameObject.GetComponent<prince>().enabledTurn = true;
-                        fightManager.Instance.updateState(GameState.UpdatePlayer);
-                        choice = -1;
-                        thinkingTimer = 2;
+                    {
+                        if (this.gameObject.GetComponent<HpManager>().Hp < 60 && healCapacity > 0 && !canMove)
+                        {
+                            choice = -1;
+                            this.gameObject.GetComponent<HpManager>().healAmount();
+                            healCapacity -= 1;
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
+                            thinkingTimer = 2;
+                        }
+                        else
+                        {
+                            choice = Random.Range(2, 5);
+                            thinkingTimer = 2;
+                        }
                     }
                     break;
                 case 2:
@@ -178,12 +129,6 @@ public class choicesIA : MonoBehaviour
                         {
                             this.gameObject.GetComponent<attacksIA>().enableAttack1 = true;
                             thinkingTimer = 2;
-                            choice = -1;
-                        }
-                        else
-                        {
-                            thinkingTimer = 2;
-                            choice = Random.Range(0, 5);
                         }
                     break;
                 case 3:
@@ -195,12 +140,6 @@ public class choicesIA : MonoBehaviour
                         {
                             this.gameObject.GetComponent<attacksIA>().enableAttack2 = true;
                             thinkingTimer = 2;
-                            choice = -1;
-                        }
-                        else
-                        {
-                            thinkingTimer = 2;
-                            choice = Random.Range(0, 5);
                         }
                     }
                     break;
@@ -208,20 +147,29 @@ public class choicesIA : MonoBehaviour
                     //PASS TURN
                     thinkingTimer -= Time.deltaTime;
                     if (thinkingTimer <= 0)
+                    {
                         if (canMove)
                         {
                             canMove = false;
                             thinkingTimer = 2;
                         }
-                    if (!canMove)
-                    {
-                        this.gameObject.GetComponent<prince>().enabledTurn = false;
-                        fightManager.Instance.updateState(GameState.UpdatePlayer);
-                        thinkingTimer = 2;
-                        choice = -1;
+                        if (!canMove)
+                        {
+                            this.gameObject.GetComponent<prince>().enabledTurn = false;
+                            fightManager.Instance.updateState(GameState.UpdatePlayer);
+                            thinkingTimer = 2;
+                            choice = -1;
+                        }
                     }
                     break;
             }
         }
+    }
+
+    public void setVariables()
+    {
+        this.gameObject.GetComponent<attacksIA>().colliderPlayer = null;
+        sensorSupport.SetActive(true);
+        canMove = true;
     }
 }

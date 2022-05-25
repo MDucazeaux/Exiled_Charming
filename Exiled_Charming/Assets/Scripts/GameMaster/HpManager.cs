@@ -15,6 +15,8 @@ public class HpManager : MonoBehaviour
     public Image HealthBarImage;
     public Text healthText;
 
+    public gameManager gameM;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,10 +35,10 @@ public class HpManager : MonoBehaviour
 
         //Hp = BasedHP + bonus; // + hpEquipment;
         
-        //if(Hp > maxHp)
-        //{
-        //    Hp = maxHp;
-        //}
+        if(Hp > maxHp)
+        {
+            Hp = maxHp;
+        }
 
         //if(Hp <= 0)
         //{
@@ -44,12 +46,11 @@ public class HpManager : MonoBehaviour
         //    Hp = 0;
         //}
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if(this.Hp <= 0 && this.tag == "ennemi")
         {
-            //    CharacterStats.Instance.TakeDamage(10);
-            Hp -= 10;
-            HealthBarImage.fillAmount = Hp / maxHp;
-            healthText.text = Hp + " / " + maxHp;
+            this.gameObject.SetActive(false);
+            fightManager.Instance.updateState(GameState.waitForStart);
+            gameM.updateState(gameState.Game);
         }
 
         if (Hp >= 70)
@@ -66,5 +67,19 @@ public class HpManager : MonoBehaviour
         {
             HealthBarImage.color = Color.red;
         }
+    }
+
+    public void dealDamage(int dmg)
+    {
+        Hp -= dmg;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
+    }
+
+    public void healAmount()
+    {
+        Hp = 100;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
     }
 }

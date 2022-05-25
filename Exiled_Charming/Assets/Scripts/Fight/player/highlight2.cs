@@ -8,13 +8,13 @@ public class highlight2 : MonoBehaviour
 {
     private GameObject Player;
 
-    private GameObject colliderGO = null; //empty game object that will be initialized after through collision
+    public GameObject colliderGO = null; //empty game object that will be initialized after through collision
 
     public bool enableAttack; //will tell if the player will be able to attack it or not
     private void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<attackType>().gameObject;
-        enableAttack = false; //set the attack permission to false since colliderGO is empty
+        enableAttack = false;
     }
 
     private void Update()
@@ -41,7 +41,7 @@ public class highlight2 : MonoBehaviour
 
     //===================================================================================//
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         //search a collision with a game object "ennemi" else it will ignore it
         if (collision.gameObject.tag == "ennemi")

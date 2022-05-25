@@ -7,12 +7,11 @@ public class Movements : MonoBehaviour
     private Vector3 originPos, targetPos;
     private Vector2 respawnPoint;
 
-    private bool isMoving;
+    public bool isMoving;
 
     private float timeForMoove = 0.2f;
     void Update()
     {
-
         if (SaveManager.instance.HasLoaded)
         {
            // add saved HP//
@@ -23,22 +22,24 @@ public class Movements : MonoBehaviour
 
         SaveManager.instance.ActiveSave.RespawnPositionSaved = transform.position;
 
-        if (Input.GetKey(KeyCode.Z) && !isMoving)
+        float axeX = Input.GetAxisRaw("Horizontal");
+        float axeY = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(KeyCode.Z) && !isMoving /*&& Triggers[0].GetComponent<TriggerMove>().Collid*/ || axeY > 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.up));
         }
 
-        if (Input.GetKey(KeyCode.Q) && !isMoving)
+        if (Input.GetKey(KeyCode.Q) && !isMoving /*&& Triggers[3].GetComponent<TriggerMove>().Collid*/ || axeX < 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.left));
         }
 
-        if (Input.GetKey(KeyCode.S) && !isMoving)
+        if (Input.GetKey(KeyCode.S) && !isMoving /*&& Triggers[2].GetComponent<TriggerMove>().Collid*/ || axeY < 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.down));
         }
 
-        if (Input.GetKey(KeyCode.D) && !isMoving)
+        if (Input.GetKey(KeyCode.D) && !isMoving /*&& Triggers[1].GetComponent<TriggerMove>().Collid*/ || axeX > 0 && !isMoving)
         {
             StartCoroutine(MovePlayer(Vector3.right));
         }
@@ -52,6 +53,8 @@ public class Movements : MonoBehaviour
 
         originPos = transform.position;
         targetPos = originPos + direction;
+
+        
 
         while (elapsedTime < timeForMoove)
         {

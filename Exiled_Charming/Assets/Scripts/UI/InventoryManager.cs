@@ -11,22 +11,51 @@ public class InventoryManager : MonoBehaviour
     public Transform ItemContent;
     public GameObject InventoryItem;
     public Toggle EnableRemove;
+    public int NbPotion;
 
     public InventoryItemController[] InventoryItems;
     private void Awake()
     {
         Instance = this;
     }
+    private void Update()
+    {
+        if (Items.Count>0)
+        {
+
+           // Debug.Log(Items[0].itemType);
+
+        }
+        
+    }
 
     public void Add(Item item)
     {
+        NbPotion = 0;
+        
         Items.Add(item);
+        foreach (Item items in Items)
+        {
+            if (items.itemType == Item.ItemType.Potion)
+            {
+                NbPotion += 1;
+            }
+        }
         ListItems();
     }
 
     public void Remove(Item item)
     {
+        NbPotion = 0;
+        
         Items.Remove(item);
+        foreach (Item items in Items)
+        {
+            if (items.itemType == Item.ItemType.Potion)
+            {
+                NbPotion += 1;
+            }
+        }
         ListItems();
     }
 
