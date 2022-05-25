@@ -18,6 +18,16 @@ public class InventoryManager : MonoBehaviour
     {
         Instance = this;
     }
+    private void Update()
+    {
+        if (Items.Count>0)
+        {
+
+           // Debug.Log(Items[0].itemType);
+
+        }
+        
+    }
 
     public void Add(Item item)
     {

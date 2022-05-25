@@ -28,10 +28,12 @@ public class SaveManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             Save();
+            GetComponent<SaveInventory>().InventorySave();
         }
         if (Input.GetKeyDown(KeyCode.L))
         {
             Load();
+            GetComponent<SaveInventory>().LoadInventory();
         }
         if (Input.GetKeyDown(KeyCode.G))
         {
@@ -115,7 +117,7 @@ public class SaveData
     public int DefSaved;
     public int ADSaved;
 
-
+    public List<Item> ItemSaved;
 
 
 
