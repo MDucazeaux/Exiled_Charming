@@ -10,7 +10,8 @@ public class SaveInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        string dataPath = Application.persistentDataPath;
+        Debug.Log(dataPath + "/Testinventorysave.txt");
     }
 
     // Update is called once per frame
@@ -26,10 +27,11 @@ public class SaveInventory : MonoBehaviour
         {
             Item item = InventoryManager.Instance.Items[i];
 
+            string dataPath = Application.persistentDataPath;
             File.AppendAllText
             (
                 // Saves object index
-                "C:\\Users\\maxdu\\AppData\\LocalLow\\DefaultCompany\\Exiled_Charming\\Testinventorysave.txt", "Object " + i.ToString() + "\n" +
+                dataPath+"\\Testinventorysave.txt", "Object " + i.ToString() + "\n" +
 
                 // Saves object properties
                 item.name + "\n" +
@@ -37,14 +39,15 @@ public class SaveInventory : MonoBehaviour
                 item.Value.ToString() + "\n" +
                 item.Icon.name + "\n" +
                 item.itemType + "\n\n"
-            );
+            ) ;
         }
     }
 
 
     public void LoadInventory()
     {
-        StreamReader reader = new StreamReader("C:\\Users\\maxdu\\AppData\\LocalLow\\DefaultCompany\\Exiled_Charming\\Testinventorysave.txt");
+        string dataPath = Application.persistentDataPath;
+        StreamReader reader = new StreamReader(dataPath + "\\Testinventorysave.txt");
 
         string text = reader.ReadToEnd();
         reader.Close();
