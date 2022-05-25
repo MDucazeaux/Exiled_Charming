@@ -8,37 +8,48 @@ public class Essaiquest : MonoBehaviour
     public int currentQuest = 0;
     public EssaiUIquest QuestPrincipal;
 
+    public Image FondImageQuete1;
+    public Text textinfosQuete1;
+    public GameObject AccepterQuest1;
+
+    public Image fondImagerewardquete1;
+    public Text  RewardQuete1;
+    public GameObject butonreward1;
+
     private int sousQuete = 0;
     private int finishQuest = 0;
     private bool retakequest = true; private bool retakequest1 = true; private bool retakequest2 = true; private bool retakequest3 = true;
     
     void Start()
     {
-    
+      
     }
-
 
     void Update()
     {
         if (sousQuete == 1)
         {
-            QuestPrincipal.StartQuest("Partie 2", 1);
+            QuestPrincipal.StartQuest("Quete 1, partie 2", 1);
         }
 
         if (sousQuete == 2)
         {
-            QuestPrincipal.StartQuest("Partie 3", 1);
+            fondImagerewardquete1.enabled = true;
+            RewardQuete1.enabled = true;
+            butonreward1.SetActive(true);
         }
+        // FIN DE QUETE NUMERO 0
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
+        // QUETE NUMERO 0 
         if (collision.CompareTag("quete1") && retakequest == true)
         {
-            currentQuest = 1;
-            QuestPrincipal.StartQuest("Quete 1", 1);
-            retakequest = false;
+            FondImageQuete1.enabled = true;
+            textinfosQuete1.enabled = true;
+            AccepterQuest1.SetActive(true);
             Debug.Log("Vous avez besoin de ramasser un gros carré sur la map");
         }
 
@@ -54,29 +65,18 @@ public class Essaiquest : MonoBehaviour
             QuestPrincipal.FinishQuest(1);
             sousQuete = 2;
         }
+        // FIN DE QUETE NUMERO 0
 
-        //if (collision.CompareTag("quete2") && finishQuest == 1 && retakequest1 == true)
-        //{
-        //    QuestPrincipal.StartQuest("partie 2");
-        //    retakequest1 = false;
-        //    currentQuest = 2;
-        //    Debug.Log("idem");
-        //}
+        //QUETE NUMERO 1 
+    }
 
-
-        //if (collision.CompareTag("quete3") && finishQuest == 2 && retakequest2 == true)
-        //{
-        //    QuestPrincipal.StartQuest("Quêtes 3");
-        //    currentQuest = 3;
-        //    retakequest2 = false;
-        //    Debug.Log("idem2");
-        //}
-
-        //if (collision.CompareTag("item3") && currentQuest == 3)
-        //{
-        //    QuestPrincipal.FinishQuest(3);
-        //    collision.gameObject.SetActive(false);
-        //    finishQuest = 3;
-        //}
+    public void acceptQuest()
+    {
+        currentQuest = 1;
+        QuestPrincipal.StartQuest("Quete 1, partie 1", 1);
+        retakequest = false;
+        FondImageQuete1.enabled = false;
+        textinfosQuete1.enabled = false;
+        AccepterQuest1.SetActive(false);
     }
 }
