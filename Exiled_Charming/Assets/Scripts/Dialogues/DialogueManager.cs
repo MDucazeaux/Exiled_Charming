@@ -11,7 +11,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textZone;
 
     public GameObject panels;
-
+    public GameObject InventoryUI;
+    public GameObject QuestsUI;
     public GameObject nextText;
 
     private int index;
@@ -53,10 +54,14 @@ public class DialogueManager : MonoBehaviour
         if(talkEnabled)
         {
             Time.timeScale = 1f;
+            QuestsUI.SetActive(true);
+            InventoryUI.SetActive(true);
         }
         else if(!talkEnabled)
         {
             Time.timeScale = 0f;
+            QuestsUI.SetActive(false);
+            InventoryUI.SetActive(false);
         }
     }
     private IEnumerator Typing()

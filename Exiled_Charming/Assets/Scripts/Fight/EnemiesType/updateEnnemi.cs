@@ -8,10 +8,12 @@ public class updateEnnemi : MonoBehaviour
 
     private void Start()
     {
-        Ennemi = GameObject.FindGameObjectWithTag("ennemi").GetComponent<choicesIA>().gameObject;
     }
     public void UpdateEnnemi()
     {
+        if (Ennemi != null)
+            Ennemi = GameObject.FindGameObjectWithTag("ennemi").GetComponent<choicesIA>().gameObject;
+
         fightManager.Instance.updateState(GameState.EnemyTurn);
         Ennemi.GetComponent<choicesIA>().setVariables();
     }

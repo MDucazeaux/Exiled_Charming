@@ -18,12 +18,13 @@ public class dialoguePnj : MonoBehaviour
 
 
     public string[] dialogueNPC;
-    public string[] dialoguePrince1;
-    public string[] dialoguePrince2;
-    public string[] dialoguePrince3;
+    public string[] questDialogue;
+
+    private string[] originalDialogue;
     private void Start()
     {
         dialogueManager = GameObject.Find("dialogueManager");
+        originalDialogue = dialogueNPC;
     }
 
     private int dialogueNb = 0;
@@ -31,22 +32,23 @@ public class dialoguePnj : MonoBehaviour
     {
         if(this.gameObject.GetComponent<enemyUnit>() && canTalk && Input.GetKeyUp(KeyCode.Space))
         {
-            switch(dialogueNb)
-            {
-                case 0: dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialoguePrince1); dialogueNb = 1; break;
-                case 1: dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialoguePrince2); dialogueNb = 2; break;
-                case 2: dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialoguePrince3); dialogueNb = -1; break;
-            }
+            dialogueManager.GetComponent<DialogueManager>().SetDialogue(questDialogue);
         }
         else if(canTalk && Input.GetKeyUp(KeyCode.Space) && !this.GetComponent<enemyUnit>())
         {
-            dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);
 
             if(hasTalkedToKingOne && cancelQuest == 0)
             {
+                dialogueNPC = questDialogue;
                 Essaiquest.Instance.nextQuest();
                 cancelQuest = 1;
             }
+            else if(cancelQuest != 0)
+            {
+                dialogueNPC = originalDialogue;
+            }
+
+            dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);
         }
     }
 

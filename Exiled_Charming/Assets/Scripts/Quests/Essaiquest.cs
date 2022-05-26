@@ -17,7 +17,7 @@ public class Essaiquest : MonoBehaviour
     private GameObject parentButton;
     public int index;
 
-    private bool isActive = true;
+    public bool isActive = true;
 
     public string[] precisions;
 

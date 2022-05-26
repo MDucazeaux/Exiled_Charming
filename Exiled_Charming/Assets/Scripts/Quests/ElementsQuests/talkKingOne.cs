@@ -15,7 +15,7 @@ public class talkKingOne : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && Essaiquest.Instance.index == 1)
+        if(collision.gameObject.tag == "Player" && Essaiquest.Instance.index == 3 && Essaiquest.Instance.isActive)
         {
             isActivated = true;
         }

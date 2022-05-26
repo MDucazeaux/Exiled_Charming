@@ -12,7 +12,7 @@ public class functionsActivation : MonoBehaviour
     public Camera camera;
 
     private gameManager gameManager;
-    private GameObject questUi;
+    public GameObject questUi;
     public Sprite princessModel;
 
     private GameObject musicManager;
@@ -28,7 +28,6 @@ public class functionsActivation : MonoBehaviour
     public bool hasPlayed = false;
     private void Start()
     {
-        questUi = GameObject.Find("QuestsUI");
         Player = GameObject.FindGameObjectWithTag("Player").gameObject;
         gameManager = GameObject.Find("gameManager").GetComponent<gameManager>();
         musicManager = GameObject.Find("musicManager");

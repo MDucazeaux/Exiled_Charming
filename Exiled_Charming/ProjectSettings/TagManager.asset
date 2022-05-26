@@ -13,6 +13,9 @@ TagManager:
   - farSlash
   - Tile
   - KingOne
+  - Rguard
+  - Bguard
+  - rat
   layers:
   - Default
   - TransparentFX
