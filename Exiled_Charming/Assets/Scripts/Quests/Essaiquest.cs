@@ -11,6 +11,7 @@ public class Essaiquest : MonoBehaviour
     public TextMeshProUGUI showPrecision;
     public GameObject setActiveButton;
     public GameObject setNotActiveButton;
+    public GameObject rewardBtn;
 
     public GameObject questObjects;
 
@@ -52,8 +53,6 @@ public class Essaiquest : MonoBehaviour
                 requirementQ4 = 3;
             }
         }
-
-
 
         if(!isActive)
         {

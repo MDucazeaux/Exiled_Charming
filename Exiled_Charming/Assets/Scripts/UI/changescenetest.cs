@@ -9,7 +9,7 @@ public class changescenetest : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && fightManager.Instance.state == GameState.waitForStart)
         {
             Object.SetActive(true);
         }

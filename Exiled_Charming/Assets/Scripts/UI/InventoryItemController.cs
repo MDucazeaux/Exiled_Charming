@@ -38,7 +38,6 @@ public class InventoryItemController : MonoBehaviour
                 case Item.ItemType.Potion:
                     GameObject player = GameObject.Find("Player");
                     player.GetComponent<HpManager>().healAmount();
-                    Debug.Log("fgjgjgjugyju");
                     RemoveItem();
                     break;
             }

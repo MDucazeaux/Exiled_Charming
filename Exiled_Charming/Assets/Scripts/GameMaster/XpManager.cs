@@ -14,16 +14,22 @@ public class XpManager : MonoBehaviour
 
     public bool LevelUp;
     public Slider XPBarImage;
+    public Text levelTxt;
     void Start()
     {
-        maxxp = 10f;
+        maxxp = 1000f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        XPBarImage.maxValue = maxxp;
-        XPBarImage.value = xp;
+        if(this.gameObject.tag == "Player")
+        {
+            XPBarImage.maxValue = maxxp;
+            XPBarImage.value = xp;
+
+            levelTxt.text = Level.ToString() ;
+        }
 
         if (xp >= maxxp)
         {

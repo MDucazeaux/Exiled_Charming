@@ -59,7 +59,6 @@ public class functionsActivation : MonoBehaviour
 
 
             //enable components linked to the player that are useful to the player in fight
-            Player.GetComponent<HpManager>().enabled = true;
             Player.GetComponent<StatsManager>().enabled = true;
             Player.GetComponent<CharacterStats>().enabled = true;
             Player.GetComponent<choicesPlayer>().enabled = true;
@@ -147,7 +146,6 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<Animator>().enabled = true;
             Player.GetComponent<SpriteRenderer>().sprite = null;
 
-            Player.GetComponent<HpManager>().enabled = false;
             Player.GetComponent<StatsManager>().enabled = true;
             Player.GetComponent<CharacterStats>().enabled = true;
             Player.GetComponent<choicesPlayer>().enabled = false;

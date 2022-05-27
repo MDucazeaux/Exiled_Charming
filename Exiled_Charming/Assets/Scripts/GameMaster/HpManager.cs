@@ -79,6 +79,8 @@ public class HpManager : MonoBehaviour
             {
                 maxHp *= 2;
                 Hp *= 2;
+                HealthBarImage.fillAmount = Hp / maxHp;
+                healthText.text = Hp + " / " + maxHp;
                 this.GetComponent<XpManager>().LevelUp = false;
             }
         }
