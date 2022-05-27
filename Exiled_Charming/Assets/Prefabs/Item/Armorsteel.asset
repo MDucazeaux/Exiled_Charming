@@ -18,5 +18,5 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 4cb7ce4d70954ba419167be60472ac2c, type: 3}
   itemType: 1
   equipmentSlot: 0
-  ArmorModifier: 0
+  ArmorModifier: 50
   DamageModifier: 0

@@ -9,6 +9,7 @@ public class HpManager : MonoBehaviour
     public int heal;
     public float Hp;
     public float maxHp = 100;
+    public int xpAmount;
 
     private int bonus;
 
@@ -16,11 +17,13 @@ public class HpManager : MonoBehaviour
     public Text healthText;
 
     public gameManager gameM;
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        BasedHP = 100;
+        Player = GameObject.Find("Player");
+
         heal = 0;
         bonus = 0;
         Hp = maxHp;
@@ -50,6 +53,7 @@ public class HpManager : MonoBehaviour
         {
             fightManager.Instance.updateState(GameState.waitForStart);
             fightManager.Instance.Ennemi = null;
+            Player.GetComponent<XpManager>().AddXp(xpAmount);
             gameM.updateState(gameState.Game);
             this.gameObject.SetActive(false);
         }
@@ -67,6 +71,16 @@ public class HpManager : MonoBehaviour
         if (Hp <= 30)
         {
             HealthBarImage.color = Color.red;
+        }
+
+        if(this.gameObject.GetComponent<XpManager>())
+        {
+            if(this.GetComponent<XpManager>().LevelUp)
+            {
+                maxHp *= 2;
+                Hp *= 2;
+                this.GetComponent<XpManager>().LevelUp = false;
+            }
         }
     }
 
