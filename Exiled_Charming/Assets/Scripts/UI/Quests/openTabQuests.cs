@@ -24,6 +24,18 @@ public class openTabQuests : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(fightManager.Instance.state != GameState.waitForStart)
+        {
+            openTab.SetActive(false);
+        }
+        else if(fightManager.Instance.state == GameState.waitForStart && !closeTab.activeSelf)
+        {
+            openTab.SetActive(true);
+        }
+    }
+
     public void openTabQuest()
     {
         backGroundQuests.gameObject.SetActive(true);

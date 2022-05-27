@@ -128,3 +128,4 @@ MonoBehaviour:
   Item: {fileID: 11400000, guid: b5607ae1ff4a2ce41a675736bc304adb, type: 2}
   ItemContent: {fileID: 0}
   InventoryItem: {fileID: 0}
+  pickupSound: {fileID: 8300000, guid: c8437e25b1dcc0843879218a3cc535e9, type: 3}

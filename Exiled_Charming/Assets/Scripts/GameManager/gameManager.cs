@@ -23,18 +23,6 @@ public class gameManager : MonoBehaviour
     {
         switch(state)
         {
-            case gameState.sceneMenu:
-                //charger la scene de menu
-                break;
-            case gameState.sceneGames:
-                //charger la scene des parties save (si une partie a deja ete save ou non)
-                break;
-            case gameState.loadGame:
-                //load la partie s'il y en a une
-                break;
-            case gameState.startGame:
-                //recommencer la partie s'il n'y en a pas
-                break;
             case gameState.Game:
                 functionsStates.gameState();
                 break;
@@ -46,24 +34,12 @@ public class gameManager : MonoBehaviour
                     hasSetGrid = 1;
                 }
                 break;
-            case gameState.Video:
-                //joueur ne joue pas mais assiste aux cinématiques
-                break;
-            case gameState.sceneEnd:
-                //crédits
-                break;
         }
     }
 }
 
 public enum gameState //differents states of the game (can add more)
 {
-    sceneMenu,
-    sceneGames,
-    loadGame,
-    startGame,
     Game,
-    Fight,
-    Video,
-    sceneEnd
+    Fight
 }

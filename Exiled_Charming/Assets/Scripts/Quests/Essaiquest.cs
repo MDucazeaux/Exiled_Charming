@@ -15,9 +15,13 @@ public class Essaiquest : MonoBehaviour
     public GameObject questObjects;
 
     private GameObject parentButton;
+
+    public int requirementQ4 = 0;
+
     public int index;
 
     public bool isActive = true;
+    private GameObject Player;
 
     public string[] precisions;
 
@@ -28,6 +32,7 @@ public class Essaiquest : MonoBehaviour
     private void Start()
     {
         parentButton = this.gameObject.transform.parent.gameObject ;
+        Player = GameObject.Find("Player");
     }
 
     void Update()
@@ -37,6 +42,18 @@ public class Essaiquest : MonoBehaviour
             showPrecision.text = precisions[index];
             questObjects.SetActive(true);
         }
+
+
+        if(requirementQ4 == 2)
+        {
+            if (Player.GetComponent<AnimManager>().ArmorType == 11)
+            {
+                nextQuest();
+                requirementQ4 = 3;
+            }
+        }
+
+
 
         if(!isActive)
         {

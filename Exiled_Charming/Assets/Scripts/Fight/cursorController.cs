@@ -7,6 +7,7 @@ public class cursorController : MonoBehaviour
     int h = 6;
     int v = 5;
 
+    public int z;
     public GameObject tileSelected = null;
 
     private GameObject cursor;
@@ -73,12 +74,12 @@ public class cursorController : MonoBehaviour
 
         if (mouseCursor)
         {
-            cursor.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + 0.1f, Camera.main.ScreenToWorldPoint(Input.mousePosition).y - 0.2f, -9);
+            cursor.transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x + 0.1f, Camera.main.ScreenToWorldPoint(Input.mousePosition).y - 0.2f, z);
         }
 
         if (!mouseCursor)
         {
-            cursor.transform.position = new Vector3(h, v, -9);
+            cursor.transform.position = new Vector3(h, v, z);
         }
     }
     private void checkTile()
