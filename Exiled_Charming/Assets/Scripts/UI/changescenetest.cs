@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class changescene : MonoBehaviour
+public class changescenetest : MonoBehaviour
 {
     public GameObject Object;
-
 
     public void Update()
     {
@@ -19,10 +18,5 @@ public class changescene : MonoBehaviour
     public void switchscene(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
-    }
-
-    public void quitGame()
-    {
-        Application.Quit();
     }
 }
