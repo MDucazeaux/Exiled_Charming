@@ -59,17 +59,14 @@ public class functionsActivation : MonoBehaviour
 
 
             //enable components linked to the player that are useful to the player in fight
-            Player.GetComponent<StatsManager>().enabled = true;
-            Player.GetComponent<CharacterStats>().enabled = true;
+            //Player.GetComponent<StatsManager>().enabled = true;
+            //Player.GetComponent<CharacterStats>().enabled = true;
             Player.GetComponent<choicesPlayer>().enabled = true;
             Player.GetComponent<attackType>().enabled = true;
             Player.GetComponent<playermovement>().enabled = true;
 
 
             //enable components linked to the enemy that are useful in fight
-            Ennemi.GetComponent<HpManager>().SetHealthBar();
-            Ennemi.GetComponent<XpManager>().enabled = true;
-            Ennemi.GetComponent<StatsManager>().enabled = true;
             Ennemi.GetComponent<enemyUnit>().enabled = true;
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
@@ -146,8 +143,7 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<Animator>().enabled = true;
             Player.GetComponent<SpriteRenderer>().sprite = null;
 
-            Player.GetComponent<StatsManager>().enabled = true;
-            Player.GetComponent<CharacterStats>().enabled = true;
+            //Player.GetComponent<CharacterStats>().enabled = true;
             Player.GetComponent<choicesPlayer>().enabled = false;
             Player.GetComponent<attackType>().enabled = false;
             Player.GetComponent<playermovement>().enabled = false;

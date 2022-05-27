@@ -16,6 +16,12 @@ public class CharacterStats : MonoBehaviour
 
     public Image HealthBarImage;
     public Text healthText;
+
+    public int defPlayer;
+    public int adPlayer;
+
+    public int amountDef;
+    public int amountAd;
     //public Text text;
 
     private void Awake()
@@ -24,17 +30,18 @@ public class CharacterStats : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+    }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            TakeDamage(10);
-            HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
-            healthText.text = CurrentHealth + " / " + MaxHealth;
-        }
 
-        Damagetxt.text = $"Damage : {Damage.GetValue()}";
-        Armortxt.text = $"Armor : {Armor.GetValue()}";
+        defPlayer = GameObject.Find("Player").GetComponent<StatsManager>().baseDef;
+        adPlayer = GameObject.Find("Player").GetComponent<StatsManager>().baseAD;
+
+        additionAdDef();
+        Damagetxt.text = $"Damage : {Damage.GetValue() + adPlayer}" ;
+        Armortxt.text = $"Armor : {Armor.GetValue() + defPlayer}";
         Healthtxt.text = $"HP : {CurrentHealth.ToString()}";
 
         if (CurrentHealth >= 70)
@@ -80,5 +87,11 @@ public class CharacterStats : MonoBehaviour
         Healthtxt.text = $"HP : {CurrentHealth.ToString()}";
         HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
         healthText.text = CurrentHealth + " / " + MaxHealth;
+    }
+
+    public void additionAdDef()
+    {
+        amountAd = adPlayer + Damage.GetValue();
+        amountDef = defPlayer + Armor.GetValue();
     }
 }

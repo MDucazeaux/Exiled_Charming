@@ -49,7 +49,7 @@ public class attackType : MonoBehaviour
                 //player selects a case
                 if (enableAttack1)
                 {
-                    dealDamage1(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue() + 15);
+                    dealDamage1(this.gameObject.GetComponent<CharacterStats>().amountAd + 15);
                     fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;
@@ -58,7 +58,7 @@ public class attackType : MonoBehaviour
                 //player selects a case
                 if (enableAttack2)
                 {
-                    dealDamage2(this.gameObject.GetComponent<CharacterStats>().Damage.GetValue());
+                    dealDamage2(this.gameObject.GetComponent<CharacterStats>().amountAd);
                     fightManager.Instance.updateState(GameState.UpdateEnnemi);
                 }
                 break;

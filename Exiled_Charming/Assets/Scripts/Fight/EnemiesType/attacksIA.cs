@@ -16,7 +16,8 @@ public class attacksIA : MonoBehaviour
 
     private void Start()
     {
-        def = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().Armor.GetValue();
+        GameObject.Find("Player").GetComponent<CharacterStats>().additionAdDef();
+        def = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStats>().amountDef;
     }
     public void Update()
     {
@@ -50,13 +51,13 @@ public class attacksIA : MonoBehaviour
     }
     private void dealDamage1(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<HpManager>().dealDamage(-def + dmg);
+        colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(-def + dmg);
         enableAttack1 = false;
     }
 
     private void dealDamage2(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<HpManager>().dealDamage(- def + dmg);
+        colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(- def + dmg);
 
         //get healthbar via function in characterStats
         enableAttack2 = false;
