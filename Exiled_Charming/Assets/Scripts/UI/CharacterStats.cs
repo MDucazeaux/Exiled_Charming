@@ -4,7 +4,7 @@ public class CharacterStats : MonoBehaviour
 {
     public static CharacterStats Instance;
 
-    public float MaxHealth = 100;
+    public float MaxHealth;
     public float CurrentHealth { get; set; }
 
     public Stats Damage;
@@ -36,32 +36,38 @@ public class CharacterStats : MonoBehaviour
     private void Update()
     {
 
+        CurrentHealth = this.GetComponent<HpManager>().Hp;
+        MaxHealth = this.GetComponent<HpManager>().maxHp;
+
         defPlayer = GameObject.Find("Player").GetComponent<StatsManager>().baseDef;
         adPlayer = GameObject.Find("Player").GetComponent<StatsManager>().baseAD;
 
+
         additionAdDef();
+        healthText.text = CurrentHealth + " / " + MaxHealth;
         Damagetxt.text = $"Damage : {Damage.GetValue() + adPlayer}" ;
         Armortxt.text = $"Armor : {Armor.GetValue() + defPlayer}";
-        Healthtxt.text = $"HP : {CurrentHealth.ToString()}";
+        Healthtxt.text = "Hp :" + CurrentHealth + "/" + MaxHealth;
 
-        if (CurrentHealth >= 70)
+
+        if (CurrentHealth >= MaxHealth/2)
         {
             HealthBarImage.color = Color.green;
         }
 
-        if (CurrentHealth <= 70)
+        if (CurrentHealth <= MaxHealth/2)
         {
             HealthBarImage.color = Color.yellow;
         }
 
-        if (CurrentHealth <= 30)
+        if (CurrentHealth <= MaxHealth/4)
         {
             HealthBarImage.color = Color.red;
         }
 
-        if (CurrentHealth >= 100)
+        if (CurrentHealth >= MaxHealth)
         {
-            CurrentHealth = 100;
+            CurrentHealth = MaxHealth;
         }
 
         if (CurrentHealth <= 0)
@@ -71,20 +77,21 @@ public class CharacterStats : MonoBehaviour
     }
     public void TakeDamage(int Damage)
     {
-        Damage -= Armor.GetValue();
+        Damage -= amountDef;
         Damage = Mathf.Clamp(Damage, 0, int.MaxValue);
 
         CurrentHealth -= Damage;
-        Debug.Log(transform.name + "take" + Damage + " damage. ");
+        this.GetComponent<HpManager>().Hp -= Damage;
 
-        //HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
-        //healthText.text = CurrentHealth + " / " + MaxHealth;
+        HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
+        healthText.text = CurrentHealth + " / " + MaxHealth;
     }
 
     public void IncreaseHealth(int value)
     {
-        CurrentHealth += value;
-        Healthtxt.text = $"HP : {CurrentHealth.ToString()}";
+        if(CurrentHealth < MaxHealth)
+            CurrentHealth += value;
+
         HealthBarImage.fillAmount = CurrentHealth / MaxHealth;
         healthText.text = CurrentHealth + " / " + MaxHealth;
     }

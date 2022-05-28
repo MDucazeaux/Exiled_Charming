@@ -51,15 +51,16 @@ public class attacksIA : MonoBehaviour
     }
     private void dealDamage1(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(-def + dmg);
+        if(colliderPlayer.GetComponent<CharacterStats>().amountDef - dmg < colliderPlayer.GetComponent<CharacterStats>().CurrentHealth)
+            colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(dmg);
         enableAttack1 = false;
     }
 
     private void dealDamage2(int dmg)
     {
-        colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(- def + dmg);
+        if (colliderPlayer.GetComponent<CharacterStats>().amountDef - dmg < colliderPlayer.GetComponent<CharacterStats>().CurrentHealth)
+            colliderPlayer.gameObject.GetComponent<CharacterStats>().TakeDamage(dmg);
 
-        //get healthbar via function in characterStats
         enableAttack2 = false;
     }
 

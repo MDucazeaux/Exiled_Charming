@@ -31,7 +31,7 @@ public class InventoryItemController : MonoBehaviour
 
     public void Useitem()
     {
-       if (player.GetComponent<HpManager>().Hp < 100)
+       if (player.GetComponent<HpManager>().Hp < player.GetComponent<HpManager>().maxHp)
         {
             switch (item.itemType)
             {

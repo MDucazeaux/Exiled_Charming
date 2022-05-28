@@ -124,7 +124,7 @@ public class choicesPlayer : MonoBehaviour
                             }
                             if (potion.Count > 0)
                             {
-                                this.GetComponent<HpManager>().healAmount();
+                                this.GetComponent<CharacterStats>().IncreaseHealth(50);
                                 InventoryManager.Instance.Remove(potion[0]);
                             }
                             fightManager.Instance.updateState(GameState.UpdateEnnemi);

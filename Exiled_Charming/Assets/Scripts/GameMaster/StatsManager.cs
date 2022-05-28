@@ -13,8 +13,7 @@ public class StatsManager : MonoBehaviour
 
     void Start()
     {
-        baseDef += Def + 10;
-        baseAD += AD + 15;
+        updateStats();
     }
 
     private void Update()
@@ -23,10 +22,7 @@ public class StatsManager : MonoBehaviour
     // Update is called once per frame
     public void updateStats()
     {
-        //int level = transform.GetComponent<XpManager>().Level;
-        
-        baseDef += Def + 10 ;
-        baseAD += AD + 15;
-        
+        baseDef += 10 ;
+        baseAD += 15;
     }
 }

@@ -15,6 +15,7 @@ public class XpManager : MonoBehaviour
     public bool LevelUp;
     public Slider XPBarImage;
     public Text levelTxt;
+    public Text xpTxtInventory;
     void Start()
     {
         maxxp = 1000f;
@@ -29,13 +30,14 @@ public class XpManager : MonoBehaviour
             XPBarImage.value = xp;
 
             levelTxt.text = Level.ToString() ;
+            xpTxtInventory.text = "Xp : " + xp.ToString() + "/" + maxxp.ToString() ;
         }
 
         if (xp >= maxxp)
         {
             Level += 1;
+            xp = xp - maxxp;
             maxxp *= 2;
-            xp = 0;
 
 
             if (this.tag == "Player")

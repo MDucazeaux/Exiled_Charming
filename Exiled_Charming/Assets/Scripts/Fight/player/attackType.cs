@@ -30,6 +30,7 @@ public class attackType : MonoBehaviour
     }
     public void Update()
     {
+
         if (tile != null)
         {
             switch (atkNb)
@@ -67,7 +68,8 @@ public class attackType : MonoBehaviour
 
     private void dealDamage1(int dmg)
     {
-        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg); ;
+        tile.gameObject.GetComponent<HpManager>().dealDamage(dmg);
+        Debug.Log(tile.name);
         enableAttack1 = false;
         atkNb = 0;
     }
@@ -82,6 +84,7 @@ public class attackType : MonoBehaviour
     public void emptyTile()
     {
         fightManager.Instance.updateState(GameState.UpdateEnnemi);
+        Debug.Log("empty") ;
     }
 
 }

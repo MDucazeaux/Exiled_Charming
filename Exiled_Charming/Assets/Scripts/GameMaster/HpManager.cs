@@ -6,12 +6,9 @@ using UnityEngine.UI;
 public class HpManager : MonoBehaviour
 {
     public int BasedHP;
-    public int heal;
     public float Hp;
-    public float maxHp = 100;
+    public float maxHp;
     public int xpAmount;
-
-    private int bonus;
 
     public Image HealthBarImage;
     public Text healthText;
@@ -24,31 +21,15 @@ public class HpManager : MonoBehaviour
     {
         Player = GameObject.Find("Player");
 
-        heal = 0;
-        bonus = 0;
         Hp = maxHp;
+
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //int level = transform.GetComponent<XpManager>().Level;
-        //bonus = level * 10 + heal;
-        //int hpEquipment = transform.GetComponentInChildren<Inventorycomponent>().HpStat;
-
-        //Hp = BasedHP + bonus; // + hpEquipment;
-        
-        if(Hp > maxHp)
-        {
-            Hp = maxHp;
-        }
-
-        //if(Hp <= 0)
-        //{
-        //    this.gameObject.SetActive(false);
-        //    Hp = 0;
-        //}
-
         if(this.Hp <= 0 && this.tag == "ennemi")
         {
             fightManager.Instance.updateState(GameState.waitForStart);
@@ -58,19 +39,22 @@ public class HpManager : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-        if (Hp >= 70)
+        if(this.tag == "ennemi")
         {
-            HealthBarImage.color = Color.green;
-        }
+            if (Hp >= maxHp / 2)
+            {
+                HealthBarImage.color = Color.green;
+            }
 
-        if (Hp <= 70)
-        {
-            HealthBarImage.color = Color.yellow;
-        }
+            if (Hp <= maxHp / 2)
+            {
+                HealthBarImage.color = Color.yellow;
+            }
 
-        if (Hp <= 30)
-        {
-            HealthBarImage.color = Color.red;
+            if (Hp <= maxHp / 4)
+            {
+                HealthBarImage.color = Color.red;
+            }
         }
 
         if(this.gameObject.GetComponent<XpManager>())
@@ -88,14 +72,24 @@ public class HpManager : MonoBehaviour
 
     public void dealDamage(int dmg)
     {
-        Hp -= dmg;
+        Hp = Hp + this.GetComponent<StatsManager>().baseDef -  dmg;
+
+        if (Hp > maxHp)
+        {
+            Hp = maxHp;
+        }
+
         HealthBarImage.fillAmount = Hp / maxHp;
         healthText.text = Hp + " / " + maxHp;
     }
 
     public void healAmount()
     {
-        Hp = 100;
+        Hp += 100;
+        if (Hp > maxHp)
+        {
+            Hp = maxHp;
+        }
         HealthBarImage.fillAmount = Hp / maxHp;
         healthText.text = Hp + " / " + maxHp;
     }
