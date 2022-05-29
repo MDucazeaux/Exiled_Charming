@@ -8,7 +8,6 @@ public class HpManager : MonoBehaviour
     public int BasedHP;
     public float Hp;
     public float maxHp;
-    public int xpAmount;
 
     public Image HealthBarImage;
     public Text healthText;
@@ -20,11 +19,8 @@ public class HpManager : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
-
         Hp = maxHp;
-
-        HealthBarImage.fillAmount = Hp / maxHp;
-        healthText.text = Hp + " / " + maxHp;
+        SetHealthBar();
     }
 
     // Update is called once per frame
@@ -34,7 +30,6 @@ public class HpManager : MonoBehaviour
         {
             fightManager.Instance.updateState(GameState.waitForStart);
             fightManager.Instance.Ennemi = null;
-            Player.GetComponent<XpManager>().AddXp(xpAmount);
             gameM.updateState(gameState.Game);
             this.gameObject.SetActive(false);
         }
@@ -68,6 +63,8 @@ public class HpManager : MonoBehaviour
                 this.GetComponent<XpManager>().LevelUp = false;
             }
         }
+
+        SetHealthBar();
     }
 
     public void dealDamage(int dmg)

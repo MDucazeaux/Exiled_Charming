@@ -19,4 +19,4 @@ MonoBehaviour:
   itemType: 1
   equipmentSlot: 1
   ArmorModifier: 0
-  DamageModifier: 10000
+  DamageModifier: 10

@@ -68,6 +68,7 @@ public class functionsActivation : MonoBehaviour
 
             //enable components linked to the enemy that are useful in fight
             Ennemi.GetComponent<enemyUnit>().enabled = true;
+            Ennemi.GetComponent<HpManager>().enabled = true;
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
             Ennemi.transform.parent = null;

@@ -68,12 +68,12 @@ public class choicesPlayer : MonoBehaviour
 
                         if (deplacementsPlayer.activeSelf)
                         {
-                            if (Input.GetKeyDown(KeyCode.W) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            if (Input.GetKeyDown(KeyCode.Z) && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right y") < 0 && possibleMove[0].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(0, 1, 0));
                                 deplacementsPlayer.SetActive(false);
                             }
-                            else if (Input.GetKeyDown(KeyCode.A) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
+                            else if (Input.GetKeyDown(KeyCode.Q) && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled || Input.GetAxis("joystick right x") < 0 && possibleMove[1].GetComponent<deplacementPlayer>().GetComponent<SpriteRenderer>().enabled)
                             {
                                 Player.makeMovement(new Vector3(-1, 0, 0));
                                 deplacementsPlayer.SetActive(false);
