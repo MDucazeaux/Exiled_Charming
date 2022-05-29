@@ -26,10 +26,12 @@ public class GetReward : MonoBehaviour
         if(indexRequired == Essaiquest.Instance.index)
         {
             this.GetComponent<Button>().enabled = true;
+            this.GetComponent<Image>().enabled = true;
         }
         else
         {
             this.GetComponent<Button>().enabled = false ;
+            this.GetComponent<Image>().enabled = false ;
         }
     }
     public void getReward()
@@ -38,6 +40,8 @@ public class GetReward : MonoBehaviour
 
         for(int x = 0; x < itemsGained.Length; x++)
             Inventory.GetComponent<InventoryManager>().Add(itemsGained[x]);
+
+        Essaiquest.Instance.nextQuest();
 
         this.gameObject.SetActive(false);
     }

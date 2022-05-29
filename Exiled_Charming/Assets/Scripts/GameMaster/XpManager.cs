@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class XpManager : MonoBehaviour
 {
+    private int lvlDiff;
+
     public int Level;
    
     public float xp;
@@ -51,6 +53,26 @@ public class XpManager : MonoBehaviour
         {
 
             this.GetComponentInChildren<TextMesh>().text = Level.ToString();
+
+            lvlDiff = this.Level - player.GetComponent<XpManager>().Level;
+
+            switch(lvlDiff)
+            {
+                case <-2: xpGiven = 0;
+                    break;
+                case -2: xpGiven = 10;
+                    break;
+                case -1: xpGiven = 50;
+                    break;
+                case 0: xpGiven = 100;
+                    break;
+                case 1: xpGiven = 150;
+                    break;
+                case 2: xpGiven = 200;
+                    break;
+                case > 2: xpGiven = 300;
+                    break;
+            }
 
             if(this.GetComponent<HpManager>().Hp <= 0)
                 player.GetComponent<XpManager>().AddXp(xpGiven);

@@ -45,7 +45,7 @@ public class dialoguePnj : MonoBehaviour
             }
             else if(cancelQuest != 0)
             {
-                dialogueNPC = originalDialogue;
+                this.enabled = false;
             }
 
             dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);

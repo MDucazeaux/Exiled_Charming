@@ -16,6 +16,8 @@ TagManager:
   - Rguard
   - Bguard
   - rat
+  - Collider
+  - Forgeron
   layers:
   - Default
   - TransparentFX
