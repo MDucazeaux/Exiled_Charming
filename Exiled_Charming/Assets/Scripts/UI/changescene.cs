@@ -1,17 +1,14 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class changescene : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
-    public void switchscene(string name)
+    // Start is called before the first frame update
+   
+    public void SwitchScene(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
-    }
-
-    public void quitGame()
-    {
-        Application.Quit();
     }
 }
