@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//permet d'attribuer des slot a un equipement defini et de remettre l'ancien équipement dans l'inventaire si un nouvelle équipement (sur le meme slot) voudrait être équipé, list d'image qui permet de récuperer l'image de l'equipement actuellment équipé
 public class EquipmentManager : MonoBehaviour
 {
 

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+//load menu quand on press enter
 public class Changesceneavantmenu : MonoBehaviour
 {
     // Start is called before the first frame update

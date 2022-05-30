@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+
+//script de base qui retourne les valeurs d'amure et de damage
 public class Stats
 {
     [SerializeField]

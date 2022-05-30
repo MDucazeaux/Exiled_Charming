@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 public class CharacterStats : MonoBehaviour
+
+    //script du player, lié a la barre de vie, et fonction de dégat subit qui réduit avec l'armure + fonction qui permet de se heal
 {
     public static CharacterStats Instance;
 
