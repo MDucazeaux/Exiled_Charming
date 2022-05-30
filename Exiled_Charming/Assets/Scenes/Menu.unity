@@ -236,6 +236,7 @@ MonoBehaviour:
   Mtrip: {fileID: 0}
   MFight: {fileID: 0}
   Mcastle: {fileID: 0}
+  SfButton: {fileID: 8300000, guid: 316d0982cdd892343a7e231578819d92, type: 3}
   PlayingFight: 0
   PlayingCastle: 0
   PlayingTrip: 0
@@ -1264,7 +1265,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Test
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
       - m_Target: {fileID: 158406164}
         m_TargetAssemblyTypeName: MusicManager, Assembly-CSharp
         m_MethodName: loadmusic
