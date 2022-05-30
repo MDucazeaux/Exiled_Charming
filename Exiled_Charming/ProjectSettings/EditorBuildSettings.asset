@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credit.unity
     guid: daf2ed14125ab8e41a9cf5561805dbf6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: f1d5c7a096be0494d9d0f56db3c77fd0
   - enabled: 1
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Amaya.unity
     guid: 3eedbd2c00a34c24ca97c523bc97c410
+  - enabled: 1
+    path: Assets/Scenes/pickGame.unity
+    guid: c1bee75391f09af43aec5f1d2cfe937d
   m_configObjects: {}

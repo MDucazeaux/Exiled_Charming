@@ -78,6 +78,8 @@ public class functionsActivation : MonoBehaviour
             Ennemi.transform.parent = null;
 
 
+            Ennemi.GetComponent<AIBT>().enabled = false;
+            Ennemi.GetComponent<Animator>().enabled = false;
             //manage everything linked to the scene (gestion)
             UIButtonsFight.SetActive(true);
             UIButtonsGame.SetActive(false);

@@ -64,143 +64,147 @@ public class Patrol : Node
                 isMoving = true;
             }
         }
-        float angle = Vector2.SignedAngle(Vector2.up, wp.position);
-        posangle = angle + 180;
 
-        //How to know where the eye is looking
-        if (posangle > 210 && posangle < 220 && limit == 0)
-        {
-            //left
-            if (_transform.CompareTag("ennemi"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 0);
-                limit++;
-                Debug.Log("gauche");
-            }
-            //if (_transform.CompareTag("Bguard"))
-            //{
-            //    _animGuard.SetInteger("BGBehaviour", 0);
-            //    limit++;
-            //}
-            //wasMovingLeft = true;
-            //wasMovingUp = false;
-            //wasMovingRight = false;
-            //wasMovingDown = false;
-        }
-        if (posangle > 260 && posangle < 270 && limit == 0)
-        {
-            //down
-            if (_transform.CompareTag("ennemi"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 3);
-                limit++;
-            }
-            //if (_transform.CompareTag("Bguard"))
-            //{
-            //    _animGuard.SetInteger("BGBehaviour", 3);
-            //    limit++;
-            //}
-            //wasMovingLeft = false;
-            //wasMovingUp = false;
-            //wasMovingRight = false;
-            //wasMovingDown = true;
-        }
-        if (posangle > 60 && posangle < 120 && limit == 0)
-        {
-            //right
-            if (_transform.CompareTag("ennemi"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 1);
-                limit++;
-            }
-            //if (_transform.CompareTag("Bguard"))
-            //{
-            //    _animGuard.SetInteger("BGBehaviour", 1);
-            //    limit++;
-            //}
-            //wasMovingLeft = false;
-            //wasMovingUp = false;
-            //wasMovingRight = true;
-            //wasMovingDown = false;
-        }
-        if (posangle > 100 && posangle < 155 && limit == 0)
-        {
-            //up
-            if (_transform.CompareTag("ennemi"))
-            {
-                _animGuard.SetInteger("RGBehaviour", 2);
-                limit++;
-            }
-            //if (_transform.CompareTag("Bguard"))
-            //{
-            //    _animGuard.SetInteger("BGBehaviour", 2);
-            //    limit++;
-            //}
-            //wasMovingLeft = false;
-            //wasMovingUp = true;
-            //wasMovingRight = false;
-            //wasMovingDown = false;
-        }
 
-        //if (!isMoving)
+        //float angle = Vector2.SignedAngle(_transform.forward, wp.position);
+        //posangle = angle + 180;
+        ////How to know where the eye is looking
+        //if (angle2 >=0 && angle2 <45 && limit == 0)
         //{
+        //    //left
         //    if (_transform.CompareTag("ennemi"))
         //    {
-        //        _animGuard.SetInteger("RGBehaviour", -1);
+        //        _animGuard.SetInteger("RGBehaviour", 0);
+        //        Debug.Log(angle2);
+        //        limit++;
         //    }
-            //if (_transform.CompareTag("Bguard"))
-            //{
-            //    _animGuard.SetInteger("BGBehaviour", -1);
-            //}
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", 0);
+        //    //    limit++;
+        //    //}
+        //    //wasMovingLeft = true;
+        //    //wasMovingUp = false;
+        //    //wasMovingRight = false;
+        //    //wasMovingDown = false;
+        //}
+        //if (angle2 >=45 && angle2 < 90 && limit == 0)
+        //{
+        //    //down
+        //    if (_transform.CompareTag("ennemi"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 3);
+        //        Debug.Log(angle2);
+        //        limit++;
+        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", 3);
+        //    //    limit++;
+        //    //}
+        //    //wasMovingLeft = false;
+        //    //wasMovingUp = false;
+        //    //wasMovingRight = false;
+        //    //wasMovingDown = true;
+        //}
+        //if (angle2 >= 0 && angle2 < 45 && limit == 0)
+        //{
+        //    //right
+        //    if (_transform.CompareTag("ennemi"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 1);
+        //        limit++;
+        //        Debug.Log(angle2);
+        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", 1);
+        //    //    limit++;
+        //    //}
+        //    //wasMovingLeft = false;
+        //    //wasMovingUp = false;
+        //    //wasMovingRight = true;
+        //    //wasMovingDown = false;
+        //}
+        //if (angle2 >45 && angle2 <110 && limit == 0)
+        //{
+        //    //up
+        //    if (_transform.CompareTag("ennemi"))
+        //    {
+        //        _animGuard.SetInteger("RGBehaviour", 2);
+        //        limit++;
+        //        Debug.Log(angle2);
+        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", 2);
+        //    //    limit++;
+        //    //}
+        //    //wasMovingLeft = false;
+        //    //wasMovingUp = true;
+        //    //wasMovingRight = false;
+        //    //wasMovingDown = false;
         //}
 
-        //if (!isMoving && wasMovingDown)
-        //{
-        //    if (_transform.CompareTag("ennemi"))
-        //    {
-        //        _animGuard.SetInteger("RGBehaviour", -1);
-        //    }
+        ////if (!isMoving)
+        ////{
+        ////    if (_transform.CompareTag("ennemi"))
+        ////    {
+        ////        _animGuard.SetInteger("RGBehaviour", -1);
+        ////    }
         //    //if (_transform.CompareTag("Bguard"))
         //    //{
         //    //    _animGuard.SetInteger("BGBehaviour", -1);
         //    //}
-        //}
+        ////}
 
-        //if (!isMoving && wasMovingLeft)
-        //{
-        //    if (_transform.CompareTag("ennemi"))
-        //    {
-        //        _animGuard.SetInteger("RGBehaviour", -2);
-        //    }
-        //    //if (_transform.CompareTag("Bguard"))
-        //    //{
-        //    //    _animGuard.SetInteger("BGBehaviour", -2);
-        //    //}
-        //}
+        ////if (!isMoving && wasMovingDown)
+        ////{
+        ////    if (_transform.CompareTag("ennemi"))
+        ////    {
+        ////        _animGuard.SetInteger("RGBehaviour", -1);
+        ////    }
+        ////    //if (_transform.CompareTag("Bguard"))
+        ////    //{
+        ////    //    _animGuard.SetInteger("BGBehaviour", -1);
+        ////    //}
+        ////}
 
-        //if (!isMoving && wasMovingUp)
-        //{
-        //    if (_transform.CompareTag("ennemi"))
-        //    {
-        //        _animGuard.SetInteger("RGBehaviour", -4);
-        //    }
-        //    //if (_transform.CompareTag("Bguard"))
-        //    //{
-        //    //    _animGuard.SetInteger("BGBehaviour", -4);
-        //    //}
-        //}
+        ////if (!isMoving && wasMovingLeft)
+        ////{
+        ////    if (_transform.CompareTag("ennemi"))
+        ////    {
+        ////        _animGuard.SetInteger("RGBehaviour", -2);
+        ////    }
+        ////    //if (_transform.CompareTag("Bguard"))
+        ////    //{
+        ////    //    _animGuard.SetInteger("BGBehaviour", -2);
+        ////    //}
+        ////}
 
-        //if (!isMoving && wasMovingRight)
-        //{
-        //    if (_transform.CompareTag("ennemi"))
-        //    {
-        //        _animGuard.SetInteger("RGBehaviour", -3);
-        //    }
-        //    //if (_transform.CompareTag("Bguard"))
-        //    //{
-        //    //    _animGuard.SetInteger("BGBehaviour", -3);
-        //    //}
-        //}
+        ////if (!isMoving && wasMovingUp)
+        ////{
+        ////    if (_transform.CompareTag("ennemi"))
+        ////    {
+        ////        _animGuard.SetInteger("RGBehaviour", -4);
+        ////    }
+        ////    //if (_transform.CompareTag("Bguard"))
+        ////    //{
+        ////    //    _animGuard.SetInteger("BGBehaviour", -4);
+        ////    //}
+        ////}
+
+        ////if (!isMoving && wasMovingRight)
+        ////{
+        ////    if (_transform.CompareTag("ennemi"))
+        ////    {
+        ////        _animGuard.SetInteger("RGBehaviour", -3);
+        ////    }
+        ////    //if (_transform.CompareTag("Bguard"))
+        ////    //{
+        ////    //    _animGuard.SetInteger("BGBehaviour", -3);
+        ////    //}
+        ////}
 
         state = NodeState.RUNNING;
         return state;
