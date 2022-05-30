@@ -4,85 +4,78 @@ using UnityEngine;
 
 public class AnimManager : MonoBehaviour
 {
-    //public Animator[] PlayerAnim;
-    private Animator PlayerAnim;
-    public int ArmorType = 0;
-    public GameObject casual;
-    public GameObject disguise;
-    public GameObject steel;
-    public GameObject gold;
+    //public Animator[] playerAnim;
+    private Animator playerAnim;
+    public GameObject Casual;
+    public GameObject Disguise;
+    public GameObject Steel;
+    public GameObject Gold;
     private bool wasMovingRight = false;
     private bool wasMovingLeft = false;
     private bool wasMovingUp = false;
     private bool wasMovingDown = false;
     private bool IsMooving = false;
     private int i;
-    
+    public int ArmorType = 0;
     private void Start()
     {
         i = 0;
-        PlayerAnim = this.gameObject.GetComponent<Animator>();
+        playerAnim = this.gameObject.GetComponent<Animator>();
         
     }
     private void Update()
     {
-        if(EquipmentManager.Instance.CurrentEquipment[0] == null)
+        //To know what armor we are wearing
+        if (ArmorType == 0)
         {
-            ArmorType = 10;
-        }
-        else
-        {
-
-            ArmorType = EquipmentManager.Instance.CurrentEquipment[0].Id;
-        }
-        if (ArmorType == 10)
-        {
-            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = casual.GetComponent<Animator>().runtimeAnimatorController;
+            playerAnim.GetComponent<Animator>().runtimeAnimatorController = Casual.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 11)
+        if(ArmorType == 1)
         {
-            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = disguise.GetComponent<Animator>().runtimeAnimatorController;
+            playerAnim.GetComponent<Animator>().runtimeAnimatorController = Disguise.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 12)
+        if(ArmorType == 2)
         {
-            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = steel.GetComponent<Animator>().runtimeAnimatorController;
+            playerAnim.GetComponent<Animator>().runtimeAnimatorController = Steel.GetComponent<Animator>().runtimeAnimatorController;
         }
         
-        if(ArmorType == 13)
+        if(ArmorType == 3)
         {
-            PlayerAnim.GetComponent<Animator>().runtimeAnimatorController = gold.GetComponent<Animator>().runtimeAnimatorController;
+            playerAnim.GetComponent<Animator>().runtimeAnimatorController = Gold.GetComponent<Animator>().runtimeAnimatorController;
         }
 
+        //To accord all the animation with the movement
+        //For the keyboard
         float axeX = Input.GetAxisRaw("Horizontal");
         float axeY = Input.GetAxisRaw("Vertical");
-
         if (Input.GetKeyDown(KeyCode.Q))
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
         }
         
+        //And for the gamepad
         if (axeX < 0)
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 0);
             wasMovingLeft = true;
             wasMovingUp = false;
             wasMovingRight = false;
@@ -91,7 +84,7 @@ public class AnimManager : MonoBehaviour
         if (axeX > 0)
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 1);
             wasMovingLeft = false;
             wasMovingUp = false;
             wasMovingRight = true;
@@ -100,7 +93,7 @@ public class AnimManager : MonoBehaviour
         if (axeY > 0)
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 2);
             wasMovingLeft = false;
             wasMovingUp = true;
             wasMovingRight = false;
@@ -109,7 +102,7 @@ public class AnimManager : MonoBehaviour
         if (axeY < 0)
         {
             IsMooving = true;
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", 3);
             wasMovingLeft = false;
             wasMovingUp = false;
             wasMovingRight = false;
@@ -118,22 +111,22 @@ public class AnimManager : MonoBehaviour
 
         if (Input.GetKeyUp(KeyCode.Z) || wasMovingUp && !IsMooving)
         {
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -4);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", -4);
         }
 
         if (Input.GetKeyUp(KeyCode.D) || wasMovingRight && !IsMooving)
         {
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -3);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", -3);
         }
 
         if (Input.GetKeyUp(KeyCode.Q) || wasMovingLeft && !IsMooving)
         {
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -2);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", -2);
         }
 
         if (Input.GetKeyUp(KeyCode.S) || wasMovingDown && !IsMooving)
         {
-            PlayerAnim.GetComponent<Animator>().SetInteger("Behaviour", -1);
+            playerAnim.GetComponent<Animator>().SetInteger("Behaviour", -1);
         }
 
         IsMooving = false;

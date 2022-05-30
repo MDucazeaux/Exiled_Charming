@@ -16,6 +16,7 @@ public class MusicManager : MonoBehaviour
     public bool PlayingCastle;
     public bool PlayingTrip;
     public bool PlayOnce;
+    public bool PlayButton;
 
     private void Start()
     {

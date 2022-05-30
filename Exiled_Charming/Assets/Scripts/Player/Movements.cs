@@ -7,12 +7,10 @@ public class Movements : MonoBehaviour
     private Vector3 originPos, targetPos;
 
     [HideInInspector]
-    public bool isMoving;
+    public bool IsMoving;
     private Rigidbody2D rb;
-    public float speed = 10f;
-    private int timeForMoove;
+    public float Speed = 10f;
 
-    new Vector2 dir;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,31 +18,30 @@ public class Movements : MonoBehaviour
 
     void Update()
     {
-        dir.x = Input.GetAxisRaw("Horizontal");
-        dir.y = Input.GetAxisRaw("Vertical");
+        float dirx = Input.GetAxisRaw("Horizontal");
+        float diry = Input.GetAxisRaw("Vertical");
+        rb.velocity = new Vector2(dirx, diry ).normalized;
+        rb.velocity *= Speed;
     }
+    //private IEnumerator MovePlayer(Vector3 direction)
+    //{
+    //    isMoving = true;
 
-    private void FixedUpdate()
-    {
+    //    float elapsedTime = 0;
 
-        if(Input.GetKey(KeyCode.D) || dir.x > 0)
-        {
-            rb.AddForce(new Vector2(7 - rb.velocity.x, 0));
-        }
+    //    originPos = transform.position;
+    //    targetPos = originPos + direction;
 
-        if (Input.GetKey(KeyCode.Q) || dir.x < 0)
-        {
-            rb.AddForce(new Vector2(-7 - rb.velocity.x, 0));
-        }
+        
 
-        if (Input.GetKey(KeyCode.Z) || dir.y > 0)
-        {
-            rb.AddForce(new Vector2(0, 7 - rb.velocity.y));
-        }
+    //    while (elapsedTime < timeForMoove)
+    //    {
+    //        transform.position = Vector3.Lerp(originPos, targetPos, (elapsedTime / timeForMoove));
+    //        elapsedTime += Time.deltaTime;
+    //        yield return null;
+    //    }
+    //    transform.position = targetPos;
 
-        if (Input.GetKey(KeyCode.S) || dir.y < 0)
-        {
-            rb.AddForce(new Vector2(0, -7 - rb.velocity.y));
-        }
-    }
+    //    isMoving = false;
+    //}
 }
