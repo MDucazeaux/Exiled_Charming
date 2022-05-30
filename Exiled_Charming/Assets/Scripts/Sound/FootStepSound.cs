@@ -19,19 +19,20 @@ public class FootStepSound : MonoBehaviour
 
     private void Update()
     {
-        
-        //if (movecomponent.isMoving)
-        //{
-        //    timer -= Time.deltaTime;
-        //    if (timer <= 0)
-        //    {
-        //        timer = 0.5f;
-        //        AudioClip clip = GetRDClip();
-        //        audiosources.PlayOneShot(clip,0.2f);
-        //    }
-        //}
+        //Know when i walk for play a rnd clip
+        if (movecomponent.IsMoving)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                timer = 0.5f;
+                AudioClip clip = GetRDClip();
+                audiosources.PlayOneShot(clip,0.2f);
+            }
+        }
     }
 
+    //taking a rnd between 3
     private AudioClip GetRDClip()
     {
         int index = Random.Range(0, 3);

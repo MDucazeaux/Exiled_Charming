@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip Mtrip;
     public AudioClip MFight;
     public AudioClip Mcastle;
+    public AudioClip SfButton;
 
     private GameObject musicManager;
     private GameObject player;
@@ -16,6 +17,7 @@ public class MusicManager : MonoBehaviour
     public bool PlayingCastle;
     public bool PlayingTrip;
     public bool PlayOnce;
+    public bool PlayButton;
 
     private void Start()
     {
@@ -44,8 +46,16 @@ public class MusicManager : MonoBehaviour
             this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 0.2f);
             PlayingFight = false;
         }
+
+        if (PlayButton)
+        {
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(SfButton, 0.2f);
+            PlayButton = false;
+        }
     }
     
-   
-
+    public void loadmusic()
+    {
+        PlayButton = true;
+    }
 }

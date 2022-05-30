@@ -5,27 +5,37 @@ using UnityEngine;
 public class TriggerManager : MonoBehaviour
 {
 
-    public MusicManager musicManager;
+    public MusicManager MusicMana;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TriggerCastle") && !musicManager.PlayingCastle)
+        //Trigger if we walk on this gameobject
+        if (collision.gameObject.CompareTag("TriggerCastle") && !MusicMana.PlayingCastle)
         {
-            musicManager.gameObject.GetComponent<AudioSource>().Stop();
-            musicManager.PlayingTrip = false;
-            musicManager.PlayingFight = false;
-            musicManager.gameObject.GetComponent<AudioSource>().PlayOneShot(musicManager.Mcastle, 0.2f);
-            musicManager.PlayingCastle = true;
+            MusicMana.gameObject.GetComponent<AudioSource>().Stop();
+            MusicMana.PlayingTrip = false;
+            MusicMana.PlayingFight = false;
+            MusicMana.gameObject.GetComponent<AudioSource>().PlayOneShot(MusicMana.Mcastle, 0.2f);
+            MusicMana.PlayingCastle = true;
         }
 
-        if (collision.gameObject.CompareTag("TriggerTrip") && !musicManager.PlayingTrip)
+        //if (collision.gameObject.CompareTag("TriggerFight") && !MusicMana.PlayingFight)
+        //{
+        //    MusicMana.gameObject.GetComponent<AudioSource>().Stop();
+        //    MusicMana.PlayingCastle = false;
+        //    MusicMana.PlayingTrip = false;
+        //    MusicMana.gameObject.GetComponent<AudioSource>().PlayOneShot(MusicMana.MFight, 0.2f);
+        //    MusicMana.PlayingFight = true;
+        //}
+
+        if (collision.gameObject.CompareTag("TriggerTrip") && !MusicMana.PlayingTrip)
         {
-            musicManager.gameObject.GetComponent<AudioSource>().Stop();
-            musicManager.PlayingFight = false;
-            musicManager.PlayingCastle = false;
-            musicManager.gameObject.GetComponent<AudioSource>().PlayOneShot(musicManager.Mtrip, 0.2f);
-            musicManager.PlayingTrip = true;
+            MusicMana.gameObject.GetComponent<AudioSource>().Stop();
+            MusicMana.PlayingFight = false;
+            MusicMana.PlayingCastle = false;
+            MusicMana.gameObject.GetComponent<AudioSource>().PlayOneShot(MusicMana.Mtrip, 0.2f);
+            MusicMana.PlayingTrip = true;
         }
 
     }

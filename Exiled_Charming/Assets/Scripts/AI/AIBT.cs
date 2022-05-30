@@ -3,6 +3,8 @@ using BehaviorTree;
 using UnityEngine.AI;
 using UnityEngine;
 
+//This scrip gonna be placed on the GameObject
+
 public class AIBT : TreeBehav
 {
     public UnityEngine.Transform[] waypoints;
