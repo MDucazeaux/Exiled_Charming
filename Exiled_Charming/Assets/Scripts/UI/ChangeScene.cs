@@ -1,14 +1,19 @@
- using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ChangeScene : MonoBehaviour
+
+// le change scene du menu qui permet d'appellé la bonne scène graçe a un string dans le on click
+public class changescene : MonoBehaviour
 {
-    // Start is called before the first frame update
-   
-    public void SwitchScene(string name)
+    public void switchscene(string name)
     {
         SceneManager.LoadScene(name, LoadSceneMode.Single);
+    }
+
+    public void quitGame()
+    {
+        Application.Quit();
     }
 }
