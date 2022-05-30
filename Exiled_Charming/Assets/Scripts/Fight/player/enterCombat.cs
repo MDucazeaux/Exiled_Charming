@@ -15,7 +15,7 @@ public class enterCombat : MonoBehaviour
 
     private void Start()
     {
-        tpPos = new Vector3(150, 40, this.transform.position.z);
+        tpPos = new Vector3(4, 5, this.transform.position.z);
         tpPoint = GameObject.Find("pointTpAfterFight");
     }
     private void Update()

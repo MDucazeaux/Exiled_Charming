@@ -11,8 +11,11 @@ public class fightRat : MonoBehaviour
     {
         if(isActivated)
         {
-            Essaiquest.Instance.nextQuest();
-            isActivated = false;
+            if(this.gameObject.name == "rat" && this.GetComponent<HpManager>().Hp <= 0)
+            {
+                Essaiquest.Instance.nextQuest();
+                isActivated = false;
+            }
         }
     }
 
