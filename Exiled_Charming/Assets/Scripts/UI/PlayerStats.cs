@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//script permettant l'ajout de nouvelles statistique ( en l'occurence du damage et de l'armure ) via l'équipement
 public class PlayerStats : CharacterStats
 {
     public void Start()

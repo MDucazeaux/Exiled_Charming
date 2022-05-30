@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+//script de base attaché a tout mes items pour faire le lien avec l'inventaire et d'utilisé mes items et d'équiper les équipmeents
+
 public class InventoryItemController : MonoBehaviour
 {
     public Item item;

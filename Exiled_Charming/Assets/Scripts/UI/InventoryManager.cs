@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//script permettant de listé mes items dans l'inventaire, et de les removes 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
@@ -66,6 +68,7 @@ public class InventoryManager : MonoBehaviour
             Destroy(item.gameObject);
         }
 
+        // Pour chaque item (ajouté dans une list intitulé "Items" quand je pick up un objet) cela me recupère son nom, son icon, son removebutton et lui attribue ce qu'il lui a étais defini dans les données de mon scriptable object item
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
