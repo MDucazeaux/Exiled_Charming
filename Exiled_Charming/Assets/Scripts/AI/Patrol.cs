@@ -5,17 +5,17 @@ using BehaviorTree;
 
 public class Patrol : Node
 {
-    private int _currentWaypointIndex = 0;
+    private int currentWaypointIndex = 0;
 
-    private float _waitTime = 1f; // in seconds
-    private float _waitCounter = 0f;
+    private float waitTime = 1f; // in seconds
+    private float waitCounter = 0f;
     private float posangle;
 
     private bool wasMovingRight = false;
     private bool wasMovingLeft = false;
     private bool wasMovingUp = false;
     private bool wasMovingDown = false;
-    private bool _waiting = false;
+    private bool waiting = false;
     private bool isMoving = false;
 
     private int limit = 0;
@@ -32,14 +32,16 @@ public class Patrol : Node
 
     public override NodeState Evaluate()
     {
-        wp = _waypoints[_currentWaypointIndex];
-        if (_waiting)
+        //Define the point where the transform should go
+        wp = _waypoints[currentWaypointIndex];
+        if (waiting)
         {
-            _waitCounter += Time.deltaTime;
-            if (_waitCounter >= _waitTime)
+            //Put some delai for go to the next target
+            waitCounter += Time.deltaTime;
+            if (waitCounter >= waitTime)
             {
                 limit = 0;
-                _waiting = false;
+                waiting = false;
             }
         }
         else
@@ -47,11 +49,11 @@ public class Patrol : Node
             if (Vector2.Distance(_transform.position, wp.position) < 0.01f)
             {
                 _transform.position = wp.position;
-                _waitCounter = 0f;
+                waitCounter = 0f;
                 isMoving = false;
-                _waiting = true;
+                waiting = true;
 
-                _currentWaypointIndex = (_currentWaypointIndex + 1) % _waypoints.Length;
+                currentWaypointIndex = (currentWaypointIndex + 1) % _waypoints.Length;
             }
             else
             {
@@ -65,9 +67,10 @@ public class Patrol : Node
         float angle = Vector2.SignedAngle(Vector2.up, wp.position);
         posangle = angle + 180;
 
+        //How to know where the eye is looking
         if (posangle > 210 && posangle < 220 && limit == 0)
         {
-            //gauche
+            //left
             if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 0);
@@ -86,7 +89,7 @@ public class Patrol : Node
         }
         if (posangle > 260 && posangle < 270 && limit == 0)
         {
-            //bas
+            //down
             if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 3);
@@ -104,7 +107,7 @@ public class Patrol : Node
         }
         if (posangle > 60 && posangle < 120 && limit == 0)
         {
-            //droite
+            //right
             if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 1);
@@ -122,7 +125,7 @@ public class Patrol : Node
         }
         if (posangle > 100 && posangle < 155 && limit == 0)
         {
-            //haut
+            //up
             if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 2);

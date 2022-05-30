@@ -19,8 +19,8 @@ public class FootStepSound : MonoBehaviour
 
     private void Update()
     {
-        
-        if (movecomponent.isMoving)
+        //Know when i walk for play a rnd clip
+        if (movecomponent.IsMoving)
         {
             timer -= Time.deltaTime;
             if (timer <= 0)
@@ -32,6 +32,7 @@ public class FootStepSound : MonoBehaviour
         }
     }
 
+    //taking a rnd between 3
     private AudioClip GetRDClip()
     {
         int index = Random.Range(0, 3);
