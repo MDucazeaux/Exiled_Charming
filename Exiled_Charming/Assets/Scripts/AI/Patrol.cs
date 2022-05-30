@@ -68,134 +68,135 @@ public class Patrol : Node
         if (posangle > 210 && posangle < 220 && limit == 0)
         {
             //gauche
-            if (_transform.CompareTag("Rguard"))
+            if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 0);
                 limit++;
+                Debug.Log("gauche");
             }
-            if (_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 0);
-                limit++;
-            }
-            wasMovingLeft = true;
-            wasMovingUp = false;
-            wasMovingRight = false;
-            wasMovingDown = false;
+            //if (_transform.CompareTag("Bguard"))
+            //{
+            //    _animGuard.SetInteger("BGBehaviour", 0);
+            //    limit++;
+            //}
+            //wasMovingLeft = true;
+            //wasMovingUp = false;
+            //wasMovingRight = false;
+            //wasMovingDown = false;
         }
         if (posangle > 260 && posangle < 270 && limit == 0)
         {
             //bas
-            if (_transform.CompareTag("Rguard"))
+            if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 3);
                 limit++;
             }
-            if (_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 3);
-                limit++;
-            }
-            wasMovingLeft = false;
-            wasMovingUp = false;
-            wasMovingRight = false;
-            wasMovingDown = true;
+            //if (_transform.CompareTag("Bguard"))
+            //{
+            //    _animGuard.SetInteger("BGBehaviour", 3);
+            //    limit++;
+            //}
+            //wasMovingLeft = false;
+            //wasMovingUp = false;
+            //wasMovingRight = false;
+            //wasMovingDown = true;
         }
-        if (posangle > 80 && posangle < 100 && limit == 0)
+        if (posangle > 60 && posangle < 120 && limit == 0)
         {
             //droite
-            if (_transform.CompareTag("Rguard"))
+            if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 1);
                 limit++;
             }
-            if (_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 1);
-                limit++;
-            }
-            wasMovingLeft = false;
-            wasMovingUp = false;
-            wasMovingRight = true;
-            wasMovingDown = false;
+            //if (_transform.CompareTag("Bguard"))
+            //{
+            //    _animGuard.SetInteger("BGBehaviour", 1);
+            //    limit++;
+            //}
+            //wasMovingLeft = false;
+            //wasMovingUp = false;
+            //wasMovingRight = true;
+            //wasMovingDown = false;
         }
-        if (posangle > 120 && posangle < 135 && limit == 0)
+        if (posangle > 100 && posangle < 155 && limit == 0)
         {
             //haut
-            if (_transform.CompareTag("Rguard"))
+            if (_transform.CompareTag("ennemi"))
             {
                 _animGuard.SetInteger("RGBehaviour", 2);
                 limit++;
             }
-            if (_transform.CompareTag("Bguard"))
-            {
-                _animGuard.SetInteger("BGBehaviour", 2);
-                limit++;
-            }
-            wasMovingLeft = false;
-            wasMovingUp = true;
-            wasMovingRight = false;
-            wasMovingDown = false;
+            //if (_transform.CompareTag("Bguard"))
+            //{
+            //    _animGuard.SetInteger("BGBehaviour", 2);
+            //    limit++;
+            //}
+            //wasMovingLeft = false;
+            //wasMovingUp = true;
+            //wasMovingRight = false;
+            //wasMovingDown = false;
         }
 
-        //if(!isMoving)
+        //if (!isMoving)
         //{
-        //    if (_transform.CompareTag("Rguard"))
+        //    if (_transform.CompareTag("ennemi"))
         //    {
         //        _animGuard.SetInteger("RGBehaviour", -1);
         //    }
-        //    if (_transform.CompareTag("Bguard"))
-        //    {
-        //        _animGuard.SetInteger("BGBehaviour", -1);
-        //    }
+            //if (_transform.CompareTag("Bguard"))
+            //{
+            //    _animGuard.SetInteger("BGBehaviour", -1);
+            //}
         //}
 
         //if (!isMoving && wasMovingDown)
         //{
-        //    if (_transform.CompareTag("Rguard"))
+        //    if (_transform.CompareTag("ennemi"))
         //    {
         //        _animGuard.SetInteger("RGBehaviour", -1);
         //    }
-        //    if (_transform.CompareTag("Bguard"))
-        //    {
-        //        _animGuard.SetInteger("BGBehaviour", -1);
-        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", -1);
+        //    //}
         //}
 
         //if (!isMoving && wasMovingLeft)
         //{
-        //    if (_transform.CompareTag("Rguard"))
+        //    if (_transform.CompareTag("ennemi"))
         //    {
         //        _animGuard.SetInteger("RGBehaviour", -2);
         //    }
-        //    if (_transform.CompareTag("Bguard"))
-        //    {
-        //        _animGuard.SetInteger("BGBehaviour", -2);
-        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", -2);
+        //    //}
         //}
 
         //if (!isMoving && wasMovingUp)
         //{
-        //    if (_transform.CompareTag("Rguard"))
+        //    if (_transform.CompareTag("ennemi"))
         //    {
         //        _animGuard.SetInteger("RGBehaviour", -4);
         //    }
-        //    if (_transform.CompareTag("Bguard"))
-        //    {
-        //        _animGuard.SetInteger("BGBehaviour", -4);
-        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", -4);
+        //    //}
         //}
 
         //if (!isMoving && wasMovingRight)
         //{
-        //    if (_transform.CompareTag("Rguard"))
+        //    if (_transform.CompareTag("ennemi"))
         //    {
         //        _animGuard.SetInteger("RGBehaviour", -3);
         //    }
-        //    if (_transform.CompareTag("Bguard"))
-        //    {
-        //        _animGuard.SetInteger("BGBehaviour", -3);
-        //    }
+        //    //if (_transform.CompareTag("Bguard"))
+        //    //{
+        //    //    _animGuard.SetInteger("BGBehaviour", -3);
+        //    //}
         //}
 
         state = NodeState.RUNNING;
