@@ -47,6 +47,8 @@ public class MusicManager : MonoBehaviour
         }
     }
     
-   
-
+    public void loadmusic()
+    {
+        PlayButton = true;
+    }
 }
