@@ -10,6 +10,8 @@ public class AIBT : TreeBehav
     public UnityEngine.Transform[] waypoints;
     public Transform Player;
     public Animator rguard;
+    public gameManager GameManager;
+    public GameObject isNear;
 
     public static float speed = 5f;
     
@@ -17,7 +19,7 @@ public class AIBT : TreeBehav
     {
         Node root = new Selector(new List<Node>
         {
-            //new PrincesseDetector(transform,Player,rguard),
+            new PrincesseDetector(transform,Player,rguard,GameManager,isNear),
             new Patrol(transform,rguard,waypoints)
         });
 
