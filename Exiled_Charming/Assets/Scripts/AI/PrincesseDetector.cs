@@ -52,7 +52,8 @@ public class PrincesseDetector : Node
         if (dist <2f||angle<60f)
         {
 
-            //Renvoie un bool pour le début du combat
+            gameManager.Instance.state = gameState.Fight;
+            fightManager.Instance.Ennemi = this._transform.gameObject;
 
             return NodeState.SUCCESS;
         }
