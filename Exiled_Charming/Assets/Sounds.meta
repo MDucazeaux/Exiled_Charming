@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Exiled_Charming/Assets/Scripts/Fight/baseCombat.meta
+guid: eced209e70c0300459c7b4a6a3e1ee68
+========
 guid: 864d7f1b1a4a62844bc2fd69719aa41c
+>>>>>>>> origin/Mapping:Exiled_Charming/Assets/Sounds.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

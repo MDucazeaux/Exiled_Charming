@@ -48,7 +48,7 @@ public class PrincesseDetector : Node
         Vector2 dir = _player.position - _transform.position;
         float dist = Vector2.Distance(_player.position, _transform.position);
         float angle = Vector2.Angle(dir, InFrontOf);
-        //Serching if the princess is a circle around us or if she is in our view 
+        //Serching if the enemyUnitss is a circle around us or if she is in our view 
         if (dist <2f||angle<60f)
         {
 

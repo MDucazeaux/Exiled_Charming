@@ -5,7 +5,7 @@ using UnityEngine;
 public class XpManager : MonoBehaviour
 {
     public int Level;
-
+   
     private float xp;
     private float maxxp;
     void Start()

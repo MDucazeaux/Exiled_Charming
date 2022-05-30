@@ -1,22 +1,92 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HpManager : MonoBehaviour
 {
-    public int Hp;
+    public int BasedHP;
+    public int heal;
+    public float Hp;
+    public float maxHp = 100;
+
+    private int bonus;
+
+    public Image HealthBarImage;
+    public Text healthText;
+
+    public gameManager gameM;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        BasedHP = 100;
+        heal = 0;
+        bonus = 0;
+        Hp = maxHp;
     }
 
     // Update is called once per frame
     void Update()
     {
-        int level = transform.GetComponent<XpManager>().Level;
+        //int level = transform.GetComponent<XpManager>().Level;
+        //bonus = level * 10 + heal;
         //int hpEquipment = transform.GetComponentInChildren<Inventorycomponent>().HpStat;
 
-        Hp = 100 + 10 * level; // + hpEquipment;
+        //Hp = BasedHP + bonus; // + hpEquipment;
+        
+        if(Hp > maxHp)
+        {
+            Hp = maxHp;
+        }
+
+        //if(Hp <= 0)
+        //{
+        //    this.gameObject.SetActive(false);
+        //    Hp = 0;
+        //}
+
+        if(this.Hp <= 0 && this.tag == "ennemi")
+        {
+            fightManager.Instance.updateState(GameState.waitForStart);
+            fightManager.Instance.Ennemi = null;
+            gameM.updateState(gameState.Game);
+            this.gameObject.SetActive(false);
+        }
+
+        if (Hp >= 70)
+        {
+            HealthBarImage.color = Color.green;
+        }
+
+        if (Hp <= 70)
+        {
+            HealthBarImage.color = Color.yellow;
+        }
+
+        if (Hp <= 30)
+        {
+            HealthBarImage.color = Color.red;
+        }
+    }
+
+    public void dealDamage(int dmg)
+    {
+        Hp -= dmg;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
+    }
+
+    public void healAmount()
+    {
+        Hp = 100;
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
+    }
+
+    public void SetHealthBar()
+    {
+        HealthBarImage.fillAmount = Hp / maxHp;
+        healthText.text = Hp + " / " + maxHp;
     }
 }
