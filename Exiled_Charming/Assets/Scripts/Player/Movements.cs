@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this component make the player moves depending on where the user wants it to go
 public class Movements : MonoBehaviour
 {
     private Vector3 originPos, targetPos;
@@ -16,32 +17,23 @@ public class Movements : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float dirx = Input.GetAxisRaw("Horizontal");
-        float diry = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector2(dirx, diry ).normalized;
-        rb.velocity *= Speed;
+        if(Input.GetKey(KeyCode.D))
+        {
+            rb.AddForce(new Vector2(Speed,0));
+        }
+        if(Input.GetKey(KeyCode.Q))
+        {
+            rb.AddForce(new Vector2(-Speed,0));
+        }
+        if(Input.GetKey(KeyCode.Z))
+        {
+            rb.AddForce(new Vector2(0,Speed));
+        }
+        if(Input.GetKey(KeyCode.S))
+        {
+            rb.AddForce(new Vector2(0,-Speed));
+        }
     }
-    //private IEnumerator MovePlayer(Vector3 direction)
-    //{
-    //    isMoving = true;
-
-    //    float elapsedTime = 0;
-
-    //    originPos = transform.position;
-    //    targetPos = originPos + direction;
-
-        
-
-    //    while (elapsedTime < timeForMoove)
-    //    {
-    //        transform.position = Vector3.Lerp(originPos, targetPos, (elapsedTime / timeForMoove));
-    //        elapsedTime += Time.deltaTime;
-    //        yield return null;
-    //    }
-    //    transform.position = targetPos;
-
-    //    isMoving = false;
-    //}
 }

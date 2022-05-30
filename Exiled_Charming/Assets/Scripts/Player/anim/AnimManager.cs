@@ -25,6 +25,32 @@ public class AnimManager : MonoBehaviour
     }
     private void Update()
     {
+
+
+        if (EquipmentManager.Instance.CurrentEquipment[0] != null)
+        {
+            if (EquipmentManager.Instance.CurrentEquipment[0].Id == 10)
+            {
+                this.ArmorType = 0;
+            }
+            else if (EquipmentManager.Instance.CurrentEquipment[0].Id == 11)
+            {
+                this.ArmorType = 1;
+            }
+            else if (EquipmentManager.Instance.CurrentEquipment[0].Id == 12)
+            {
+                this.ArmorType = 2;
+            }
+            else if (EquipmentManager.Instance.CurrentEquipment[0].Id == 13)
+            {
+                this.ArmorType = 3;
+            }
+        }
+        else
+        {
+            this.ArmorType = 0;
+        }
+
         //To know what armor we are wearing
         if (ArmorType == 0)
         {

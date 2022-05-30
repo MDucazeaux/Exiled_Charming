@@ -10,6 +10,7 @@ public class changescene : MonoBehaviour
 
     private float timer;
 
+    bool activescene1;
     bool activescene2;
     bool activescene3;
     
@@ -20,6 +21,18 @@ public class changescene : MonoBehaviour
 
     public void Update()
     {
+        if(activescene1 == true)
+        {
+            timer -= Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                SceneManager.LoadScene("pickGame", LoadSceneMode.Single);
+                timer = 0.7f;
+            }
+
+        }
+
         if (activescene2 == true)
         {
             timer -= Time.deltaTime;
@@ -45,9 +58,13 @@ public class changescene : MonoBehaviour
 
     public void switchscene()
     {
-        SceneManager.LoadScene("Test", LoadSceneMode.Single);
+        SceneManager.LoadScene("Main", LoadSceneMode.Single);
     }
 
+    public void switchscene1()
+    {
+        activescene1 = true;
+    }
     public void switchscene2()
     {
         activescene2 = true;
