@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//differents states of the game(actually 2)
 public class gameManager : MonoBehaviour
 {
     public static gameManager Instance;

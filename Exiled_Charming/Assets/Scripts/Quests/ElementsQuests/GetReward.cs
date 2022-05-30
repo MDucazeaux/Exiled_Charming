@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//distribute rewards when the player finish the tutorial
 public class GetReward : MonoBehaviour
 {
     public int xpGain;

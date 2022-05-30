@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//organisation of a fight with a "dead point" when the player isnt in fight
 public class fightManager : MonoBehaviour
 {
     public static fightManager Instance;

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this component create the grid, if the grid has already been created in the fight manager itll call another function so that it doesnt have to recreate a grid again
+
 public class gridSystem : MonoBehaviour
 {
     [SerializeField] private int width, height;

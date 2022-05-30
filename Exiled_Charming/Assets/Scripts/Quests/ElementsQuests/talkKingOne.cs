@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//will set the next quest when the player has talked to the king if it was asked in the quest
 public class talkKingOne : MonoBehaviour
 {
     public bool isActivated = false;

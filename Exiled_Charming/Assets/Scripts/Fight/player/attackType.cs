@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//once the player has decided to attack the ai with one of his two attacks, he'll deal damage, attack1 deal critical damage, while 2nd one doesnt.
 public class attackType : MonoBehaviour
 {
     public static attackType Instance;

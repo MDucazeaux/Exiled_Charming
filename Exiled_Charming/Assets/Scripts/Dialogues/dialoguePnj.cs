@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the dialogue is set in the inspector but it contains the main dialogue of the npc or its dialogue quest.
 public class dialoguePnj : MonoBehaviour
 {
 
     private GameObject dialogueManager;
-
+    private GameObject guardAppearance;
     private bool canTalk = false;
 
     //------------------------------------//
@@ -24,6 +25,7 @@ public class dialoguePnj : MonoBehaviour
     private void Start()
     {
         dialogueManager = GameObject.Find("dialogueManager");
+        guardAppearance = GameObject.Find("LibraryGuard");
         originalDialogue = dialogueNPC;
     }
 
@@ -33,7 +35,7 @@ public class dialoguePnj : MonoBehaviour
         {
             dialogueManager.GetComponent<DialogueManager>().SetDialogue(questDialogue);
 
-            if(this.tag == "Prince" && dialogueManager.GetComponent<DialogueManager>().index == dialogueNPC.Length)
+            if(this.tag == "Prince")
             {
                 this.tag = "ennemi";
             }
@@ -44,13 +46,20 @@ public class dialoguePnj : MonoBehaviour
         {
             if (hasTalkedToKingOne && cancelQuest == 0)
             {
-                dialogueNPC = questDialogue;
-                Essaiquest.Instance.nextQuest();
-                this.enabled = false;
-                cancelQuest = 1;
+                dialogueNPC = questDialogue; 
+                Debug.Log(guardAppearance.name);
+                Debug.Log(dialogueManager.GetComponent<DialogueManager>().index);
             }
 
             dialogueManager.GetComponent<DialogueManager>().SetDialogue(dialogueNPC);
+        }
+
+        if(hasTalkedToKingOne && dialogueManager.GetComponent<DialogueManager>().index >= 6)
+        {
+                guardAppearance.GetComponent<SpriteRenderer>().enabled = true;
+                Essaiquest.Instance.nextQuest();
+                this.enabled = false;
+                cancelQuest = 1;
         }
     }
 
@@ -69,7 +78,7 @@ public class dialoguePnj : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Player" && this.tag == "Prince")
+        if(collision.gameObject.tag == "Player")
         {
             canTalk = true;
         }

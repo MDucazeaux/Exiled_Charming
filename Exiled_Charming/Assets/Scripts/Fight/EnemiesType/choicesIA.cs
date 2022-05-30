@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this component has every choices that the ai can make through the fight ONLY(move,heal,2 attack types, and he can also pass)
 public class choicesIA : MonoBehaviour
 {
     [HideInInspector] public static choicesIA Instance;

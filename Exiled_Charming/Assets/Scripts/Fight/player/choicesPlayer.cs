@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//all the choices that the player can make during a fight
+
 public class choicesPlayer : MonoBehaviour
 {
     [HideInInspector] public static choicesPlayer Instance;

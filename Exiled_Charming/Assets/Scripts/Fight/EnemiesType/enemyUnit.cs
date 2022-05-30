@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this component permite to verify that its the enemy turn and not the player.
+
 public class enemyUnit : MonoBehaviour
 {
     public bool EnemyTurn;

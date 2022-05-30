@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//permite to control a cursor on the screen when the player is in fight with a controller
 public class cursorController : MonoBehaviour
 {
     int h = 6;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//quest element:  tell when the player entered the library to go to the next quest
 public class enterLibrary : MonoBehaviour
 {
     private bool isActivated = false;

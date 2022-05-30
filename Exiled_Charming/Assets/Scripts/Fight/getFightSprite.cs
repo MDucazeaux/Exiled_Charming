@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//will set up the game object sprite so that it faces the good thing (if possible)
 public class getFightSprite : MonoBehaviour
 {
     public Sprite[] fightSprite;

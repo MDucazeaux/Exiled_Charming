@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//enable and disable components and make transitions depending on which state in the game the player is
+
 public class functionsActivation : MonoBehaviour
 {
     public GameObject managers;
@@ -43,11 +45,13 @@ public class functionsActivation : MonoBehaviour
         if (!gridSet)
         {
             Ennemi = fightManager.Instance.Ennemi;
+
             setPos = false;
 
             Player.transform.position = new Vector3(0, 6, -4);
             camera.transform.parent = null;
             Player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
+
             //disable components linked to the player that are useless to him in fight
             Player.GetComponent<enterCombat>().myColliders[0].enabled = false;
             Player.GetComponent<enterCombat>().myColliders[1].enabled = true;
@@ -61,8 +65,6 @@ public class functionsActivation : MonoBehaviour
 
 
             //enable components linked to the player that are useful to the player in fight
-            //Player.GetComponent<StatsManager>().enabled = true;
-            //Player.GetComponent<CharacterStats>().enabled = true;
             Player.GetComponent<choicesPlayer>().enabled = true;
             Player.GetComponent<attackType>().enabled = true;
             Player.GetComponent<playermovement>().enabled = true;
@@ -74,9 +76,6 @@ public class functionsActivation : MonoBehaviour
             Ennemi.GetComponent<choicesIA>().enabled = true;
             Ennemi.GetComponent<attacksIA>().enabled = true;
             Ennemi.transform.parent = null;
-
-            //Ennemi.GetComponent<AIBT>().enabled = false;
-            //Ennemi.GetComponent<Animator>().enabled = false;
 
 
             //manage everything linked to the scene (gestion)
@@ -100,6 +99,7 @@ public class functionsActivation : MonoBehaviour
 
         if(hasPlayed)
         {
+            //will play the right song depending on where the player was before entering the fight
             if (musicManager.GetComponent<MusicManager>().PlayingTrip)
             {
                 musicManager.GetComponent<AudioSource>().Stop();
@@ -121,10 +121,10 @@ public class functionsActivation : MonoBehaviour
             }
         }
 
+        //tp player at the last position he was before the fight
         if (!setPos)
         { 
             Player.transform.position = Player.GetComponent<enterCombat>().tpPos;
-            Player.GetComponent<enterCombat>().tpPoint.transform.parent = Player.transform;
             setPos = true;
         }
 
@@ -135,6 +135,7 @@ public class functionsActivation : MonoBehaviour
             camera.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -5);
             camera.transform.parent = Player.transform;
 
+            //set useful components for the player in game
             Player.GetComponent<enterCombat>().myColliders[0].enabled = true;
             Player.GetComponent<enterCombat>().myColliders[1].enabled = false;
             Player.GetComponent<enterCombat>().myColliders[2].enabled = false;
@@ -146,7 +147,7 @@ public class functionsActivation : MonoBehaviour
             Player.GetComponent<Animator>().enabled = true;
             Player.GetComponent<SpriteRenderer>().sprite = null;
 
-            //Player.GetComponent<CharacterStats>().enabled = true;
+            //disable useless component of the player in game
             Player.GetComponent<choicesPlayer>().enabled = false;
             Player.GetComponent<attackType>().enabled = false;
             Player.GetComponent<playermovement>().enabled = false;
@@ -154,6 +155,7 @@ public class functionsActivation : MonoBehaviour
 
         if (Ennemi != null)
         {
+            //disable useless component for the enemy
             Ennemi.GetComponent<XpManager>().enabled = false;
             Ennemi.GetComponent<StatsManager>().enabled = false;
             Ennemi.GetComponent<enemyUnit>().enabled = false;
@@ -162,9 +164,7 @@ public class functionsActivation : MonoBehaviour
             Ennemi.transform.parent = Map.transform;
         }
 
-        //Ennemi.GetComponent<AIBT>().enabled = true;
-        //Ennemi.GetComponent<Animator>().enabled = true;
-
+        //management of the scene when the player is in game and not in fight
         UIButtonsFight.SetActive(false);
         UIButtonsGame.SetActive(true);
         fightStructure.SetActive(false);

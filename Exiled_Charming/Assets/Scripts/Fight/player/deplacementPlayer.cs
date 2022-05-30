@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//this object is set on an object that is placed around the player that will detect the collisions and tell the player if he can move toward the direction he wants to or not.
 public class deplacementPlayer : MonoBehaviour
 {
     private void Update()

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//highlight appears when the enemies are in the player range
+//this component is set on game object that appear when the player want to do the second type of attack
 
 public class highlight2 : MonoBehaviour
 {

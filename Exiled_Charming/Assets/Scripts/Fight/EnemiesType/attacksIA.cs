@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the ai has picked an attack, it'll deal damages depending on the attack type, the 1st one deal a critical hit, while the other one doesnt.
 public class attacksIA : MonoBehaviour
 {
     public static attackType Instance;
@@ -28,7 +29,7 @@ public class attacksIA : MonoBehaviour
             {
                 if (enableAttack1)
                 {
-                    dealDamage1(this.gameObject.GetComponent<StatsManager>().AD + 15);
+                    dealDamage1(this.gameObject.GetComponent<StatsManager>().baseAD + 15);
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
 
@@ -36,7 +37,7 @@ public class attacksIA : MonoBehaviour
 
                 if (enableAttack2)
                 {
-                    dealDamage2(this.gameObject.GetComponent<StatsManager>().AD);
+                    dealDamage2(this.gameObject.GetComponent<StatsManager>().baseAD);
                     fightManager.Instance.updateState(GameState.UpdatePlayer);
                     this.gameObject.GetComponent<choicesIA>().choice = -1;
 

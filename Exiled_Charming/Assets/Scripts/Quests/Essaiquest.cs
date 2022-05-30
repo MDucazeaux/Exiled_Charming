@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//manage the main quests
+
 public class Essaiquest : MonoBehaviour
 {
     public static Essaiquest Instance;

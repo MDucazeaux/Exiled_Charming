@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//this component will manage the hp of the game object that has it, itll also manage the level up for the hp but NOT THE XP GAINED
+
 public class HpManager : MonoBehaviour
 {
     public int BasedHP;
@@ -15,7 +18,7 @@ public class HpManager : MonoBehaviour
     public gameManager gameM;
     private GameObject Player;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         Player = GameObject.Find("Player");
@@ -23,9 +26,14 @@ public class HpManager : MonoBehaviour
         SetHealthBar();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        if(Hp < 0)
+        {
+            Hp = 0;
+        }
+
         if(this.Hp <= 0 && this.tag == "ennemi")
         {
             fightManager.Instance.updateState(GameState.waitForStart);
@@ -36,6 +44,7 @@ public class HpManager : MonoBehaviour
 
         if(this.tag == "ennemi")
         {
+
             if (Hp >= maxHp / 2)
             {
                 HealthBarImage.color = Color.green;
@@ -49,6 +58,11 @@ public class HpManager : MonoBehaviour
             if (Hp <= maxHp / 4)
             {
                 HealthBarImage.color = Color.red;
+            }
+
+            if(Hp <= 0)
+            {
+                Player.GetComponent<XpManager>().AddXp(this.GetComponent<XpManager>().xpGiven);
             }
         }
 

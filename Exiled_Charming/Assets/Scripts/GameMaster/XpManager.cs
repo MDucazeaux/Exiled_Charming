@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//this component will manage all the experience that the player can get during his game. 
+//the enemies also have this component to have a level and be able to give the player some xp. 
+//the xp is given depending on the level difference between them and the player. its always updated since the player can level up.
+
 public class XpManager : MonoBehaviour
 {
     private int lvlDiff;
@@ -21,10 +26,41 @@ public class XpManager : MonoBehaviour
     public Text levelTxt;
     public Text xpTxtInventory;
 
+    public TextMesh lvlMobs;
+
     private GameObject player;
+    private bool setVariables = false;
     void Start()
     {
-        player = GameObject.Find("Player");
+        player = GameObject.Find("Player"); 
+
+        if (!setVariables)
+        {
+            switch (Level)
+            {
+                case < 2:
+                    this.GetComponent<HpManager>().Hp = 200;
+                    this.GetComponent<HpManager>().maxHp = 200;
+                    setVariables = true;
+                    break;
+                case < 4:
+                    this.GetComponent<HpManager>().Hp = 800;
+                    this.GetComponent<HpManager>().maxHp = 800;
+                    setVariables = true;
+                    break;
+                case < 6:
+                    this.GetComponent<HpManager>().Hp = 2000;
+                    this.GetComponent<HpManager>().maxHp = 2000;
+                    setVariables = true;
+                    break;
+                case < 8:
+                    this.GetComponent<HpManager>().Hp = 3000;
+                    this.GetComponent<HpManager>().maxHp = 3000;
+                    setVariables = true;
+                    break;
+            }
+
+        }
     }
 
     // Update is called once per frame
@@ -49,34 +85,38 @@ public class XpManager : MonoBehaviour
             }
         }
 
-        if (this.tag == "ennemi")
+        if (this.tag == "ennemi" && this.transform.parent != null)
         {
-
-            if(this.GetComponent<TextMesh>() != null)
-                this.GetComponentInChildren<TextMesh>().text = Level.ToString();
+            lvlMobs.text = Level.ToString();
 
             lvlDiff = this.Level - player.GetComponent<XpManager>().Level;
 
-            switch(lvlDiff)
+            switch (lvlDiff)
             {
-                case <-2: xpGiven = 0;
+                case < -2:
+                    xpGiven = 0;
                     break;
-                case -2: xpGiven = 10;
+                case -2:
+                    xpGiven = 10;
                     break;
-                case -1: xpGiven = 50;
+                case -1:
+                    xpGiven = 50;
                     break;
-                case 0: xpGiven = 100;
+                case 0:
+                    xpGiven = 100;
                     break;
-                case 1: xpGiven = 150;
+                case 1:
+                    xpGiven = 150;
                     break;
-                case 2: xpGiven = 200;
+                case 2:
+                    xpGiven = 200;
                     break;
-                case > 2: xpGiven = 300;
+                case > 2:
+                    xpGiven = 300;
                     break;
             }
 
-            if(this.GetComponent<HpManager>().Hp <= 0)
-                player.GetComponent<XpManager>().AddXp(xpGiven);
+
         }
     }
 

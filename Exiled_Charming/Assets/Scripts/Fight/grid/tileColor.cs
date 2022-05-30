@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//the color of the ground only(2 colors 1/2)
 public class tileColor : MonoBehaviour
 {
     [SerializeField] private Color color1, color2;

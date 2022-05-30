@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+//make the dialogue lines go after each other (when one has ended, itll check if there is another line after, if not the player can stop the dialogue)
 public class DialogueManager : MonoBehaviour
 {
     public float speed;
