@@ -15,7 +15,7 @@ MonoBehaviour:
   Id: 13
   ItemName: Armorgold
   Value: 0
-  Icon: {fileID: 2083331258, guid: a26d5a3a568ee85419663f79b025f260, type: 3}
+  Icon: {fileID: 957070889, guid: c13498730ce4f974bbe4ad99ef2c2c4e, type: 3}
   itemType: 1
   equipmentSlot: 0
   ArmorModifier: 100

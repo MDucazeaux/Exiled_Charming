@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject QuestsUI;
     public GameObject nextText;
 
-    private int index;
+    public int index;
     private string[] dialogue;
 
     private bool talkEnabled = true;

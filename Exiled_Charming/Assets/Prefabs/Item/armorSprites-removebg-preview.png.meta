@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: c13498730ce4f974bbe4ad99ef2c2c4e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 304
+        width: 68
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e280490f5cfcd46a144126352f0180
+      internalID: -1492284406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 312
+        width: 137
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8018b6d2a9c1e8840aab6551e0a3f446
+      internalID: 32259820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 175
+        width: 213
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614c9ae363b53214fba3d6b26ca9a83a
+      internalID: -1751773683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 296
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e60f8b072ce35a54cb1b3fcf250c50aa
+      internalID: -1711424566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 296
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23738d9861443f14e8bc7c28bc66266b
+      internalID: -2002185423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 308
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c8b8a96494012a458153d35f22b0c7f
+      internalID: 1068040239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 296
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c175f5a0ac3e47438987abff796b4a4
+      internalID: 1969127829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 296
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784097b3dfd60d041b37047d4d4b8520
+      internalID: 1835663111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 288
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b382fbe89cbf05b4aa69736ac7e3d3d9
+      internalID: 1409116152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 288
+        width: 66
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a338c928c747544ebc02f3909f07612
+      internalID: 1085125888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 220
+        width: 40
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdae62c7e58d20143ab118712c35338e
+      internalID: -773777129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 216
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4aaa3995c938946a313e8f17d13068
+      internalID: -839413046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 216
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a7c4e2dd4317e4f9a4c45b214e5a90
+      internalID: 32185611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 212
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c741b7a126d6f7245b094ff7abbfc722
+      internalID: -1406908483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 152
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd323deb1b83cb40b5a89154a8596ac
+      internalID: 1199532127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 152
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c0a13724aa60c4e90e440c357b4d84
+      internalID: 957070889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 152
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d16b3b05385e50c408e7278d7789dad3
+      internalID: -728276355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 148
+        width: 64
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f475ced3d60b1934f974b018c5fd362f
+      internalID: -1030305239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 152
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2239170c751368d4e88496113c8f7ed8
+      internalID: -1394964712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 88
+        width: 56
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d530ee9203f7f7e4092a8942302b94c5
+      internalID: -1186269790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 88
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629572eb18ff5684bbc32c8c81306a73
+      internalID: 1745025184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 88
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320331fb060126643ad7b3e7c0a292c2
+      internalID: -550042636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 84
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49369ba5746903428973b79d2d9fafb
+      internalID: -339354911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 88
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a65c361a906bbc545b4395fc859d76eb
+      internalID: 175622858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 123
+        width: 4
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc7bf1d336b3744886abad9fdc8a5c2
+      internalID: 1820689115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 24
+        width: 56
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9603f5ad05bd394f88b1eb2e150f636
+      internalID: -208120981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 24
+        width: 64
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3402c24edcf648448a4dabe0a15aa16
+      internalID: 2101908684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 24
+        width: 48
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ebf2398a1b7ba4c8631d07f551b2e6
+      internalID: -1543840658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 20
+        width: 60
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828c1f8d8fd6dec4b95460632339c934
+      internalID: 2141619229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 24
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18ad4b56da12e742a3c928a24738473
+      internalID: 1116300360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: armorSprites-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 44
+        width: 4
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a83b9ada38ac24a45a311fbb0a99d941
+      internalID: 574950696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      armorSprites-removebg-preview_16: -728276355
+      armorSprites-removebg-preview_27: -1543840658
+      armorSprites-removebg-preview_1: 32259820
+      armorSprites-removebg-preview_7: 1835663111
+      armorSprites-removebg-preview_18: -1394964712
+      armorSprites-removebg-preview_4: -2002185423
+      armorSprites-removebg-preview_26: 2101908684
+      armorSprites-removebg-preview_11: -839413046
+      armorSprites-removebg-preview_19: -1186269790
+      armorSprites-removebg-preview_13: -1406908483
+      armorSprites-removebg-preview_9: 1085125888
+      armorSprites-removebg-preview_21: -550042636
+      armorSprites-removebg-preview_14: 1199532127
+      armorSprites-removebg-preview_24: 1820689115
+      armorSprites-removebg-preview_12: 32185611
+      armorSprites-removebg-preview_10: -773777129
+      armorSprites-removebg-preview_17: -1030305239
+      armorSprites-removebg-preview_15: 957070889
+      armorSprites-removebg-preview_20: 1745025184
+      armorSprites-removebg-preview_29: 1116300360
+      armorSprites-removebg-preview_23: 175622858
+      armorSprites-removebg-preview_8: 1409116152
+      armorSprites-removebg-preview_2: -1751773683
+      armorSprites-removebg-preview_22: -339354911
+      armorSprites-removebg-preview_3: -1711424566
+      armorSprites-removebg-preview_30: 574950696
+      armorSprites-removebg-preview_5: 1068040239
+      armorSprites-removebg-preview_25: -208120981
+      armorSprites-removebg-preview_0: -1492284406
+      armorSprites-removebg-preview_6: 1969127829
+      armorSprites-removebg-preview_28: 2141619229
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

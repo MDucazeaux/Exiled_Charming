@@ -21,6 +21,8 @@ public class functionsActivation : MonoBehaviour
     public GameObject UIButtonsFight;
     public GameObject UIButtonsGame;
 
+    public BoxCollider2D[] nbColliders;
+
     public bool gridSet = false;
     bool setPos = false;
 

@@ -52,7 +52,8 @@ public class XpManager : MonoBehaviour
         if (this.tag == "ennemi")
         {
 
-            this.GetComponentInChildren<TextMesh>().text = Level.ToString();
+            if(this.GetComponent<TextMesh>() != null)
+                this.GetComponentInChildren<TextMesh>().text = Level.ToString();
 
             lvlDiff = this.Level - player.GetComponent<XpManager>().Level;
 

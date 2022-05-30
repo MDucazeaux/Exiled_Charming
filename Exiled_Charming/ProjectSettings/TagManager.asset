@@ -18,6 +18,7 @@ TagManager:
   - rat
   - Collider
   - Forgeron
+  - Prince
   layers:
   - Default
   - TransparentFX
