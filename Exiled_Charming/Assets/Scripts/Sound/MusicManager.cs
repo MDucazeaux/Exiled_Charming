@@ -38,7 +38,7 @@ public class MusicManager : MonoBehaviour
         if (!PlayOnce)
         {
             this.gameObject.GetComponent<AudioSource>().Stop();
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle,1f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle,0.3f);
             PlayOnce = true;
             PlayingFight = false;
             PlayingCastle = true;
@@ -47,19 +47,19 @@ public class MusicManager : MonoBehaviour
         if (PlayingFight)
         {
             this.gameObject.GetComponent<AudioSource>().Stop() ;
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 1f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 0.3f);
             PlayingFight = false;
         }
 
         if (PlayButton)
         {
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(SfButton, 1f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(SfButton, .3f);
             PlayButton = false;
         }
 
         if(SceneManager.GetActiveScene().name == "Credit" && PlayCredits)
         {
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MCredits, 1f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MCredits, .3f);
             PlayCredits = false;
         }
         

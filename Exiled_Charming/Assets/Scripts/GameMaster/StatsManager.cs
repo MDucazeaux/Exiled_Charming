@@ -42,6 +42,6 @@ public class StatsManager : MonoBehaviour
     public void updateStats()
     {
         baseDef += 10 ;
-        baseAD += 15;
+        baseAD += 25;
     }
 }
