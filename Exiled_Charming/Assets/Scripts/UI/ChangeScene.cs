@@ -40,6 +40,7 @@ public class changescene : MonoBehaviour
             if (timer <= 0)
             {
                 SceneManager.LoadScene("Credit", LoadSceneMode.Single);
+                
                 timer = 0.7f;
             }
         }

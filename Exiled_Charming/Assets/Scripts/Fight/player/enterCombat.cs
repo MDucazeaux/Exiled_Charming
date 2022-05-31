@@ -16,17 +16,20 @@ public class enterCombat : MonoBehaviour
     private void Start()
     {
         tpPos = new Vector3(4, 5, this.transform.position.z);
+        transform.position = tpPos;
         tpPoint = GameObject.Find("pointTpAfterFight");
     }
     private void Update()
     {
+        if(setPosTp)
+        {
+            tpPos = transform.position;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "ennemi")
+        if(collision.gameObject.tag == "ennemi" || collision.gameObject.tag =="rat")
         {
-            tpPos = transform.position;
-            tpPoint.transform.position = tpPos;
             gameManager.state = gameState.Fight;
             fightManager.Instance.Ennemi = collision.gameObject;
             setPosTp = true;

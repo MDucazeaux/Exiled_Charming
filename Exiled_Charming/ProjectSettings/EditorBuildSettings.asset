@@ -17,13 +17,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Test.unity
     guid: f1d5c7a096be0494d9d0f56db3c77fd0
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Thomas.unity
     guid: b003310770b67d943b4eeade98c591ea
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Amaya.unity
     guid: 3eedbd2c00a34c24ca97c523bc97c410
   - enabled: 1

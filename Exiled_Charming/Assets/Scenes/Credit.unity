@@ -1158,11 +1158,13 @@ MonoBehaviour:
   MFight: {fileID: 0}
   Mcastle: {fileID: 0}
   SfButton: {fileID: 8300000, guid: 316d0982cdd892343a7e231578819d92, type: 3}
+  MCredits: {fileID: 8300000, guid: 8ebdc4e71acd0cb4a95d59c17f455b7c, type: 3}
   PlayingFight: 0
   PlayingCastle: 0
   PlayingTrip: 0
   PlayOnce: 0
   PlayButton: 0
+  PlayCredits: 0
 --- !u!82 &1959246383
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1177,13 +1179,13 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 64.41794
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

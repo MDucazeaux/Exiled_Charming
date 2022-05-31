@@ -6,24 +6,24 @@ using UnityEngine;
 public class fightRat : MonoBehaviour
 {
     public bool isActivated = false;
+    public gameManager gameManager;
 
     private void Update()
     {
         if(isActivated)
         {
-            if(this.gameObject.name == "rat" && this.GetComponent<HpManager>().Hp <= 0)
-            {
-                Essaiquest.Instance.nextQuest();
-                isActivated = false;
-            }
+            Essaiquest.Instance.nextQuest();
+            isActivated = false;
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player" && Essaiquest.Instance.index == 1)
         {
             this.gameObject.tag = "ennemi";
+            fightManager.Instance.Ennemi = this.gameObject;
+            gameManager.updateState(gameState.Fight);
             isActivated = true;
         }
     }

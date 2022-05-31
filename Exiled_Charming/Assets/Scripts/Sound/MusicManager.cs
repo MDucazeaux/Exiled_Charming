@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip MFight;
     public AudioClip Mcastle;
     public AudioClip SfButton;
+    public AudioClip MCredits;
 
     private GameObject musicManager;
     private GameObject player;
@@ -18,6 +20,7 @@ public class MusicManager : MonoBehaviour
     public bool PlayingTrip;
     public bool PlayOnce;
     public bool PlayButton;
+    public bool PlayCredits;
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class MusicManager : MonoBehaviour
         PlayingTrip = false;
         PlayingCastle = false;
         PlayingFight = false;
+        PlayCredits = true;
     }
 
     private void Update()
@@ -34,7 +38,7 @@ public class MusicManager : MonoBehaviour
         if (!PlayOnce)
         {
             this.gameObject.GetComponent<AudioSource>().Stop();
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle, 0.2f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(Mcastle,1f);
             PlayOnce = true;
             PlayingFight = false;
             PlayingCastle = true;
@@ -43,15 +47,22 @@ public class MusicManager : MonoBehaviour
         if (PlayingFight)
         {
             this.gameObject.GetComponent<AudioSource>().Stop() ;
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 0.2f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MFight, 1f);
             PlayingFight = false;
         }
 
         if (PlayButton)
         {
-            this.gameObject.GetComponent<AudioSource>().PlayOneShot(SfButton, 0.2f);
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(SfButton, 1f);
             PlayButton = false;
         }
+
+        if(SceneManager.GetActiveScene().name == "Credit" && PlayCredits)
+        {
+            this.gameObject.GetComponent<AudioSource>().PlayOneShot(MCredits, 1f);
+            PlayCredits = false;
+        }
+        
     }
     
     public void loadmusic()
