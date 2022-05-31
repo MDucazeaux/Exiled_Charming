@@ -85,7 +85,7 @@ public class XpManager : MonoBehaviour
             }
         }
 
-        if (this.tag == "ennemi" && this.transform.parent != null)
+        if (this.tag == "ennemi" && this.transform.parent != null && !this.GetComponent<dialoguePnj>())
         {
             lvlMobs.text = Level.ToString();
 

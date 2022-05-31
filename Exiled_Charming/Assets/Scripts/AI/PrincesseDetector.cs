@@ -32,6 +32,10 @@ public class PrincesseDetector : Node
         {
             _isnear.SetActive(true);
         }
+        else
+        {
+            _isnear.SetActive(false);
+        }
 
         if(Vector2.Distance(_transform.position, _player.position) <3)
         {

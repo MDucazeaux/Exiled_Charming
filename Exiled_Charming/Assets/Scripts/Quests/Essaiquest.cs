@@ -47,12 +47,12 @@ public class Essaiquest : MonoBehaviour
         }
 
 
-        if(requirementQ4 == 2)
+        if(requirementQ4 >= 2)
         {
-            if (Player.GetComponent<AnimManager>().ArmorType == 11)
+            if (Player.GetComponent<AnimManager>().ArmorType == 1)
             {
                 nextQuest();
-                requirementQ4 = 3;
+                requirementQ4 = 0;
             }
         }
 
