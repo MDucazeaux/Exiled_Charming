@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HelmetOfProtection 1
   m_EditorClassIdentifier: 
   Id: 2
-  ItemName: WeaponAxe
+  ItemName: Hache
   Value: 0
   Icon: {fileID: -979167921, guid: 4b03c9158c3d934458a2406622e62b91, type: 3}
   itemType: 1

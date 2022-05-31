@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Armorsteel
   m_EditorClassIdentifier: 
   Id: 12
-  ItemName: Armorsteel
+  ItemName: Armure en fer
   Value: 0
   Icon: {fileID: -839413046, guid: c13498730ce4f974bbe4ad99ef2c2c4e, type: 3}
   itemType: 1

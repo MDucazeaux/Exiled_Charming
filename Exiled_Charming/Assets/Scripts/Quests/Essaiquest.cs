@@ -14,7 +14,7 @@ public class Essaiquest : MonoBehaviour
     public GameObject setActiveButton;
     public GameObject setNotActiveButton;
     public GameObject rewardBtn;
-
+    public GameObject potionQuest;
     public GameObject questObjects;
 
     private GameObject parentButton;
@@ -36,6 +36,7 @@ public class Essaiquest : MonoBehaviour
     {
         parentButton = this.gameObject.transform.parent.gameObject ;
         Player = GameObject.Find("Player");
+        potionQuest.SetActive(false);
     }
 
     void Update()
@@ -46,6 +47,10 @@ public class Essaiquest : MonoBehaviour
             questObjects.SetActive(true);
         }
 
+        if(index == 2 && potionQuest != null)
+        {
+            potionQuest.SetActive(true);
+        }
 
         if(requirementQ4 >= 2)
         {

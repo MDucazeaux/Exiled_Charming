@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b4d2a268f46ad44935579579fe077b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: b5607ae1ff4a2ce41a675736bc304adb, type: 2}
+  Item: {fileID: 11400000, guid: 7e0910e1a84ae204296d4e572b5848a4, type: 2}
   ItemContent: {fileID: 0}
   InventoryItem: {fileID: 0}
   pickupSound: {fileID: 8300000, guid: c8437e25b1dcc0843879218a3cc535e9, type: 3}

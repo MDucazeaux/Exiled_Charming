@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: HelmetOfProtection
   m_EditorClassIdentifier: 
   Id: 2
-  ItemName: WeaponHammer
+  ItemName: Epee
   Value: 0
-  Icon: {fileID: 449082292, guid: 4b03c9158c3d934458a2406622e62b91, type: 3}
+  Icon: {fileID: 1181214351, guid: 4b03c9158c3d934458a2406622e62b91, type: 3}
   itemType: 1
   equipmentSlot: 1
   ArmorModifier: 0
-  DamageModifier: 80
+  DamageModifier: 30

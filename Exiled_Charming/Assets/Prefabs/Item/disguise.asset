@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: disguise
   m_EditorClassIdentifier: 
   Id: 11
-  ItemName: disguise
+  ItemName: Deguisement
   Value: 0
   Icon: {fileID: -247283324, guid: 0b76b96e5a8d8874dbf81624ae090f80, type: 3}
   itemType: 1

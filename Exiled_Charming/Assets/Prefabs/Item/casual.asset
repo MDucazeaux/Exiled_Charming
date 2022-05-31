@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: casual
   m_EditorClassIdentifier: 
   Id: 10
-  ItemName: casual
+  ItemName: Robe
   Value: 0
   Icon: {fileID: 21300000, guid: 41dcf386c06d6174a911e35a01139201, type: 3}
   itemType: 1

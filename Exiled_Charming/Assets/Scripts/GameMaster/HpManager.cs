@@ -45,6 +45,7 @@ public class HpManager : MonoBehaviour
         if(this.tag == "ennemi")
         {
 
+            SetHealthBar();
             if (Hp >= maxHp / 2)
             {
                 HealthBarImage.color = Color.green;
